@@ -1,5 +1,6 @@
 import { lazy, Fragment } from "react";
 import { Row, Col } from "antd";
+import Link from '@material-ui/core/Link';
 // import i18n from "i18next";
 import { withTranslation } from "react-i18next";
 import Fade from "react-reveal/Fade";
@@ -7,7 +8,8 @@ import Fade from "react-reveal/Fade";
 // import SocialMediaIcons from 'react-social-media-icons';
 import * as S from "./styles";
 // var { SocialIcon } = require('react-social-icons');
-const SvgIcon = lazy(() => import("../../common/SvgIcon"));
+// const SvgIcon = lazy(() => import("../../common/SvgIcon"));
+const MyComp = lazy(() => import("../../components/MyComp/myComp"));
 const Container = lazy(() => import("../../common/Container"));
 
 const Footer = ({ t }) => {
@@ -59,9 +61,9 @@ const Footer = ({ t }) => {
                     Feel free to reach out.`
                   )}
                 </S.Para>
-                <a href="mailto:info@jdpelectrical.com.au ">
+                {/* <a href="mailto:info@jdpelectrical.com.au "> */}
                   <S.Chat>{t(`Let's Chat`)}</S.Chat>
-                </a>
+                {/* </a> */}
               </Col>
  
               <Col lg={8} md={8} sm={12} xs={24}>
@@ -145,12 +147,19 @@ const Footer = ({ t }) => {
             >
               <S.NavLink to="/">
                 <S.LogoContainer>
-                  <SvgIcon
+                  <Link to="/" >
+                {/* <Suspense fallback={
+                            // <Spinner animation="border" />
+                            }> */}
+                                <MyComp /> 
+                    {/* </Suspense> */}
+                </Link>
+                  {/* <SvgIcon
                     src="logo.svg"
                     aria-label="homepage"
                     width="101px"
                     height="64px"
-                  />
+                  /> */}
                 </S.LogoContainer>
               </S.NavLink>
               <S.FooterContainer>

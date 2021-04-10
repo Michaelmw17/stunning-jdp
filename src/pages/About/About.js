@@ -23,9 +23,9 @@ function First() {
               <div className="p-name">Joe Panetta</div>
               <div className="p-des">Engineer</div>
               <div className="p-sm">
-                <a href="#"><i className="fab fa-facebook-f" /></a>
+                {/* <a href="#"><i className="fab fa-facebook-f" /></a>
                 <a href="#"><i className="fab fa-twitter" /></a>
-                <a href="#"><i className="fab fa-instagram" /></a>
+                <a href="#"><i className="fab fa-instagram" /></a> */}
                 {/* <a href="#"><i className="fab fa-tumblr" /></a> */}
               </div>
             </div>
@@ -34,9 +34,9 @@ function First() {
               <div className="p-name">Anna Panetta</div>
               <div className="p-des">Engineer</div>
               <div className="p-sm">
-                <a href="#"><i className="fab fa-facebook-f" /></a>
+                {/* <a href="#"><i className="fab fa-facebook-f" /></a>
                 <a href="#"><i className="fab fa-twitter" /></a>
-                <a href="#"><i className="fab fa-instagram" /></a>
+                <a href="#"><i className="fab fa-instagram" /></a> */}
                 {/* <a href="#"><i className="fab fa-tumblr" /></a> */}
               </div>
             </div>
@@ -45,9 +45,9 @@ function First() {
               <div className="p-name">Dominic Panetta</div>
               <div className="p-des">Engineer</div>
               <div className="p-sm">
-                <a href="#"><i className="  fab fa-facebook-f" /></a>
+                {/* <a href="#"><i className="  fab fa-facebook-f" /></a>
                 <a href="#"><i className="fab fa-twitter" /></a>
-                <a href="#"><i className="fab fa-instagram" /></a>
+                <a href="#"><i className="fab fa-instagram" /></a> */}
                 {/* <a href="#"><i className="fab fa-tumblr" /></a> */}
               </div>
             </div>

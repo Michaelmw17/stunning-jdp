@@ -14,12 +14,12 @@ const ContactFrom = lazy(() => import("../../components/ContactForm"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
-const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
+// const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 
 const Home = () => {
   return (
     <Container>
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
       
       <Route
         exact path="/"

@@ -3,7 +3,7 @@ import { Row, Col, Drawer } from "antd";
 import { CSSTransition } from "react-transition-group";
 import { withTranslation } from "react-i18next";
 import { makeStyles } from '@material-ui/core/styles';
-import { green } from '@material-ui/core/colors';
+import { grey } from '@material-ui/core/colors';
 // import SvgIcon from '@material-ui/core/SvgIcon';
 import BuildIcon from '@material-ui/icons/Build';
 import ApartmentIcon from '@material-ui/icons/Apartment';
@@ -11,7 +11,8 @@ import ApartmentIcon from '@material-ui/icons/Apartment';
 import GroupIcon from '@material-ui/icons/Group';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 import * as S from "./styles";
-const SvgIcons = lazy(() => import("../../common/SvgIcon"));
+// const SvgIcons = lazy(() => import("../../common/SvgIcon"));
+const MyComp = lazy(() => import("../../components/MyComp/myComp"));
 // const Button = lazy(() => import("../../common/Button"));
 
 const Header = ({ t }) => {
@@ -56,19 +57,19 @@ const useStyles = makeStyles((theme) => ({
          <div className={classes.root}>
         <S.CustomNavLinkSmall onClick={() => scrollTo("mission")}>
           {/* <HomeIcon style={{ color: green[500], fontSize: 40   }} /> */}
-          <GroupIcon style={{ color: green[500], fontSize: 40   }} />
+          <GroupIcon style={{ color: grey[500], fontSize: 40   }} />
           <S.Span >{t("About")}</S.Span>
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall onClick={() => scrollTo("about")}>
-          <BuildIcon style={{ color: green[500], fontSize: 40   }} />
+          <BuildIcon style={{ color: grey[500], fontSize: 40   }} />
             <S.Span className="Span">{t("Services")}</S.Span>
         </S.CustomNavLinkSmall>
           <S.CustomNavLinkSmall onClick={() => scrollTo("product")}>
-            <ApartmentIcon style={{ color: green[500], fontSize: 40 }} />
+            <ApartmentIcon style={{ color: grey[500], fontSize: 40 }} />
           <S.Span>{t("Photos")}</S.Span>
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall onClick={() => scrollTo("product")}>
-          <ContactMailIcon style={{ color: green[500], fontSize: 40  }} />
+          <ContactMailIcon style={{ color: grey[500], fontSize: 40  }} />
           <S.Span>{t("Contact")}</S.Span>
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall
@@ -90,7 +91,12 @@ const useStyles = makeStyles((theme) => ({
       <S.Container>
         <Row type="flex" justify="space-between" gutter={20}>
           <S.LogoContainer to="/" aria-label="homepage">
-            <SvgIcons src="logo.svg" />
+            {/* <SvgIcons src="logo.svg" /> */}
+             
+                
+                                <MyComp /> 
+                    
+                
           </S.LogoContainer>
           <S.NotHidden>
             <MenuItem />

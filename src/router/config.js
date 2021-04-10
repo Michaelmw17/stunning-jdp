@@ -1,6 +1,6 @@
 const routes = [
   {
-    path: ["/jdp-myapp", "/home"],
+    path: ["/", "/home"],
     exact: true,
     component: "Home",
   },
