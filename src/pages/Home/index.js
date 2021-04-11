@@ -1,25 +1,39 @@
 import { lazy } from "react";
 
 import IntroContent from "../../content/IntroContent.json";
-import MiddleBlockContent from "../../content/MiddleBlockContent.json";
-import AboutContent from "../../content/AboutContent.json";
-import MissionContent from "../../content/MissionContent.json";
-import ProductContent from "../../content/ProductContent.json";
-import ContactContent from "../../content/ContactContent.json";
+import LandingContent from "../../content/LandingContent.json";
+import LandingHeader from "../../components/LandingHeader";
+import { Link } from 'react-router-dom';
+import about from '../About/About'
+import Button from '@material-ui/core/Button';
+import './homeStyles.css';
+import GoogleMap from '../First'
 
 import {  Route } from "react-router-dom";
 import FullWidthGrid from "../../components/LightBlub/lightBlub";
-
-const ContactFrom = lazy(() => import("../../components/ContactForm"));
+// import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Fab from '@material-ui/core/Fab';
+// import AddIcon from '@material-ui/icons/Add';
+// import Icon from '@material-ui/core/Icon';
+// import DeleteIcon from '@material-ui/icons/Delete';
+import NavigationIcon from '@material-ui/icons/Navigation';
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
-const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
-// const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 
-const Home = () => {
+const styles = theme => ({
+  fab: {
+    margin: theme.spacing.unit,
+  },
+  extendedIcon: {
+    marginRight: theme.spacing.unit,
+  },
+});
+const Home = (props) => {
+  const { classes } = props;
   return (
     <Container>
-      {/* <ScrollToTop /> */}
+      <LandingHeader />
       
       <Route
         exact path="/"
@@ -28,51 +42,32 @@ const Home = () => {
         content={IntroContent.text}
         button={IntroContent.button}
       />
+     <div>
+        <div className="Button">
+          <Link to="/about">
+      <Fab variant="extended" aria-label="Delete" className={classes.fab}>
+        <NavigationIcon className={classes.extendedIcon} />
+      <Button onClick={about} >
+          Enter JPD
+        </Button>
+          </Fab>
+        </Link>
+        </div>
+     
+    </div>
       
-      <MiddleBlock
-        title={MiddleBlockContent.title}
-        content={MiddleBlockContent.text}
-        button={MiddleBlockContent.button}
-      />
       <ContentBlock
         type="right"
         first="true"
-        title={IntroContent.title}
-        content={IntroContent.text}
-        button={IntroContent.button}
+        title={LandingContent.title}
+        content={LandingContent.text}
         icon="developer.svg"
         id="intro"
       />
-      <ContentBlock
-        type="left"
-        title={AboutContent.title}
-        content={AboutContent.text}
-        section={AboutContent.section}
-        icon="graphs.svg"
-        id="about"
-      />
-      <ContentBlock
-        type="right"
-        title={MissionContent.title}
-        content={MissionContent.text}
-        icon="product-launch.svg"
-        id="mission"
-      />
 
-      <ContentBlock
-        type="left"
-        title={ProductContent.title}
-        content={ProductContent.text}
-        icon="waving.svg"
-        id="product"
-      />
-      <ContactFrom
-        title={ContactContent.title}
-        content={ContactContent.text}
-        id="contact"
-      />
+     
     </Container>
   );
 };
 
-export default Home;
+export default  withStyles(styles)(Home);

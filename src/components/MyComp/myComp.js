@@ -11,7 +11,7 @@ const  MyComp = ()  => {
         timeout={3000} //3 secs
       />
                             }>
-        <img src={process.env.PUBLIC_URL + '/circle-cropped.png'}
+        <img src={process.env.PUBLIC_URL + '/JDP-BRANDING-04.png'}
             alt="Logo" style={{ height: '100px', width: '100px',   display: "block",
             marginLeft: "auto",
                 marginRight: "auto"

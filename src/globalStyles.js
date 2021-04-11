@@ -33,8 +33,8 @@ const Styles = createGlobalStyle`
     h4,
     h5,
     h6 {
-        font-family: 'Ubuntu', sans-serif;
-        color: #00008b;
+        font-family: 'Poppins', sans-serif;
+        color: #5085A5;
         font-size: 2.575rem;
         line-height: 3.0625rem;
       
@@ -44,8 +44,9 @@ const Styles = createGlobalStyle`
     }
 
     p {
-        color: #687864;
-        font-size: 1.125rem;
+        color: #FFF;
+		font-weight: 200;
+        font-size: 1.525rem;
     }
 
     h1 {

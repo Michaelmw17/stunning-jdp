@@ -5,7 +5,7 @@ const SVGComponent = (props) => (
     <defs>
       <style>
         {
-          ".cls-1{fill:#feba91;}.cls-2,.cls-6{fill:#fff;}.cls-2,.cls-3,.cls-8{stroke:#2e186a;stroke-linejoin:round;stroke-width:6px;}.cls-2,.cls-3{stroke-linecap:round;}.cls-3,.cls-8{fill:none;}.cls-4{fill:#2e186a;}.cls-5{fill:#5d21d1;}.cls-7{fill:#fe7624;}"
+          ".cls-1{fill:#feba91;}.cls-2,.cls-6{fill:#fff;}.cls-2,.cls-3,.cls-8{stroke:#2e186a;stroke-linejoin:round;stroke-width:6px;}.cls-2,.cls-3{stroke-linecap:round;}.cls-3,.cls-8{fill:none;}.cls-4{fill:#687864;}.cls-5{fill:#5d21d1;}.cls-7{fill:#fe7624;}"
         }
       </style>
     </defs>

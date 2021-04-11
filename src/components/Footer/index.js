@@ -1,6 +1,6 @@
 import { lazy, Fragment } from "react";
 import { Row, Col } from "antd";
-import Link from '@material-ui/core/Link';
+// import Link from '@material-ui/core/Link';
 // import i18n from "i18next";
 import { withTranslation } from "react-i18next";
 import Fade from "react-reveal/Fade";
@@ -12,39 +12,14 @@ import * as S from "./styles";
 const MyComp = lazy(() => import("../../components/MyComp/myComp"));
 const Container = lazy(() => import("../../common/Container"));
 
+const Mailto = ({ email, subject = '', body = '', children }) => {
+  let params = subject || body ? '?' : '';
+  if (subject) params += `subject=${encodeURIComponent(subject)}`;
+  if (body) params += `${subject ? '&' : ''}body=${encodeURIComponent(body)}`;
+
+  return <a href={`mailto:${email}${params}`}>{children}</a>;
+};
 const Footer = ({ t }) => {
-  // const handleChange = (event) => {
-  //   i18n.changeLanguage(event.target.value);
-  // };
-// const socialMediaIcons = [
-//   {
-//     url: 'https://github.com/andrewgbliss',
-//     className: 'fa-github-square',
-//   },
-//   {
-//     url: 'https://gitlab.com/andrewgbliss',
-//     className: 'fa-gitlab',
-//   },
-//   {
-//     url: 'https://www.npmjs.com/~andrewgbliss',
-//     className: 'fa-npm',
-//   },
-// ];
-
-
-  // const SocialLink = ({ href, src }) => {
-  //   return (
-  //     <a
-  //       href={href}
-  //       target="_blank"
-  //       rel="noopener noreferrer"
-  //       key={src}
-  //       aria-label={src}
-  //     >
-  //       <SvgIcon src={src} width="25px" height="25px" />
-  //     </a>
-  //   );
-  // };
 
   return (
     <Fragment>
@@ -61,9 +36,9 @@ const Footer = ({ t }) => {
                     Feel free to reach out.`
                   )}
                 </S.Para>
-                {/* <a href="mailto:info@jdpelectrical.com.au "> */}
+                <Mailto email="info@jdpelectrical.com.au " subject="Enquire To JPD" body="Hello world!" >
                   <S.Chat>{t(`Let's Chat`)}</S.Chat>
-                {/* </a> */}
+                </Mailto>
               </Col>
  
               <Col lg={8} md={8} sm={12} xs={24}>
@@ -71,9 +46,10 @@ const Footer = ({ t }) => {
                 <S.Large to="/" left="true">
                   {t("Ph: 0412 450 300")}
                 </S.Large>
-                <S.Large left="true" to="/">
-                  {t("E: joe@jdpelectrical.com.au")}
-                </S.Large>
+                <Mailto email="joe@jdpelectrical.com.au" subject="Enquire To JPD" body="Hello Joe!">
+                    <S.Chat>{t(`Joe@jdpelectrical.com.au`)}</S.Chat>
+                  </Mailto>
+               
               </Col>
               <Col lg={6} md={6} sm={12} xs={24} >
                 <S.Empty />
@@ -81,9 +57,9 @@ const Footer = ({ t }) => {
                 <S.Large left="true" to="/">
                   {t("Ph: 0412 479 557")}
                 </S.Large>
-                <S.Large left="true" to="/">
-                  {t("E: dom@jdpelectrical.com.au")}
-                </S.Large>
+                <Mailto email="dom@jdpelectrical.com.au" subject="Enquire To JPD" body="Hello Dom!">
+                    <S.Chat>{t(`Dom@jdpelectrical.com.au`)}</S.Chat>
+                  </Mailto>
               </Col>
               <Col lg={6} md={6} sm={12} xs={24}>
                 <S.Empty />
@@ -91,12 +67,20 @@ const Footer = ({ t }) => {
                 <S.Large left="true" to="/">
                   {t("Ph: (02) 9419 7947 ")}
                 </S.Large>
+                <Mailto email=" info@jdpelectrical.com.au" subject="Enquire To JPD" body="Hello JPD!">
+                 <S.Chat>{t(`Info@jdpelectrical.com.au`)}</S.Chat>
+                  </Mailto>
                 <S.Large left="true" to="/">
-                  {t("General email: info@jdpelectrical.com.au")}
+                  
                 </S.Large>
                 <S.Large left="true" to="/">
-                  {t("Accounts email: accounts@jdpelectrical.com.au")}
+                 
+                  {/* <a href="mailto:accounts@jdpelectrical.com.au">
+                  {t("Accounts email: accounts@jdpelectrical.com.au")}</a> */}
                 </S.Large>
+                <Mailto email=" accounts@jdpelectrical.com.au" subject="Enquire To JPD" body="Hello JPD!">
+                   <S.Chat>{t(`Accounts@jdpelectrical.com.au`)}</S.Chat>
+                  </Mailto>
               </Col>
             </Row>
             <Row type="flex" justify="space-between">
@@ -109,21 +93,27 @@ const Footer = ({ t }) => {
               </Col>
               <Col lg={8} md={8} sm={12} xs={24}>
                 <S.Title>{t("Company")}</S.Title>
-                <S.Large left="true" to="/">
+                <S.Large left="true" to="/about">
                   {t("About")}
                 </S.Large>
                 <S.Large left="true" to="/">
                   {t("Home")}
                 </S.Large>
-                <S.Large left="true" to="/">
+                
+                {/* <S.Large left="true" to="/">
                   {t("Services")}
                 </S.Large>
                 <S.Large left="true" to="/">
                   {t("Photos")}
-                </S.Large>
+                </S.Large> */}
               </Col>
-              {/* <Col lg={6} md={6} sm={12} xs={24}>
-                <S.Select>
+              <Col lg={6} md={6} sm={12} xs={24}>
+                <i className="fab fa-facebook-f fa-2x" />
+                <br/>
+                <i className="fab fa-instagram fa-2x" />
+                <br/>
+               <i className="fab fa-twitter fa-2x" />
+                {/* <S.Select>
                   <S.Label htmlFor="select-lang">{t("Language")}</S.Label>
                   <S.LangSelect
                     value={i18n.language}
@@ -132,8 +122,8 @@ const Footer = ({ t }) => {
                     <option value="en">English</option>
                     <option value="es">Español</option>
                   </S.LangSelect>
-                </S.Select>
-              </Col> */}
+                </S.Select> */}
+              </Col>
             </Row>
           </Container>
         </S.Footer>
@@ -147,13 +137,14 @@ const Footer = ({ t }) => {
             >
               <S.NavLink to="/">
                 <S.LogoContainer>
-                  <Link to="/" >
+                  <MyComp />
+                  {/* <Link to="/" > */}
                 {/* <Suspense fallback={
                             // <Spinner animation="border" />
                             }> */}
-                                <MyComp /> 
+                                
                     {/* </Suspense> */}
-                </Link>
+                {/* </Link> */}
                   {/* <SvgIcon
                     src="logo.svg"
                     aria-label="homepage"

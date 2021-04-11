@@ -31,12 +31,12 @@ export const ServiceWrapper = styled.div`
 
 export const MinTitle = styled.h6`
   font-size: 1rem;
-  line-height: 1rem;
+  line-height: 1.2rem;
   padding: 0.5rem 0;
 `;
 
 export const MinPara = styled.p`
-  font-size: 0.75rem;
+  font-size: 0.9rem;
 `;
 
 export const ServiceItem = styled(Col)`

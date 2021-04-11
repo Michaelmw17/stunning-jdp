@@ -2,9 +2,10 @@ import { lazy, Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
 
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+// import Header from "../components/Header";
+
 import About from "../pages/About/About"
-import Services from "../pages/Services/services"
+import First from "../pages/First"
 import Contact from "../pages/Contact/contact"
 import Home from "../pages/Home"
 // import FullWidthGrid from "../components/LightBlub/lightBlub";
@@ -16,7 +17,7 @@ const Router = () => {
   return (
     <Suspense fallback={null}>
       <GlobalStyles />
-      <Header />
+      
       <Switch>
         {routes.map((routeItem) => {
           return (
@@ -35,8 +36,8 @@ const Router = () => {
         <Route path="/About">
       <About />
     </Route>
-        <Route path="/services">
-      <Services />
+        <Route path="/First">
+      <First />
     </Route>
         <Route path="/contact">
       <Contact />

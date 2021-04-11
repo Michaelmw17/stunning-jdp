@@ -61,24 +61,50 @@ function Services() {
         id="product"
       />
 
-    </Container>
+      </Container>
+        <div className="team-section">
+        <div className="inner-width">
+          <h2>Meet our team</h2>
+          <div className="pers">
+            <div className="pe">
+              <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="rafeh" />
+              <div className="p-name">Joe Panetta</div>
+              <div className="p-des">Engineer</div>
+              <div className="p-sm">
+                {/* <a href="#"><i className="fab fa-facebook-f" /></a>
+                <a href="#"><i className="fab fa-twitter" /></a>
+                <a href="#"><i className="fab fa-instagram" /></a> */}
+                {/* <a href="#"><i className="fab fa-tumblr" /></a> */}
+              </div>
+            </div>
+            <div className="pe">
+              <img src="https://randomuser.me/api/portraits/men/60.jpg" alt="rafeh" />
+              <div className="p-name">Anna Panetta</div>
+              <div className="p-des">Engineer</div>
+              <div className="p-sm">
+                {/* <a href="#"><i className="fab fa-facebook-f" /></a>
+                <a href="#"><i className="fab fa-twitter" /></a>
+                <a href="#"><i className="fab fa-instagram" /></a> */}
+                {/* <a href="#"><i className="fab fa-tumblr" /></a> */}
+              </div>
+            </div>
+            <div className="pe">
+              <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="rafeh" />
+              <div className="p-name">Dominic Panetta</div>
+              <div className="p-des">Engineer</div>
+              <div className="p-sm">
+                {/* <a href="#"><i className="  fab fa-facebook-f" /></a>
+                <a href="#"><i className="fab fa-twitter" /></a>
+                <a href="#"><i className="fab fa-instagram" /></a> */}
+                {/* <a href="#"><i className="fab fa-tumblr" /></a> */}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
 
-// const Wrapper = styled.div`
-//   min-height: calc(100vh - 50px);
-//   background-color: #00d38a;
-//   padding: 20px;
-
-//   span {
-//     color: #fff;
-//     font-size: 40px;
-//   }
-
-//   section {
-//     color: #fff;
-//   }
-// `;
 
 export default Services;
