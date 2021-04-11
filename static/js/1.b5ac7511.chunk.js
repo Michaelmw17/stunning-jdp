@@ -1,0 +1,2 @@
+(this["webpackJsonpmy-app"]=this["webpackJsonpmy-app"]||[]).push([[1],{220:function(t,e,i){},252:function(t,e,i){"use strict";i.r(e);var n=i(0),a=i(94),p=i.n(a),s=(i(220),i(1));e.default=function(){return Object(s.jsx)(n.Suspense,{fallback:Object(s.jsx)(p.a,{type:"Puff",color:"#00BFFF",height:100,width:100,timeout:3e3}),children:Object(s.jsx)("img",{src:"/stunning-jdp/JDP-BRANDING-04.png",alt:"Logo",style:{height:"100px",width:"100px",display:"block",marginLeft:"auto",marginRight:"auto"},"max-age":"31536000"})})}}}]);
+//# sourceMappingURL=1.b5ac7511.chunk.js.map
