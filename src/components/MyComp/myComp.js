@@ -1,7 +1,8 @@
 import React, { Suspense } from "react";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-const  MyComp = ()  => {
+
+const MyComp = () => {
     return<Suspense fallback={
                         <Loader
         type="Puff"
@@ -12,8 +13,8 @@ const  MyComp = ()  => {
       />
                             }>
         <img src={process.env.PUBLIC_URL + '/JDP-BRANDING-04.png'}
-            alt="Logo" style={{ height: '100px', width: '100px',   display: "block",
-            marginLeft: "auto",
+            alt="Logo" style={{ height: '100px', width: '120px',   display: "block",
+                marginLeft: "auto",
                 marginRight: "auto"
             }}
             max-age="31536000"

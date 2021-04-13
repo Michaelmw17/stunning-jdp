@@ -35,7 +35,7 @@ const Styles = createGlobalStyle`
     h6 {
         font-family: 'Poppins', sans-serif;
         color: #5085A5;
-        font-size: 2.575rem;
+        font-size: 2.975rem;
         line-height: 3.0625rem;
       
         @media only screen and (max-width: 414px) {
@@ -44,11 +44,11 @@ const Styles = createGlobalStyle`
     }
 
     p {
-        color: #FFF;
+        color: #000;
 		font-weight: 200;
         font-size: 1.525rem;
     }
-
+   
     h1 {
         font-weight: 600;
     }
@@ -100,6 +100,7 @@ const Styles = createGlobalStyle`
 }
  body.active {
 	 background: #f4f6f7;
+	 color: black
 }
  .container {
 	 margin: auto;

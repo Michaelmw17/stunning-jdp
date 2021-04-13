@@ -1,9 +1,12 @@
-import { useState, Fragment, lazy } from "react";
+import { useState, Fragment, lazy, Suspense } from "react";
+
+
+import Spinner from 'react-bootstrap/Spinner';
 import { Row, Col, Drawer } from "antd";
 import { CSSTransition } from "react-transition-group";
 import { withTranslation } from "react-i18next";
 import { makeStyles } from '@material-ui/core/styles';
-import { grey } from '@material-ui/core/colors';
+// import { grey } from '@material-ui/core/colors';
 // import SvgIcon from '@material-ui/core/SvgIcon';
 import BuildIcon from '@material-ui/icons/Build';
 // import ApartmentIcon from '@material-ui/icons/Apartment';
@@ -108,10 +111,12 @@ const useStyles = makeStyles((theme) => ({
         <Row type="flex" justify="space-between" gutter={20}>
           <S.LogoContainer to="/" aria-label="homepage">
             {/* <SvgIcons src="logo.svg" /> */}
-             
+             <Suspense fallback={
+                            <Spinner animation="border" />
+                            }>
                 
-                                <MyComp /> 
-                    
+                                <MyComp rel="preload" /> 
+                    </Suspense>
                 
           </S.LogoContainer>
           <S.NotHidden>

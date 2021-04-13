@@ -5,9 +5,9 @@ import LandingContent from "../../content/LandingContent.json";
 import LandingHeader from "../../components/LandingHeader";
 import { Link } from 'react-router-dom';
 import about from '../About/About'
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 import './homeStyles.css';
-import GoogleMap from '../First'
+// import GoogleMap from '../First'
 
 import {  Route } from "react-router-dom";
 import FullWidthGrid from "../../components/LightBlub/lightBlub";
@@ -23,10 +23,10 @@ const Container = lazy(() => import("../../common/Container"));
 
 const styles = theme => ({
   fab: {
-    margin: theme.spacing.unit,
+    margin: theme.spacing(1),
   },
   extendedIcon: {
-    marginRight: theme.spacing.unit,
+    marginRight: theme.spacing(1),
   },
 });
 const Home = (props) => {
@@ -45,11 +45,12 @@ const Home = (props) => {
      <div>
         <div className="Button">
           <Link to="/about">
-      <Fab variant="extended" aria-label="Delete" className={classes.fab}>
+            <Fab variant="extended" aria-label="Delete"
+              className={classes.fab} onClick={about} >
         <NavigationIcon className={classes.extendedIcon} />
-      <Button onClick={about} >
+      
           Enter JPD
-        </Button>
+        
           </Fab>
         </Link>
         </div>
