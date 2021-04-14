@@ -1,62 +1,4 @@
-// import React, {useState} from 'react'
-// import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 
-// const containerStyle = {
-//               width: "80%",
-//               height: `50vh`,
-//               marginLeft: '100px',
-//               marginRight: '100px',
-//               marginTop: '40px',
-//               marginBottom: '40px'
-// };
-
-
-// function First() {
-//   const { isLoaded } = useJsApiLoader({
-//     id: 'google-map-script',
-//     googleMapsApiKey: "AIzaSyDClsZrp7BOREKiMZvP3P8lZhdh3UCFkqE"
-//   })
-// const centering = {
-//   lat: -33.809736320786705,
-//   lng: 151.1484024775667
-// };
-//   const [map, setMap] = React.useState(null)
-
-//   const onLoad = React.useCallback(function callback(map) {
-//     const bounds = new window.google.maps.LatLngBounds();
-//     map.fitBounds(bounds);
-//     setMap(map)
-//   }, [])
-
-//   const onUnmount = React.useCallback(function callback(map) {
-//     setMap(null)
-//   }, [])
-// const [isOpened, setOpened] = useState(false);
-//   return isLoaded ? (
-//       <GoogleMap
-//         mapContainerStyle={containerStyle}
-//         center={centering}
-//         zoom={16}
-//         defaultZoom={15}
-//         onLoad={onLoad}
-//         onUnmount={onUnmount}
-//     >
-//       <Marker
-//           title='JPD'
-//           position={centering}
-//           onClick={() => {
-//             setOpened(!isOpened);
-//           }}
-//       />
-      
-      
-//         { /* Child components, such as markers, info windows, etc. */ }
-//         <></>
-//       </GoogleMap>
-//   ) : <></>
-// }
-
-// export default React.memo(First)
 import React, { useState } from "react";
 import {
   GoogleMap,
@@ -103,10 +45,10 @@ const center = {
 
 function First(props) {
   const [isOpened, setOpened] = useState(false);
-const testData = {
-  text: "  495 Friday Hut Road, Possum Creek",
-  link: "https://www.google.com/maps/place/495+Friday+Hut+Rd,+Possum+Creek+NSW+2479/data=!4m2!3m1!1s0x6b9088b3f117865d:0x538c627863a29552?sa=X&ved=2ahUKEwjC2YHPpaPvAhXtzjgGHWruCisQ8gEwAHoECAQQAQ"
-};
+// const testData = {
+//   text: "  495 Friday Hut Road, Possum Creek",
+//   link: "https://www.google.com/maps/place/495+Friday+Hut+Rd,+Possum+Creek+NSW+2479/data=!4m2!3m1!1s0x6b9088b3f117865d:0x538c627863a29552?sa=X&ved=2ahUKEwjC2YHPpaPvAhXtzjgGHWruCisQ8gEwAHoECAQQAQ"
+// };
   return (
     <LoadScript googleMapsApiKey="AIzaSyDClsZrp7BOREKiMZvP3P8lZhdh3UCFkqE"
       >

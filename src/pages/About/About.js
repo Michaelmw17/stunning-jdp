@@ -8,6 +8,7 @@ import ContactContent from "../../content/ContactContent.json";
 import IntroContent from "../../content/IntroContent.json";
 import Header from "../../components/Header";
 import GoogleMap from '../First'
+// import MyButton from '../../components/MyButton/index'
 
 import './about.css'
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
