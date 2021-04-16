@@ -13,9 +13,10 @@ function Contact() {
     <div>
           <section>
               <ContactFrom
-        title={ContactContent.title}
-        content={ContactContent.text}
-        id="contact"
+            title={ContactContent.title}
+            content={ContactContent.text}
+            
+            id="contact"
       />
      
       </section>

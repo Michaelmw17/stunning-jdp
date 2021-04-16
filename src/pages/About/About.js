@@ -2,14 +2,15 @@ import React, { lazy } from 'react';
 import MissionContent from "../../content/MissionContent.json";
 // import Loader from "react-loader-spinner";
 import MiddleBlockContent from "../../content/MiddleBlockContent.json";
-import AboutContent from "../../content/AboutContent.json";
-import ProductContent from "../../content/ProductContent.json";
+// import AboutContent from "../../content/AboutContent.json";
+// import ProductContent from "../../content/ProductContent.json";
 import ContactContent from "../../content/ContactContent.json";
 import IntroContent from "../../content/IntroContent.json";
 import Header from "../../components/Header";
 import GoogleMap from '../First'
 // import MyButton from '../../components/MyButton/index'
-
+import Carousel from "../../components/CarouselTest/Carousel"
+import CarouselServices from "../../components/CarouselTopServices/Carousel"
 import './about.css'
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const ContactFrom = lazy(() => import("../../components/ContactForm"));
@@ -21,6 +22,7 @@ function First() {
     <div>
       <Container>
         <Header />
+        {/* <Carousel /> */}
         <ContentBlock
         type="right"
         first="true"
@@ -35,32 +37,40 @@ function First() {
         content={MiddleBlockContent.text}
         button={MiddleBlockContent.button}
       />
-      <ContentBlock
+      {/* <ContentBlock
         type="left"
         title={AboutContent.title}
         content={AboutContent.text}
         section={AboutContent.section}
         icon="graphs.svg"
         id="about"
-      />
+      /> */}
+        <div id="Service">
+        <CarouselServices
+           /></div>
       <ContentBlock
         type="right"
         title={MissionContent.title}
         content={MissionContent.text}
         icon="product-launch.svg"
-        id="mission"
-      />
-      <ContentBlock
+          id="mission"
+          
+        />
+        <div id="Review">
+        <Carousel
+         
+        /></div>
+      {/* <ContentBlock
         type="left"
         title={ProductContent.title}
         content={ProductContent.text}
         icon="waving.svg"
         id="product"
-      />
+      /> */}
       <ContactFrom
         title={ContactContent.title}
         content={ContactContent.text}
-        id="contact"
+        id="Team"
         />
          <GoogleMap/>
       </Container>

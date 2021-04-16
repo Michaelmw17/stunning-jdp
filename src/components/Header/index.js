@@ -6,20 +6,14 @@ import { Row, Col, Drawer } from "antd";
 import { CSSTransition } from "react-transition-group";
 import { withTranslation } from "react-i18next";
 import { makeStyles } from '@material-ui/core/styles';
-// import { grey } from '@material-ui/core/colors';
-// import SvgIcon from '@material-ui/core/SvgIcon';
 import BuildIcon from '@material-ui/icons/Build';
-// import ApartmentIcon from '@material-ui/icons/Apartment';
-import CameraAltIcon from '@material-ui/icons/CameraAlt';
-// import PhoneIcon from '@material-ui/icons/Phone';
-import GroupIcon from '@material-ui/icons/Group';
+import InfoIcon from '@material-ui/icons/Info';
 import HomeIcon from '@material-ui/icons/Home';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
+import RateReviewIcon from '@material-ui/icons/RateReview';
         import { Link } from 'react-router-dom';
 import * as S from "./styles";
-// const SvgIcons = lazy(() => import("../../common/SvgIcon"));
 const MyComp = lazy(() => import("../../components/MyComp/myComp"));
-// const Button = lazy(() => import("../../common/Button"));
 
 const Header = ({ t }) => {
   const [isNavVisible] = useState(false);
@@ -42,13 +36,6 @@ const useStyles = makeStyles((theme) => ({
   },
   
 }));
-//   function HomeIcon(props) {
-//   return (
-//     <SvgIcon {...props}>
-//       <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-//     </SvgIcon>
-//   );
-// }
   const MenuItem = () => {
     const classes = useStyles();
     const scrollTo = (id) => {
@@ -63,19 +50,18 @@ const useStyles = makeStyles((theme) => ({
         <div className={classes.root}>
           
         <S.CustomNavLinkSmall onClick={() => scrollTo("mission")}>
-          {/* <HomeIcon style={{ color: green[500], fontSize: 40   }} /> */}
-          <GroupIcon style={{color:"#5085A5", fontSize: 40   }} />
+          <InfoIcon style={{color:"#5085A5", fontSize: 40   }} />
           <S.Span >{t("About")}</S.Span>
         </S.CustomNavLinkSmall>
-        <S.CustomNavLinkSmall onClick={() => scrollTo("about")}>
+        <S.CustomNavLinkSmall onClick={() => scrollTo("Service")}>
           <BuildIcon style={{ color:"#5085A5", fontSize: 40   }} />
             <S.Span className="Span">{t("Services")}</S.Span>
         </S.CustomNavLinkSmall>
-          <S.CustomNavLinkSmall onClick={() => scrollTo("product")}>
-            <CameraAltIcon style={{ color:"#5085A5", fontSize: 40 }} />
-          <S.Span>{t("Photos")}</S.Span>
+          <S.CustomNavLinkSmall onClick={() => scrollTo("Review")}>
+            <RateReviewIcon style={{ color:"#5085A5", fontSize: 40 }} />
+          <S.Span>{t("Reviews")}</S.Span>
         </S.CustomNavLinkSmall>
-        <S.CustomNavLinkSmall onClick={() => scrollTo("product")}>
+        <S.CustomNavLinkSmall onClick={() => scrollTo("Team")}>
           <ContactMailIcon style={{ color:"#5085A5", fontSize: 40  }} />
           <S.Span>{t("Contact")}</S.Span>
           </S.CustomNavLinkSmall>
@@ -85,19 +71,12 @@ const useStyles = makeStyles((theme) => ({
               <S.Span>{t("Home")}</S.Span>
               </Link>
           </S.CustomNavLinkSmall>
-          {/* <Link to="/about">
-          <HomeIcon style={{ color: grey[500], fontSize: 55   }} />
-          <GroupIcon style={{ color: grey[500], fontSize: 40   }} />
-          <S.Span >{t("Welcome")}</S.Span>
-        </Link> */}
         
         <S.CustomNavLinkSmall
           style={{ width: "180px" }}
-          onClick={() => scrollTo("contact")}
+          onClick={() => scrollTo("Team")}
         >
           <S.Span>
-            {/* <PhoneIcon style={{ color: green[500] }} /> */}
-            {/* <Button>{t("Contact")}</Button> */}
           </S.Span>
           </S.CustomNavLinkSmall>
           </div>
@@ -110,7 +89,6 @@ const useStyles = makeStyles((theme) => ({
       <S.Container>
         <Row type="flex" justify="space-between" gutter={20}>
           <S.LogoContainer to="/" aria-label="homepage">
-            {/* <SvgIcons src="logo.svg" /> */}
              <Suspense fallback={
                             <Spinner animation="border" />
                             }>

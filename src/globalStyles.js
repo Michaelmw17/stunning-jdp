@@ -54,10 +54,10 @@ const Styles = createGlobalStyle`
     a {
         text-decoration: none;
         outline: none;
-        color: #2E186A;
+        color: #EAB642;
 
         :hover {
-            color: #2e186a;
+            color: #EAB642;
         }
     }
     
@@ -86,3 +86,11 @@ const Styles = createGlobalStyle`
 `;
 
 export default Styles;
+export const GlobalStyles = createGlobalStyle`
+  body {
+    background: ${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.text};
+    font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
+    transition: all 0.50s linear;
+  }
+  `
