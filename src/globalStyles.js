@@ -6,6 +6,7 @@ const Styles = createGlobalStyle`
     html,
     a {
         font-family: 'Ubuntu', sans-serif;
+        
     }
 
 
@@ -15,6 +16,7 @@ const Styles = createGlobalStyle`
         border: 0;
         outline: 0;
         overflow-x: hidden;
+        
     }
 .Span {
 	color: red[500],
@@ -33,7 +35,7 @@ const Styles = createGlobalStyle`
     h5,
     h6 {
         font-family: 'Poppins', sans-serif;
-        color: #EAB642;
+        color: #000;
         font-size: 2.975rem;
         line-height: 3.0625rem;
       

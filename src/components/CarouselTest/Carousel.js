@@ -18,16 +18,16 @@ export default class CarouselServices extends Component {
         <Slider {...settings}>
           <div >
             <h2> "It's just amazing. Absolutely wonderful!"
-               <small> - Claudelle .</small></h2>
+               <p><small> - Claudelle .</small></p></h2>
             
           </div>
           <div>
             <h2> "It's just amazing. Absolutely wonderful!"
-               <small> - Claudelle .</small></h2>
+               <p><small> - Claudelle .</small></p></h2>
           </div>
           <div>
-            <h2> "It's just amazing. Absolutely wonderful!"
-               <small> - Claudelle .</small></h2>
+             <h2> "It's just amazing. Absolutely wonderful!"
+               <p><small> - Claudelle .</small></p></h2>
           </div>
           
         </Slider>

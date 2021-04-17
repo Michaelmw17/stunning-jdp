@@ -101,7 +101,7 @@ export const Outline = styled(MenuOutlined)`
 
 export const Span = styled.div`
   cursor: pointer;
-  color: #0000CD;
+  color: #1890FF;
 	font-size: 20;
 	position: "static";
   

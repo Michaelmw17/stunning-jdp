@@ -59,10 +59,10 @@ function First(props) {
             }}
         mapContainerStyle={{
               height: `50vh`,
-              width: '80%',
+              width: '70%',
               marginLeft: '40px',
-              marginRight: '40px',
-              marginTop: '40px',
+              marginRight: '10px',
+              marginTop: '0px',
               marginBottom: '40px'
         }}
         zoom={15}

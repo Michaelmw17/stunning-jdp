@@ -11,7 +11,7 @@ import GoogleMap from '../First'
 // import MyButton from '../../components/MyButton/index'
 import Carousel from "../../components/CarouselTest/Carousel"
 import CarouselServices from "../../components/CarouselTopServices/Carousel"
-import { BrowserRouter, Route, Link } from "react-router-dom";
+// import { BrowserRouter, Route, Link } from "react-router-dom";
 
 import './about.css'
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
