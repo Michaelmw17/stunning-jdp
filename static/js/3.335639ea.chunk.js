@@ -1,2 +1,0 @@
-(this["webpackJsonpmy-app"]=this["webpackJsonpmy-app"]||[]).push([[3],{259:function(t,e,a){"use strict";a.r(e);var i=a(0),n=a(206),p=a.n(n),s=(a(225),a(1));e.default=function(){return Object(s.jsx)(i.Suspense,{fallback:Object(s.jsx)(p.a,{type:"Puff",color:"#00BFFF",height:100,width:100,timeout:3e3}),children:Object(s.jsx)("img",{src:"/stunning-jdp/JDP-BRANDING-04.png",alt:"Logo",style:{height:"100px",width:"120px",display:"block",marginLeft:"auto",marginRight:"auto"},"max-age":"31536000"})})}}}]);
-//# sourceMappingURL=3.335639ea.chunk.js.map
