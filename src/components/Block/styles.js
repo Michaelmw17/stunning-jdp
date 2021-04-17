@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Content = styled.p`
   margin-top: 1.5rem;
+  font-size: 20px
 `;
 
 export const Container = styled.div`
