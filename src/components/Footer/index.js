@@ -20,7 +20,12 @@ const Mailto = ({ email, subject = '', body = '', children }) => {
   return <a href={`mailto:${email}${params}`}>{children}</a>;
 };
 const Footer = ({ t }) => {
-
+const scrollTo = (id) => {
+    const element = document.getElementById(id);
+    element.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <Fragment>
       <Fade bottom>
@@ -93,19 +98,22 @@ const Footer = ({ t }) => {
               </Col>
               <Col lg={8} md={8} sm={12} xs={24}>
                 <S.Title>{t("Company")}</S.Title>
-                <S.Large left="true" to="/about">
+                <S.Large left="true" onClick={() => scrollTo("mission")}>
                   {t("About")}
                 </S.Large>
                 <S.Large left="true" to="/">
                   {t("Home")}
                 </S.Large>
                 
-                {/* <S.Large left="true" to="/">
+                <S.Large left="true" onClick={() => scrollTo("Service")}>
                   {t("Services")}
                 </S.Large>
-                <S.Large left="true" to="/">
-                  {t("Photos")}
-                </S.Large> */}
+                <S.Large left="true" onClick={() => scrollTo("Review")}>
+                  {t("Reviews")}
+                </S.Large>
+                <S.Large left="true" onClick={() => scrollTo("Team")}>
+                  {t("Contact")}
+                </S.Large>
               </Col>
               <Col lg={6} md={6} sm={12} xs={24}>
                 <i className="fab fa-facebook-f fa-2x" />

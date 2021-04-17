@@ -70,14 +70,14 @@ const Home = (props, i) => {
   
 
         <h1 style={{textAlign: 'center', marginTop:30, color: '#EAB642'}}>Enter JDP Electrical Services</h1>
-      <ContentBlock
+      {/* <ContentBlock
         type="right"
         first="true"
         title={LandingContent.title}
         content={LandingContent.text}
         icon="developer.svg"
         id="intro"
-      />
+      /> */}
     </Container>
         </ThemeProvider>
         
