@@ -98,20 +98,20 @@ const scrollTo = (id) => {
               <Col lg={8} md={8} sm={12} xs={24}>
                 <S.Title>{t("Company")}</S.Title>
                 {/*Errors below on HOME page*/}
-                <S.Large left="true" onClick={() => scrollTo("mission")}>
+                <S.Large left="true"  to="/about" onClick={() => scrollTo("mission")}>
                   {t("About")}
                 </S.Large>
                 <S.Large left="true" to="/">
                   {t("Home")}
                 </S.Large>
                 
-                <S.Large left="true" onClick={() => scrollTo("Service")}>
+                <S.Large left="true"  to="/about" onClick={() => scrollTo("Service")}>
                   {t("Services")}
                 </S.Large>
-                <S.Large left="true" onClick={() => scrollTo("Review")}>
+                <S.Large left="true"  to="/about" onClick={() => scrollTo("Review")}>
                   {t("Reviews")}
                 </S.Large>
-                <S.Large left="true" onClick={() => scrollTo("Team")}>
+                <S.Large left="true"  to="/about" onClick={() => scrollTo("Team")}>
                   {t("Contact")}
                 </S.Large>
               </Col>
