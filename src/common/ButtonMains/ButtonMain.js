@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-// import Button from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button';
 import './button.css'
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,9 +28,10 @@ export default function OutlinedButtons() {
           <div id="example1">
               {/* <label> */}
                   {/* <input type="checkbox" name=""></input> */}
-              <span title="Click to Enter" variant="notOutlined" color="primary" style={{
+              <Button title="Click to Enter" variant="outlined" color="primary" style={{
                   "position": "absolute", "top": "0", "left": "0", "display": "block",
-                  "width": "150%", "height": "60%", "background": "linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(211,211,211,1) 100%)", "borderRadius": "20%", "boxShadow": "0 0 50px #D3D3D3,\n    inset 0 0 50px rgba(255,255,255),\n    inset 0 1px 1px #71d9ff,\n    0 0 0 1px #D3D3D3,\n    0 0 0 3px #707070,\n    0 0 0 5px #D3D3D3",
+          "width": "150%", "height": "60%",
+          "background": "linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(211,211,211,1) 100%)", "borderRadius": "20%", "boxShadow": "0 0 50px #D3D3D3,\n    inset 0 0 50px rgba(255,255,255),\n    inset 0 1px 1px #71d9ff,\n    0 0 0 1px #D3D3D3,\n    0 0 0 3px #707070,\n    0 0 0 5px #D3D3D3",
 
           }}>
             <span  style={{
@@ -42,7 +43,7 @@ export default function OutlinedButtons() {
           }}>
 
             </span>
-        </span>
+        </Button>
         
       {/* </label> */}
     
