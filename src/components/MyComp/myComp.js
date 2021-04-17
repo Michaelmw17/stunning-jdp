@@ -13,9 +13,15 @@ const MyComp = () => {
       />
                             }>
         <img src={process.env.PUBLIC_URL + '/JDP-BRANDING-04.png'}
-            alt="Logo" style={{ height: '100px', width: '120px',   display: "block",
+            alt="Logo" style={{
+               display: "absolute",
+                background: '#FFF',
                 marginLeft: "auto",
-                marginRight: "auto"
+                marginRight: "auto",
+                width: "100%",
+                height: 'auto',
+                maxWidth: "100%",
+                maxHeight: "60px",
             }}
             max-age="31536000"
         />

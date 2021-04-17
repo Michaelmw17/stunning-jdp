@@ -1,5 +1,5 @@
 import { useState, Fragment, lazy, Suspense } from "react";
-
+import './stylesHeader.css'
 import '../../globalStyles'
 import Spinner from 'react-bootstrap/Spinner';
 import { Row, Col, Drawer } from "antd";
@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     '& > svg': {
       margin: theme.spacing(2),
+      
     },
     
   },
@@ -51,24 +52,24 @@ const useStyles = makeStyles((theme) => ({
           
         <S.CustomNavLinkSmall onClick={() => scrollTo("mission")}>
           <InfoIcon style={{color:"#EAB642", fontSize: 40   }} />
-          <S.Span ><a>{t("About")}</a></S.Span>
+          <S.Span ><span>{t("About")}</span></S.Span>
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall onClick={() => scrollTo("Service")}>
           <BuildIcon style={{ color:"#EAB642", fontSize: 40   }} />
-            <S.Span className="Span"><a>{t("Services")}</a></S.Span>
+            <S.Span className="Span"><span>{t("Services")}</span></S.Span>
         </S.CustomNavLinkSmall>
           <S.CustomNavLinkSmall onClick={() => scrollTo("Review")}>
             <RateReviewIcon style={{ color:"#EAB642", fontSize: 40 }} />
-          <S.Span><a>{t("Reviews")}</a></S.Span>
+          <S.Span><span>{t("Reviews")}</span></S.Span>
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall onClick={() => scrollTo("Team")}>
           <ContactMailIcon style={{ color:"#EAB642", fontSize: 40  }} />
-          <S.Span><a>{t("Contact")}</a></S.Span>
+          <S.Span><span>{t("Contact")}</span></S.Span>
           </S.CustomNavLinkSmall>
           <S.CustomNavLinkSmall>
             <Link to="/">
           <HomeIcon style={{ color:"#EAB642", fontSize: 40  }} />
-              <S.Span>{t("Home")}</S.Span>
+              <S.Span><span>{t("Home")}</span></S.Span>
               </Link>
           </S.CustomNavLinkSmall>
         

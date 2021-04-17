@@ -1,4 +1,6 @@
-import { useState, Fragment, lazy } from "react";
+import { useState, Fragment, lazy, Suspense } from "react";
+
+import Spinner from 'react-bootstrap/Spinner';
 import { Row, Col, Drawer } from "antd";
 import { CSSTransition } from "react-transition-group";
 import { withTranslation } from "react-i18next";
@@ -6,7 +8,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import HomeIcon from '@material-ui/icons/Home';
 import * as S from "./styles";
-
+import Tooltip from "react-simple-tooltip"
+import {css} from "styled-components"
+ 
 const MyComp = lazy(() => import("../MyComp/myComp"));
 
 const Header = ({ t }) => {
@@ -44,11 +48,33 @@ const useStyles = makeStyles((theme) => ({
       <Fragment>
          <div className={classes.root}>
       
-          <Link to="/about">
+          
+            <Tooltip
+            arrow={10}
+  background="#F8F8FF"
+  border="#0e1111"
+  color="#0e1111"
+  content="Enter JDP Electrical"
+  fadeDuration={3}
+  fadeEasing="linear"
+  fixed={false}
+  fontFamily="inherit"
+  fontSize="inherit"
+  offset={0}
+  padding={15}
+  placement="right"
+  radius={10}
+  zIndex={1}
             
+    customCss={css`
+      white-space: wrap;
+    `}
+  ><Link to="/about">
           <HomeIcon style={{ color:"#EAB642", fontSize: 55   }} />
-          <S.Span >{t("Welcome")}</S.Span>
-        </Link>
+              <S.Span >{t("Welcome")}</S.Span>
+          </Link>
+          </Tooltip>
+        
         <S.CustomNavLinkSmall
           style={{ width: "180px" }}
           onClick={() => scrollTo("contact")}
@@ -63,14 +89,19 @@ const useStyles = makeStyles((theme) => ({
 
   return (
     <S.Header>
-      <S.Container>
+      <S.Header>
         <Row type="flex" justify="space-between" gutter={20}>
           <S.LogoContainer to="/" aria-label="homepage">
-                  <MyComp /> 
+                  <Suspense fallback={
+                            <Spinner animation="border" />
+                            }>
+                
+                                <MyComp rel="preload" /> 
+                    </Suspense>
           </S.LogoContainer>
-          <S.NotHidden>
+          {/* <S.NotHidden> */}
             <MenuItem />
-          </S.NotHidden>
+          {/* </S.NotHidden> */}
           <S.Burger onClick={showDrawer}>
             <S.Outline />
           </S.Burger>
@@ -95,7 +126,7 @@ const useStyles = makeStyles((theme) => ({
             <MenuItem />
           </Drawer>
         </CSSTransition>
-      </S.Container>
+      </S.Header>
     </S.Header>
   );
 };

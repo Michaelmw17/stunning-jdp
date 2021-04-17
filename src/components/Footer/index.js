@@ -1,9 +1,11 @@
-import { lazy, Fragment } from "react";
+import { lazy, Fragment,Suspense  } from "react";
 import { Row, Col } from "antd";
+import Spinner from 'react-bootstrap/Spinner';
 // import Link from '@material-ui/core/Link';
 // import i18n from "i18next";
 import { withTranslation } from "react-i18next";
 import Fade from "react-reveal/Fade";
+import {  Link } from 'react-router-dom';
 // import { GrInstagram } from 'react-icons/fa';
 // import SocialMediaIcons from 'react-social-media-icons';
 import * as S from "./styles";
@@ -79,9 +81,6 @@ const scrollTo = (id) => {
                   
                 </S.Large>
                 <S.Large left="true" to="/">
-                 
-                  {/* <a href="mailto:accounts@jdpelectrical.com.au">
-                  {t("Accounts email: accounts@jdpelectrical.com.au")}</a> */}
                 </S.Large>
                 <Mailto email=" accounts@jdpelectrical.com.au" subject="Enquire To JPD" body="Hello JPD!">
                    <S.Chat>{t(`Accounts@jdpelectrical.com.au`)}</S.Chat>
@@ -98,6 +97,7 @@ const scrollTo = (id) => {
               </Col>
               <Col lg={8} md={8} sm={12} xs={24}>
                 <S.Title>{t("Company")}</S.Title>
+                {/*Errors below on HOME page*/}
                 <S.Large left="true" onClick={() => scrollTo("mission")}>
                   {t("About")}
                 </S.Large>
@@ -121,16 +121,6 @@ const scrollTo = (id) => {
                 <i className="fab fa-instagram fa-2x" />
                 <br/>
                <i className="fab fa-twitter fa-2x" />
-                {/* <S.Select>
-                  <S.Label htmlFor="select-lang">{t("Language")}</S.Label>
-                  <S.LangSelect
-                    value={i18n.language}
-                    id="select-lang"
-                  >
-                    <option value="en">English</option>
-                    <option value="es">Español</option>
-                  </S.LangSelect>
-                </S.Select> */}
               </Col>
             </Row>
           </Container>
@@ -143,15 +133,17 @@ const scrollTo = (id) => {
               align="middle"
               style={{ paddingTop: "3rem" }}
             >
-              <S.NavLink to="/">
+              <Link to="/" >
                 <S.LogoContainer>
-                  <MyComp />
+                  <Suspense fallback={
+                            <Spinner animation="border" />
+                            }>
+                    <MyComp />
+                  
                   {/* <Link to="/" > */}
-                {/* <Suspense fallback={
-                            // <Spinner animation="border" />
-                            }> */}
+
                                 
-                    {/* </Suspense> */}
+                    </Suspense>
                 {/* </Link> */}
                   {/* <SvgIcon
                     src="logo.svg"
@@ -160,7 +152,8 @@ const scrollTo = (id) => {
                     height="64px"
                   /> */}
                 </S.LogoContainer>
-              </S.NavLink>
+              {/* </S.NavLink> */}
+              </Link>
               <S.FooterContainer>
                 {/* <SocialMediaIcons
                     icons={socialMediaIcons}

@@ -20,11 +20,13 @@ export const Container = styled.div`
   padding-left: 25px;
   margin-right: auto;
   margin-left: auto;
+  
 `;
 
 export const NavLink = styled.div`
   display: inline-block;
   text-align: center;
+  
 `;
 // export const Span = styled.div`
 //   color: red[500],
@@ -57,6 +59,7 @@ export const ContactWrapper = styled.div`
 export const Burger = styled.div`
   @media only screen and (max-width: 768px) {
     display: block !important;
+    
   }
   padding: 1.25rem 1.25rem;
   display: none;
@@ -65,6 +68,7 @@ export const Burger = styled.div`
 export const NotHidden = styled.div`
   @media only screen and (max-width: 768px) {
     display: none;
+    
   }
 `;
 
@@ -74,6 +78,7 @@ export const Menu = styled.h5`
   padding: 0 1.56rem 0 0;
   font-weight: 600;
   border-bottom: 5px solid #111b47;
+  
 `;
 
 export const CustomNavLinkSmall = styled(NavLink)`

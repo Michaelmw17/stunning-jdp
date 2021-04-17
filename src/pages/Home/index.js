@@ -1,20 +1,24 @@
 import React, {  lazy } from "react";
-import LandingContent from "../../content/LandingContent.json";
+// import LandingContent from "../../content/LandingContent.json";
 import LandingHeader from "../../components/LandingHeader";
 import Toggle from "../../components/Toggler"
 // import dummyData from "./data";
 // import OutlinedButtons from '../../common/ButtonMains/ButtonMain'
 
-import { Link } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import {ThemeProvider} from "styled-components";
 import  {useDarkMode} from "../../components/useDarkMode"
 import { GlobalStyles } from "../../globalStyles";
 import { lightTheme, darkTheme } from "../../components/Themes"
+import Tooltip from "react-simple-tooltip"
+import {css} from "styled-components"
+ 
 
 import './homeStyles.css';
+const ContainerHeader = lazy(() => import("../../common/ContainerHeader"));
 
-const ContentBlock = lazy(() => import("../../components/ContentBlock"));
+// const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const Container = lazy(() => import("../../common/Container"));
 
 const styles = theme => ({
@@ -48,8 +52,11 @@ const Home = (props, i) => {
   // const { classes } = props;
   return (<div> 
     <ThemeProvider theme={themeMode}  key={i}>
-    <Container>
-      <LandingHeader />
+      <ContainerHeader>
+        <LandingHeader />
+      </ContainerHeader>
+      <Container>
+      
       <GlobalStyles/>
         {/* <div className="WhiteContainer">
            <Link to='./About'>
@@ -60,15 +67,40 @@ const Home = (props, i) => {
         </div> */}
          
         <>
-      
-            <div className="App">
-              <Link to='./About'>
+          <div className="App">
+            <Tooltip
+            arrow={15}
+      background="#F8F8FF"
+      border="#0e1111"
+      color="#0e1111"
+      content="Click to enter JDP Electrical"
+      fadeDuration={3}
+      fadeEasing="linear"
+      fixed={false}
+      fontFamily="inherit"
+      fontSize="inherit"
+      offset={0}
+      padding={16}
+      placement="bottom"
+      radius={10}
+      zIndex={1}
+            
+    customCss={css`
+      white-space: nowrap;
+      word-break: break-all;
+    `}
+  >
+           
+              <NavLink to='/About'>
           <Toggle theme={theme} toggleTheme={themeToggler} key={i}/>
-          </Link>
-        </div>
-      </>
+          </NavLink>
+       
+
   
 
+            </Tooltip>
+          </div>
+   </>
         <h1 style={{textAlign: 'center', marginTop:30, color: '#EAB642'}}>Enter JDP Electrical Services</h1>
       {/* <ContentBlock
         type="right"

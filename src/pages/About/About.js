@@ -18,6 +18,7 @@ const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const ContactFrom = lazy(() => import("../../components/ContactForm"));
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
+const ContainerHeader = lazy(() => import("../../common/ContainerHeader"));
 
 function First() {
   return (

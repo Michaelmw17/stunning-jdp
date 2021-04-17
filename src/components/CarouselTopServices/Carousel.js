@@ -43,7 +43,7 @@ export default class CarouselServices extends Component {
       <div className="container">
         <h2 style={{textAlign: 'center'}}> Services</h2>  
         <Slider {...settings}> 
-          <div >
+          <div className="Services">
             
             {/* <ButtonMain></ButtonMain> */}
             <h4> Residential</h4>
@@ -51,11 +51,11 @@ export default class CarouselServices extends Component {
               light powerpoint</p>
               
           </div>
-          <div>
+          <div className="Services">
             <h4>Maintenance</h4>
             <p>JDP Electrical Services provide a full range of electrical services and installations for homeowners</p>
           </div>
-          <div>
+          <div className="Services">
             <h4>Commercial</h4>
             <p>We understand that safety is paramount in the home. As such, all electrical work is carried out by our qualified and fully insured electricians. All electrical works carried out are in compliances with AS/NZ3000 wiring regulations for electrical installation and are fully certified.</p>
           </div>
