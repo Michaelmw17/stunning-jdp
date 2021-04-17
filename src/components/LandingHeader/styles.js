@@ -103,4 +103,5 @@ export const Span = styled.div`
   cursor: pointer;
 	font-size: 20;
 	position: "static";
+  color:000
 `;

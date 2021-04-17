@@ -1,6 +1,6 @@
-import { useState, Fragment, lazy, Suspense } from "react";
+import { useState, Fragment, lazy, Suspense, React} from "react";
 
-
+import '../../globalStyles'
 import Spinner from 'react-bootstrap/Spinner';
 import { Row, Col, Drawer } from "antd";
 import { CSSTransition } from "react-transition-group";
@@ -13,9 +13,25 @@ import ContactMailIcon from '@material-ui/icons/ContactMail';
 import RateReviewIcon from '@material-ui/icons/RateReview';
         import { Link } from 'react-router-dom';
 import * as S from "./styles";
+import styled, { ThemeProvider } from 'styled-components';
+import NoSsr from '@material-ui/core/NoSsr';
+import {
+  createMuiTheme,
+  ThemeProvider as MuiThemeProvider,
+} from '@material-ui/core/styles';
+import { deepPurple } from '@material-ui/core/colors';
+import Avatar from '@material-ui/core/Avatar';
+
+const customTheme = createMuiTheme({
+  palette: {
+    primary: {
+      main: deepPurple[500],
+    },
+  },
+});
 const MyComp = lazy(() => import("../../components/MyComp/myComp"));
 
-const Header = ({ t }) => {
+const Header = ({ t, props }) => {
   const [isNavVisible] = useState(false);
   const [isSmallScreen] = useState(false);
   const [visible, setVisibility] = useState(false);
@@ -36,6 +52,29 @@ const useStyles = makeStyles((theme) => ({
   },
   
 }));
+const customTheme = createMuiTheme({
+  palette: {
+    primary: {
+      main: deepPurple[500],
+    },
+  },
+});
+
+const Styledvatar = styled(Avatar)`
+  ${({ theme }) => `
+  cursor: pointer;
+  background-color: ${theme.palette.primary.main};
+  transition: ${theme.transitions.create(['background-color', 'transform'], {
+    duration: theme.transitions.duration.standard,
+  })};
+  &:hover {
+    background-color: ${theme.palette.secondary.main};
+    transform: scale(1.3);
+  }
+  `}
+`;
+
+
   const MenuItem = () => {
     const classes = useStyles();
     const scrollTo = (id) => {
@@ -45,31 +84,41 @@ const useStyles = makeStyles((theme) => ({
       });
       setVisibility(false);
     };
+    
     return (
       <Fragment>
         <div className={classes.root}>
           
         <S.CustomNavLinkSmall onClick={() => scrollTo("mission")}>
-          <InfoIcon style={{color:"#5085A5", fontSize: 40   }} />
-          <S.Span >{t("About")}</S.Span>
+          
+           
+              <NoSsr>
+      <MuiThemeProvider theme={customTheme}>
+        <ThemeProvider theme={customTheme}>
+                  <InfoIcon style={{ color: "#EAB642", fontSize: 40 }} />
+                  <S.Span ><a>{t("About")}</a></S.Span>
+        </ThemeProvider>
+      </MuiThemeProvider>
+    </NoSsr>
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall onClick={() => scrollTo("Service")}>
-          <BuildIcon style={{ color:"#5085A5", fontSize: 40   }} />
-            <S.Span className="Span">{t("Services")}</S.Span>
+          <BuildIcon style={{ color:"#EAB642", fontSize: 40   }} />
+            <S.Span className="Span"><a>{t("Services")}</a></S.Span>
         </S.CustomNavLinkSmall>
           <S.CustomNavLinkSmall onClick={() => scrollTo("Review")}>
-            <RateReviewIcon style={{ color:"#5085A5", fontSize: 40 }} />
-          <S.Span>{t("Reviews")}</S.Span>
+            <RateReviewIcon style={{ color:"#EAB642", fontSize: 40 }} />
+          <S.Span><a>{t("Reviews")}</a></S.Span>
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall onClick={() => scrollTo("Team")}>
-          <ContactMailIcon style={{ color:"#5085A5", fontSize: 40  }} />
-          <S.Span>{t("Contact")}</S.Span>
+          <ContactMailIcon style={{ color:"#EAB642", fontSize: 40  }} />
+          <S.Span><a>{t("Contact")}</a></S.Span>
           </S.CustomNavLinkSmall>
           <S.CustomNavLinkSmall>
             <Link to="/">
-          <HomeIcon style={{ color:"#5085A5", fontSize: 40  }} />
-              <S.Span>{t("Home")}</S.Span>
+          <HomeIcon style={{ color:"#EAB642", fontSize: 40,  }} />
+              <S.Span> {t("Home")}</S.Span>
               </Link>
+            
           </S.CustomNavLinkSmall>
         
         <S.CustomNavLinkSmall
@@ -92,7 +141,7 @@ const useStyles = makeStyles((theme) => ({
              <Suspense fallback={
                             <Spinner animation="border" />
                             }>
-                
+               
                                 <MyComp rel="preload" /> 
                     </Suspense>
                 

@@ -23,7 +23,7 @@ const Styles = createGlobalStyle`
 }
         
     a:hover {
-        color: #000;
+        color: #EAB642;
     }
 
     h1,
@@ -33,8 +33,20 @@ const Styles = createGlobalStyle`
     h5,
     h6 {
         font-family: 'Poppins', sans-serif;
-        color: #5085A5;
+        color: #EAB642;
         font-size: 2.975rem;
+        line-height: 3.0625rem;
+      
+        @media only screen and (max-width: 414px) {
+          font-size: 1.625rem;
+        }
+   
+    h4,
+    h5,
+    h6 {
+        font-family: 'Poppins', sans-serif;
+        color: #EAB642;
+        font-size: 1.975rem;
         line-height: 3.0625rem;
       
         @media only screen and (max-width: 414px) {
@@ -80,7 +92,10 @@ const Styles = createGlobalStyle`
 
     .anticon,
     .ant-notification-notice-icon-success {
-        color: rgb(255,130,92);
+        color: #EAB642;
+    }
+    Span:hover {
+        color: #000
     }
 
 `;

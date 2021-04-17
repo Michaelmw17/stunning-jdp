@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
       
           <Link to="/about">
             
-          <HomeIcon style={{ color:"#5085A5", fontSize: 55   }} />
+          <HomeIcon style={{ color:"#EAB642", fontSize: 55   }} />
           <S.Span >{t("Welcome")}</S.Span>
         </Link>
         <S.CustomNavLinkSmall

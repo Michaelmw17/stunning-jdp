@@ -11,6 +11,8 @@ import GoogleMap from '../First'
 // import MyButton from '../../components/MyButton/index'
 import Carousel from "../../components/CarouselTest/Carousel"
 import CarouselServices from "../../components/CarouselTopServices/Carousel"
+import { BrowserRouter, Route, Link } from "react-router-dom";
+
 import './about.css'
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const ContactFrom = lazy(() => import("../../components/ContactForm"));
@@ -67,11 +69,18 @@ function First() {
         icon="waving.svg"
         id="product"
       /> */}
+       
+            
+             
       <ContactFrom
         title={ContactContent.title}
         content={ContactContent.text}
+        href={ContactContent.href}
         id="Team"
-        />
+          />
+        {/* <Link to="https://www.google.com/maps/search/nit+17+4-6+Chaplin+Drive+Lane+Cove+West+NSW+2066./@-33.8098656,151.1461655,17z/data=!3m1!4b1" target="_blank" className="Link">
+          Unit 17 4-6 Chaplin Drive Lane Cove West NSW 2066
+        </Link> */}
          <GoogleMap/>
       </Container>
       <div className="team-section">

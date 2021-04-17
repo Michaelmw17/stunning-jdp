@@ -1,17 +1,20 @@
 
 .App {
 width: 250px; height: 400px; 
-  margin-top:130px;
- background: rgba(252, 252, 252, 0.9);
--webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
--moz-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
--webkit-border-radius: 5px;
--moz-border-radius: 5px;
--ms-border-radius: 5px;
--o-border-radius: 5px;
-border-radius: 5px; 
+  margin-top:90px;
+ background: rgba(255, 255, 255, 0.973);
+-webkit-box-shadow: 0 1px 2px rgba(0, 225, 255, 0.801);
+-moz-box-shadow: 0 1px 2px rgba(0, 225, 255, 0.801);
+box-shadow: 10 10px 10px rgba(107, 107, 107, 0.801);
+-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
+-ms-border-radius: 15px;
+-o-border-radius: 15px;
+border-radius: 10px; 
 margin-left: auto;
 margin-right: auto;
 cursor: pointer;
+-webkit-box-shadow: "3px 3px 5px 6px #ccc";  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:"    3px 3px 5px 6px #ccc";  /* Firefox 3.5 - 3.6 */
+  box-shadow:         "3px 3px 5px 6px #ccc";
 }

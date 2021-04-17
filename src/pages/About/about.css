@@ -96,6 +96,10 @@
 		width: 100%;
 	}
 }
+.Link {
+	margin-bottom: 600px;
+	display: absolute;
+}
 /* .WhiteContainer {
 width: 500px; height: 500px; margin-top: 0px; margin-left: auto; margin-right: auto;   
   

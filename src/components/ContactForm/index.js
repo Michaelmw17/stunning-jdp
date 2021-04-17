@@ -30,9 +30,13 @@ const Contact = ({ title, content, id, t }) => {
   return (
     <S.ContactContainer id={id}>
       <S.Contact>
+        {/* <a href={`https://www.google.com/maps/search/nit+17+4-6+Chaplin+Drive+Lane+Cove+West+NSW+2066./@-33.8098656,151.1461655,17z/data=!3m1!4b1`}> Unit 17 4-6 Chaplin Drive Lane Cove West NSW 2066</a> */}
         <Row type="flex" justify="space-between" align="middle">
           <Col lg={12} md={11} sm={24}>
+            
             <Block padding={true} title={title} content={content} />
+            <a href={`https://www.google.com/maps/search/nit+17+4-6+Chaplin+Drive+Lane+Cove+West+NSW+2066./@-33.8098656,151.1461655,17z/data=!3m1!4b1`}> Unit 17 4-6 Chaplin Drive Lane Cove West NSW 2066</a>
+        
           </Col>
           <Col lg={12} md={12} sm={24}>
             <S.FormGroup autoComplete="off" onSubmit={handleSubmit}>
