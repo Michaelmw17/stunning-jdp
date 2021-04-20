@@ -50,30 +50,21 @@ const Home = (props, i) => {
 
   
   // const { classes } = props;
-  return (<div> 
+  return (<div className="IntroContainer"> 
     <ThemeProvider theme={themeMode}  key={i}>
       <ContainerHeader>
         <LandingHeader />
       </ContainerHeader>
       <Container>
-      
       <GlobalStyles/>
-        {/* <div className="WhiteContainer">
-           <Link to='./About'>
-          <Toggle theme={theme} toggleTheme={themeToggler} key={i}/>
-          
-            
-          </Link>
-        </div> */}
-         
         <>
           <div className="App">
             <Tooltip
-            arrow={15}
-      background="#F8F8FF"
+            arrow={8}
+      background="#EAB642"
       border="#0e1111"
-      color="#0e1111"
-      content="Click to enter JDP Electrical"
+      color="#FFF"
+      content="Click to Enter JDP Electrical"
       fadeDuration={3}
       fadeEasing="linear"
       fixed={false}
@@ -82,7 +73,7 @@ const Home = (props, i) => {
       offset={0}
       padding={16}
       placement="bottom"
-      radius={10}
+      radius={3}
       zIndex={1}
             
     customCss={css`
@@ -90,9 +81,11 @@ const Home = (props, i) => {
       word-break: break-all;
     `}
   >
-           
+
               <NavLink to='/About'>
-          <Toggle theme={theme} toggleTheme={themeToggler} key={i}/>
+                
+                  <Toggle theme={theme} toggleTheme={themeToggler} key={i} />
+                
           </NavLink>
        
 

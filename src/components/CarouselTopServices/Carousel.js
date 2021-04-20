@@ -40,7 +40,7 @@ export default class CarouselServices extends Component {
 	]
 };
     return (
-      <div className="container">
+      <div className="containerCar">
         <h2 style={{textAlign: 'center'}}> Services</h2>  
         <Slider {...settings}> 
           <div className="Services">

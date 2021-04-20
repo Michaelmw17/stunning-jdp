@@ -55,7 +55,7 @@ const Contact = ({ title, content, id, t }) => {
               <Col span={24}>
                 <Input
                   type="text"
-                  name="email"
+                  name="Email"
                   id="Email"
                   placeholder="Your Email"
                   value={values.email || ""}

@@ -1,10 +1,20 @@
 
 .container {
-  padding: 60px;
+  padding: 50px;
+  padding-right: 10px;
   background: transparent;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
 }
-
-
+.containerCar {
+  padding: 50px;
+  padding-right: 10px;
+  background: transparent;
+  margin-right: auto;
+  margin-left: auto;
+}
 .Services {
     padding-top: 10px;
 }

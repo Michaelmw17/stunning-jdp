@@ -1,7 +1,7 @@
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import Slide from "react-reveal/Slide";
-
+import ButtonAnimated from '../../../common/ButtonAnimation/AnimationButton'
 import SvgIcon from "../../../components/ImageComp/imgComp";
 
 import Button from "../../../common/Button";
@@ -21,7 +21,7 @@ const RightBlock = ({ title, content, button, icon, t, id }) => {
         <Col lg={11} md={11} sm={11} xs={24}>
           <Slide left>
             <S.ContentWrapper>
-              <h6>{t(title)}</h6>
+              <h3>{t(title)}</h3>
               <S.Content>{t(content)}</S.Content>
               <S.ButtonWrapper>
                 {button &&
@@ -32,8 +32,8 @@ const RightBlock = ({ title, content, button, icon, t, id }) => {
                         key={id}
                         color={item.color}
                         width="true"
-                        onClick={() => scrollTo("Service")}
-                      >
+                        onClick={() => scrollTo("Team")}
+                      > 
                         {t(item.title)}
                       </Button>
                     );
@@ -44,14 +44,13 @@ const RightBlock = ({ title, content, button, icon, t, id }) => {
                   typeof button === "object" &&
                   button.map((item, id) => {
                     return (
-                      <Button
+                    <ButtonAnimated 
                         key={id}
-                        color={item.color1}
-                        width="true"
-                        onClick={() => scrollTo("mission")}
+                       
                       >
                         {t(item.title1)}
-                      </Button>
+                      </ButtonAnimated>
+                      
                     );
                   })}
               </S.ButtonWrapper>
@@ -60,6 +59,7 @@ const RightBlock = ({ title, content, button, icon, t, id }) => {
         </Col>
         <Col lg={11} md={11} sm={12} xs={24}>
           <Slide right>
+            
             <SvgIcon
               src={icon}
               className="about-block-image"

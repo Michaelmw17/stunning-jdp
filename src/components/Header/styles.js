@@ -62,12 +62,12 @@ export const Burger = styled.div`
     
   }
   padding: 1.25rem 1.25rem;
-  display: none;
+  
 `;
 
 export const NotHidden = styled.div`
   @media only screen and (max-width: 768px) {
-    display: none;
+    
     
   }
 `;
@@ -101,6 +101,7 @@ export const Label = styled.span`
 `;
 
 export const Outline = styled(MenuOutlined)`
+padding-top: 40px;
   font-size: 22px;
   padding-right: ${(props) => (props.padding ? '10px' : '')};
 `;

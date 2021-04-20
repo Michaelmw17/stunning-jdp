@@ -23,7 +23,7 @@ const LeftContentBlock = ({ icon, title, content, section, t, id }) => {
         <Col lg={11} md={11} sm={11} xs={24}>
           <Slide right>
             <S.ContentWrapper>
-              <h6>{t(title)}</h6>
+              <h3>{t(title)}</h3>
               <S.Content>{t(content)}</S.Content>
               <S.ServiceWrapper>
                 <Row type="flex" justify="space-between">
@@ -35,6 +35,7 @@ const LeftContentBlock = ({ icon, title, content, section, t, id }) => {
                           <SvgIcon src={item.icon} width="60px" height="60px" />
                           <S.MinTitle>{t(item.title)}</S.MinTitle>
                           <S.MinPara>{t(item.content)}</S.MinPara>
+                          
                         </Col>
                       );
                     })}

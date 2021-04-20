@@ -3,35 +3,63 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './stylesCarousel.css'
+import '../../globalStyles'
 export default class CarouselServices extends Component {
   render() {
     const settings = {
       dots: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      responsive: [
+		{
+			breakpoint: 1200,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1
+			}
+		},
+		{
+			breakpoint: 1008,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		},
+		{
+			breakpoint: 800,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+			// settings: "unslick"
+		}
+
+	]
     };
-    return (
-      <div className="container">
+    return (<>
+      {/* <h1>Reviews</h1> */}
+      <div className="containerCar">
         
         <Slider {...settings}>
           <div >
-            <h2> "It's just amazing. Absolutely wonderful!"
-               <p><small> - Claudelle .</small></p></h2>
+            <div className="review"> "It's just amazing. Absolutely wonderful!"
+               </div><p><em> - Claudelle .</em></p>
             
           </div>
           <div>
-            <h2> "It's just amazing. Absolutely wonderful!"
-               <p><small> - Claudelle .</small></p></h2>
+            <div className="review"> "It's just amazing. Absolutely wonderful!"
+              </div> <p><em> - Claudelle .</em></p>
           </div>
           <div>
-             <h2> "It's just amazing. Absolutely wonderful!"
-               <p><small> - Claudelle .</small></p></h2>
+             <div className="review"> "It's just amazing. Absolutely wonderful!"
+               </div><p><em> - Claudelle .</em></p>
           </div>
           
         </Slider>
       </div>
+      </>
     );
   }
 }

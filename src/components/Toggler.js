@@ -24,7 +24,7 @@ import OutlinedButtons from '../common/ButtonMains/ButtonMain'
 
 const Toggle = ({theme,  toggleTheme }) => {
   return (
-      
+
       <OutlinedButtons onClick={toggleTheme}>
         {theme === "light" ?
           <p> </p>

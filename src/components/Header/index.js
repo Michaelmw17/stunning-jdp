@@ -49,9 +49,8 @@ const useStyles = makeStyles((theme) => ({
     return (
       <Fragment>
         <div className={classes.root}>
-          
         <S.CustomNavLinkSmall onClick={() => scrollTo("mission")}>
-          <InfoIcon style={{color:"#EAB642", fontSize: 40   }} />
+          <InfoIcon style={{color:"#EAB642", fontSize: 40  }} />
           <S.Span ><span>{t("About")}</span></S.Span>
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall onClick={() => scrollTo("Service")}>
@@ -72,7 +71,6 @@ const useStyles = makeStyles((theme) => ({
               <S.Span><span>{t("Home")}</span></S.Span>
               </Link>
           </S.CustomNavLinkSmall>
-        
         <S.CustomNavLinkSmall
           style={{ width: "180px" }}
           onClick={() => scrollTo("Team")}
@@ -98,12 +96,15 @@ const useStyles = makeStyles((theme) => ({
                     </Suspense>
                 
           </S.LogoContainer>
-          <S.NotHidden>
-            <MenuItem />
-          </S.NotHidden>
           <S.Burger onClick={showDrawer}>
             <S.Outline />
           </S.Burger>
+          {/* <S.NotHidden> */}
+            {/* <MenuItem /> */}
+          {/* </S.NotHidden> */}
+          {/* <S.Burger onClick={showDrawer}>
+            <S.Outline />
+          </S.Burger> */}
         </Row>
         <CSSTransition
           in={!isSmallScreen || isNavVisible}

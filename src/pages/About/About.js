@@ -8,6 +8,8 @@ import GoogleMap from '../First'
 import Carousel from "../../components/CarouselTest/Carousel"
 import CarouselServices from "../../components/CarouselTopServices/Carousel"
 import './about.css'
+import MeetTheTeam from "../../components/MeetTheTeam/team"
+import Footer from "../../components/Footer";
 
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const ContactFrom = lazy(() => import("../../components/ContactForm"));
@@ -19,6 +21,7 @@ function First() {
     <div>
       <Container>
         <Header />
+       
         <ContentBlock
         type="right"
         first="true"
@@ -33,9 +36,7 @@ function First() {
         content={MiddleBlockContent.text}
         button={MiddleBlockContent.button}
       />
-        <div id="Service">
-        <CarouselServices
-          /></div>
+
       <ContentBlock
         type="right"
         title={MissionContent.title}
@@ -43,8 +44,16 @@ function First() {
         icon="product-launch.svg"
           id="mission"
         />
-        <div id="Review">
+        
+     
+      </Container>
+      <MeetTheTeam/>
+      <div id="Review">
         <Carousel/>
+        </div>
+      <div id="Service">
+        <CarouselServices
+          />
         </div>
       <ContactFrom
         title={ContactContent.title}
@@ -52,49 +61,8 @@ function First() {
         href={ContactContent.href}
         id="Team"
           />
-        <GoogleMap/>
-      </Container>
-      <div className="team-section">
-        <div className="inner-width">
-          <h2>Meet our team</h2>
-          <div className="pers">
-            <div className="pe">
-              <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="rafeh" />
-              <div className="p-name">Joe Panetta</div>
-              <div className="p-des">Engineer</div>
-              <div className="p-sm">
-
-                <i className="fab fa-facebook-f" />
-                <i className="fab fa-instagram" />
-               <i className="fab fa-twitter" />
-               
-              </div>
-            </div>
-            <div className="pe">
-              <img src="https://randomuser.me/api/portraits/men/60.jpg" alt="rafeh" />
-              <div className="p-name">Anna Panetta</div>
-              <div className="p-des">Engineer</div>
-              <div className="p-sm">
-                <i className="fab fa-facebook-f" />
-                <i className="fab fa-instagram" />
-               <i className="fab fa-twitter" />
-                
-              </div>
-            </div>
-            <div className="pe">
-              <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="rafeh" />
-              <div className="p-name">Dominic Panetta</div>
-              <div className="p-des">Engineer</div>
-              <div className="p-sm">
-                <i className="fab fa-facebook-f" />
-                <i className="fab fa-instagram" />
-                <i className="fab fa-twitter" />
-                
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <GoogleMap />
+      <Footer />
       </div>
       
   );

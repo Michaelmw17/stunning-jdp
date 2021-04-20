@@ -2089,9 +2089,9 @@
   "version" "3.0.3"
 
 "@types/node@*":
-  "integrity" "sha512-vFHy/ezP5qI0rFgJ7aQnjDXwAMrG0KqqIH7tQG5PPv3BWBayOPIQNBjVc/P6hhdZfMx51REc6tfDNXHUio893g=="
-  "resolved" "https://registry.yarnpkg.com/@types/node/-/node-14.14.31.tgz"
-  "version" "14.14.31"
+  "integrity" "sha512-dueRKfaJL4RTtSa7bWeTK1M+VH+Gns73oCgzvYfHZywRCoPSd8EkXBL0mZ9unPTveBn+D9phZBaxuzpwjWkW0g=="
+  "resolved" "https://registry.npmjs.org/@types/node/-/node-14.14.41.tgz"
+  "version" "14.14.41"
 
 "@types/normalize-package-data@^2.4.0":
   "integrity" "sha512-f5j5b/Gf71L+dbqxIpQ4Z2WlmI/mPJ0fOkGGmFgtb6sAu97EPczzbS3/tJKxmcYDj55OX6ssqwDAWOHIYDRDGA=="
@@ -2117,6 +2117,13 @@
   "integrity" "sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug=="
   "resolved" "https://registry.yarnpkg.com/@types/q/-/q-1.5.4.tgz"
   "version" "1.5.4"
+
+"@types/react-jss@^10.0.0":
+  "integrity" "sha512-xy3Y0RVEubCpaLIvyu8rMu5CDGHSv3TnbP7Ob++r85WlLRx13B0l1vGnifIzT8rDiOb2yMX2MZWFZH9l4l3p/A=="
+  "resolved" "https://registry.npmjs.org/@types/react-jss/-/react-jss-10.0.0.tgz"
+  "version" "10.0.0"
+  dependencies:
+    "react-jss" "*"
 
 "@types/react-transition-group@^2.0.8":
   "integrity" "sha512-5Fv2DQNO+GpdPZcxp2x/OQG/H19A01WlmpjVD9cKvVFmoVLOZ9LvBgSWG6pSXIU4og5fgbvGPaCV5+VGkWAEHA=="
@@ -10778,6 +10785,14 @@
     "uncontrollable" "^7.2.1"
     "warning" "^4.0.3"
 
+"react-card-flipper@^1.0.1":
+  "integrity" "sha512-DAIGF1iCb3c+ItBdosefvYdEwARliCMg7uVo/0JEjkclYJwscz4KS+0fPFkPX4pNQENRtsCcmR1PIzFvp7x7Rg=="
+  "resolved" "https://registry.npmjs.org/react-card-flipper/-/react-card-flipper-1.0.1.tgz"
+  "version" "1.0.1"
+  dependencies:
+    "classnames" "^2.2.6"
+    "react-jss" "^8.6.1"
+
 "react-dev-utils@^11.0.3":
   "integrity" "sha512-dx0LvIGHcOPtKbeiSUM4jqpBl3TcY7CDjZdfOIcKeznE7BWr9dg0iPG90G5yfVQ+p/rGNMXdbfStvzQZEVEi4A=="
   "resolved" "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-11.0.4.tgz"
@@ -10857,7 +10872,7 @@
   "resolved" "https://registry.yarnpkg.com/react-is/-/react-is-17.0.1.tgz"
   "version" "17.0.1"
 
-"react-jss@^8.1.0":
+"react-jss@*", "react-jss@^8.1.0", "react-jss@^8.6.1":
   "integrity" "sha512-SH6XrJDJkAphp602J14JTy3puB2Zxz1FkM3bKVE8wON+va99jnUTKWnzGECb3NfIn9JPR5vHykge7K3/A747xQ=="
   "resolved" "https://registry.npmjs.org/react-jss/-/react-jss-8.6.1.tgz"
   "version" "8.6.1"
@@ -12965,6 +12980,11 @@
   "integrity" "sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c="
   "resolved" "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz"
   "version" "0.0.6"
+
+"typescript@^3.2.1 || ^4", "typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta":
+  "integrity" "sha512-V+evlYHZnQkaz8TRBuxTA92yZBPotr5H+WhQ7bD3hZUndx5tGOa1fuCgeSjxAzM1RiN5IzvadIXTVefuuwZCRg=="
+  "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.2.4.tgz"
+  "version" "4.2.4"
 
 "ua-parser-js@^0.7.18", "ua-parser-js@^0.7.9":
   "integrity" "sha512-eXMaRYK2skomGocoX0x9sBXzx5A1ZVQgXfrW4mTc8dT0zS7olEcyfudAzRC5tIIRgLxQ69B6jut3DI+n5hslPA=="

@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 // import Header from "../components/Header";
 
 import About from "../pages/About/About"
@@ -43,7 +43,7 @@ const Router = () => {
       <Contact />
     </Route>
       </Switch>
-      <Footer />
+      {/* <Footer /> */}
     </Suspense>
   );
 };

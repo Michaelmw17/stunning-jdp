@@ -1,4 +1,8 @@
 
+.IntroContainer{
+  background-color:#1E232A;
+   background-size: cover;
+}
 .App {
 width: 250px; height: 400px; 
   margin-top:90px;
@@ -22,3 +26,6 @@ cursor: pointer;
   box-shadow:         "3px 3px 5px 6px #ccc";
   
 }
+/* .App:hover{
+ background: rgb(170, 170, 170);
+} */

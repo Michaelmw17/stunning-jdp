@@ -50,10 +50,10 @@ const useStyles = makeStyles((theme) => ({
       
           
             <Tooltip
-            arrow={10}
-  background="#F8F8FF"
+            arrow={8}
+  background="#EAB642"
   border="#0e1111"
-  color="#0e1111"
+  color="#FFF"
   content="Enter JDP Electrical"
   fadeDuration={3}
   fadeEasing="linear"
@@ -63,13 +63,14 @@ const useStyles = makeStyles((theme) => ({
   offset={0}
   padding={15}
   placement="right"
-  radius={10}
+  radius={5}
   zIndex={1}
             
     customCss={css`
       white-space: wrap;
     `}
-  ><Link to="/about">
+          >
+            <Link to="/about">
           <HomeIcon style={{ color:"#EAB642", fontSize: 55   }} />
               <S.Span >{t("Welcome")}</S.Span>
           </Link>
@@ -99,9 +100,9 @@ const useStyles = makeStyles((theme) => ({
                                 <MyComp rel="preload" /> 
                     </Suspense>
           </S.LogoContainer>
-          {/* <S.NotHidden> */}
+          <S.NotHidden>
             <MenuItem />
-          {/* </S.NotHidden> */}
+          </S.NotHidden>
           <S.Burger onClick={showDrawer}>
             <S.Outline />
           </S.Burger>

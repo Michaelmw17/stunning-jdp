@@ -1,53 +1,53 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import '../../globalStyles'
-import $ from 'jquery';
-// import MyButton from '../MyButton/index'
+// import React from 'react';
+// import { makeStyles } from '@material-ui/core/styles';
+// import Grid from '@material-ui/core/Grid';
+// import '../../globalStyles'
+// import $ from 'jquery';
+// // import MyButton from '../MyButton/index'
 
-const useStyles = makeStyles((theme, id) => ({
+// const useStyles = makeStyles((theme, id) => ({
     
-  root: {
-    flexGrow: 1,
-  },
-}));
+//   root: {
+//     flexGrow: 1,
+//   },
+// }));
 
 
 
-export default function FullWidthGrid() {
-  const classes = useStyles();
-$(function(){
-  $(".enter-btn").click(function(){
-    $("body").toggleClass(" active");
-  });  
-});
+// export default function FullWidthGrid() {
+//   const classes = useStyles();
+// $(function(){
+//   $(".enter-btn").click(function(){
+//     $("body").toggleClass(" active");
+//   });  
+// });
 
  
-  return (
-      <div className="section group">
-	<div className="col span_1_of_2">
-      <div className={classes.root}>
-        <Grid container spacing={3}>
-            <Grid item xs={12} sm={12}>
-                <div className="container">
-                <div className="fancy-bulb">
-                  <div className="left-streaks streaks" />
-                  <div className="enter-btn" >
-                    {/* <MyButton /> */}
-                  </div>
-                      <div className="right-streaks streaks" />
-                    </div>
-                </div>
-              </Grid>
-            </Grid>
-          </div>
-        </div>
-      <div className="col span_1_of_2">
+//   return (
+//       <div className="section group">
+// 	<div className="col span_1_of_2">
+//       <div className={classes.root}>
+//         <Grid container spacing={3}>
+//             <Grid item xs={12} sm={12}>
+//                 <div className="container">
+//                 <div className="fancy-bulb">
+//                   <div className="left-streaks streaks" />
+//                   <div className="enter-btn" >
+//                     {/* <MyButton /> */}
+//                   </div>
+//                       <div className="right-streaks streaks" />
+//                     </div>
+//                 </div>
+//               </Grid>
+//             </Grid>
+//           </div>
+//         </div>
+//       <div className="col span_1_of_2">
         
-        </div>
-        </div>
-    );
-}
+//         </div>
+//         </div>
+//     );
+// }
 // import React, {lazy } from 'react';
 // import { makeStyles } from '@material-ui/core/styles';
 // import Grid from '@material-ui/core/Grid';

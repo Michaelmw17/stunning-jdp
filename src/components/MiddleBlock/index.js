@@ -20,7 +20,7 @@ const MiddleBlock = ({ title, content, button, t }) => {
         <Fade bottom>
           <S.ContentWrapper>
             <Col lg={24} md={24} sm={24} xs={24}>
-              <h6>{t(title)}</h6>
+              <h3>{t(title)}</h3>
               <S.Content>{t(content)}</S.Content>
               {button ? (
                 <Button
