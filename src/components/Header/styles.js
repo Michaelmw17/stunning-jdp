@@ -4,12 +4,20 @@ import { MenuOutlined } from '@ant-design/icons';
 
 export const Header = styled.header`
   padding: 1rem 0.5rem;
+   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 88px;
+  z-index: 10;
 
 `;
 
 export const LogoContainer = styled(Link)`
   display: flex;
   padding-top: 1rem;
+   position: sticky;
+  top: 0;
 `;
 
 export const Container = styled.div`

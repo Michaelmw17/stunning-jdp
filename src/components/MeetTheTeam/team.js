@@ -19,7 +19,7 @@ const TestApp = ({ classes }) => {
         <div className="col-10 text-center col-centered">
            <div className="team-section">
         <div className="inner-width">
-        <Grid container spacing={5} justify="flex-start">
+        <Grid container spacing={6} justify="flex-start">
           <Grid item xs={12} sm={6} md={6} lg={4}>
           <ReactCardFlipper
             width="300px"
@@ -135,7 +135,11 @@ const styling = {
     borderRadius: "8px",
     padding: "10px",
     marginBottom: "50px",
-      backgroundColor: "#EAB642",
+      
+  background:' #EAB642',
+  '-webkit-box-shadow': "0 7px 8px rgba(0, 0, 0, 0.12)",
+  '-moz-box-shadow': "0 7px 8px rgba(0, 0, 0, 0.12)",
+  'box-shadow':" 0 7px 8px rgba(0, 0, 0, 0.12)",
     color: "white",
   }
 };

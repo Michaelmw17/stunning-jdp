@@ -1,6 +1,6 @@
 import React, { lazy } from 'react';
 import MissionContent from "../../content/MissionContent.json";
-import MiddleBlockContent from "../../content/MiddleBlockContent.json";
+// import MiddleBlockContent from "../../content/MiddleBlockContent.json";
 import ContactContent from "../../content/ContactContent.json";
 import IntroContent from "../../content/IntroContent.json";
 import Header from "../../components/Header";
@@ -10,10 +10,11 @@ import CarouselServices from "../../components/CarouselTopServices/Carousel"
 import './about.css'
 import MeetTheTeam from "../../components/MeetTheTeam/team"
 import Footer from "../../components/Footer";
+// import ContactJs from "../../components/MyContact/myComp";
 
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const ContactFrom = lazy(() => import("../../components/ContactForm"));
-const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
+// const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
 
 function First() {
@@ -31,11 +32,11 @@ function First() {
         icon="developer.svg"
         id="intro"
       />
-        <MiddleBlock
+        {/* <MiddleBlock
         title={MiddleBlockContent.title}
         content={MiddleBlockContent.text}
         button={MiddleBlockContent.button}
-      />
+      /> */}
 
       <ContentBlock
         type="right"
@@ -55,6 +56,9 @@ function First() {
         <CarouselServices
           />
         </div>
+        {/* <div className="Contact">
+        <ContactJs/>
+        </div> */}
       <ContactFrom
         title={ContactContent.title}
         content={ContactContent.text}

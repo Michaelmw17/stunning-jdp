@@ -15,9 +15,7 @@ export const ButtonAnimated = styled.button`
   max-width: 180px;
   
   
-
-
-  @media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
     width: ${(props) => (props.width ? '160px' : '100%')};
   }
 
