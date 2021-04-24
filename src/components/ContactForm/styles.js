@@ -8,7 +8,6 @@ export const ContactContainer = styled.div`
 export const Contact = styled.section`
   position: relative;
   width: 100%;
-  max-width: 1480px;
 `;
 
 export const IconContainer = styled.div`

@@ -19,11 +19,11 @@ export const Button = styled.button`
   }
 
   @media only screen and (max-width: 768px) {
-    width: ${(props) => (props.width ? '140px' : '100%')};
+    width: ${(props) => (props.width ? '160px' : '100%')};
   }
 
   @media only screen and (max-width: 480px) {
-    width: ${(props) => (props.width ? '130px' : '100%')};
+    width: ${(props) => (props.width ? '160px' : '100%')};
   }
   
 `;

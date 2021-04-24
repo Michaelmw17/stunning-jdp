@@ -29,7 +29,7 @@ export default function SimpleSelect() {
     <div>
       <FormControl className={classes.formControl}>
         <InputLabel shrink id="demo-simple-select-placeholder-label-label">
-          Enquire:
+          What can we help you with?: 
         </InputLabel>
         <Select
           labelId="demo-simple-select-placeholder-label-label"

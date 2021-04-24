@@ -1,6 +1,7 @@
 import { useState, Fragment, lazy, Suspense } from "react";
 import './stylesHeader.css'
 import '../../globalStyles'
+import Button from '@material-ui/core/Button';
 import Spinner from 'react-bootstrap/Spinner';
 import { Row, Col, Drawer } from "antd";
 import { CSSTransition } from "react-transition-group";
@@ -9,8 +10,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import BuildIcon from '@material-ui/icons/Build';
 import InfoIcon from '@material-ui/icons/Info';
 import HomeIcon from '@material-ui/icons/Home';
-import ContactMailIcon from '@material-ui/icons/ContactMail';
 import RateReviewIcon from '@material-ui/icons/RateReview';
+import ContactMailIcon from '@material-ui/icons/ContactMail';
+import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
         import { Link } from 'react-router-dom';
 import * as S from "./styles";
 const MyComp = lazy(() => import("../../components/MyComp/myComp"));
@@ -49,15 +51,25 @@ const useStyles = makeStyles((theme) => ({
     return (
       <Fragment>
         <div className={classes.root}>
+         <S.CustomNavLinkSmall>
+            <Link to="/">
+          <HomeIcon style={{ color:"#EAB642", fontSize: 40  }} />
+              <S.Span><span>{t("Welcome")}</span></S.Span>
+              </Link>
+          </S.CustomNavLinkSmall>
+          <S.CustomNavLinkSmall onClick={() => scrollTo("Service")}>
+          <BuildIcon style={{ color:"#EAB642", fontSize: 40   }} />
+            <S.Span className="Span"><span>{t("Services")}</span></S.Span>
+        </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall onClick={() => scrollTo("mission")}>
           <InfoIcon style={{color:"#EAB642", fontSize: 40  }} />
           <S.Span ><span>{t("About")}</span></S.Span>
         </S.CustomNavLinkSmall>
-        <S.CustomNavLinkSmall onClick={() => scrollTo("Service")}>
-          <BuildIcon style={{ color:"#EAB642", fontSize: 40   }} />
-            <S.Span className="Span"><span>{t("Services")}</span></S.Span>
+          <S.CustomNavLinkSmall onClick={() => scrollTo("Teams")}>
+            <SupervisorAccountIcon style={{ color:"#EAB642", fontSize: 40 }} />
+          <S.Span><span>{t("Our Team")}</span></S.Span>
         </S.CustomNavLinkSmall>
-          <S.CustomNavLinkSmall onClick={() => scrollTo("Review")}>
+          <S.CustomNavLinkSmall onClick={() => scrollTo("Teams")}>
             <RateReviewIcon style={{ color:"#EAB642", fontSize: 40 }} />
           <S.Span><span>{t("Reviews")}</span></S.Span>
         </S.CustomNavLinkSmall>
@@ -65,12 +77,14 @@ const useStyles = makeStyles((theme) => ({
           <ContactMailIcon style={{ color:"#EAB642", fontSize: 40  }} />
           <S.Span><span>{t("Contact")}</span></S.Span>
           </S.CustomNavLinkSmall>
-          <S.CustomNavLinkSmall>
-            <Link to="/">
-          <HomeIcon style={{ color:"#EAB642", fontSize: 40  }} />
-              <S.Span><span>{t("Home")}</span></S.Span>
-              </Link>
-          </S.CustomNavLinkSmall>
+        <S.CustomNavLinkSmall >
+          <div>
+      <Button classes={{ root: 'button', label: 'button-label'}} style={{ marginBottom:'50px' }}><a href="tel:0294-197-947">Call JPD Now!</a>
+      </Button>
+    </div>
+    </S.CustomNavLinkSmall>
+        
+
         <S.CustomNavLinkSmall
           style={{ width: "180px" }}
           onClick={() => scrollTo("Team")}
@@ -96,15 +110,15 @@ const useStyles = makeStyles((theme) => ({
                     </Suspense>
                 
           </S.LogoContainer>
-          <S.Burger onClick={showDrawer}>
-            <S.Outline />
-          </S.Burger>
-          {/* <S.NotHidden> */}
-            {/* <MenuItem /> */}
-          {/* </S.NotHidden> */}
           {/* <S.Burger onClick={showDrawer}>
             <S.Outline />
           </S.Burger> */}
+          <S.NotHidden>
+            <MenuItem />
+          </S.NotHidden>
+          <S.Burger onClick={showDrawer}>
+            <S.Outline />
+          </S.Burger>
         </Row>
         <CSSTransition
           in={!isSmallScreen || isNavVisible}

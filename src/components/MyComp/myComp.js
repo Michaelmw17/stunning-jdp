@@ -16,12 +16,12 @@ const MyComp = () => {
             alt="Logo" style={{
                display: "absolute",
                 background: '#FFF',
-                marginLeft: "auto",
                 marginRight: "auto",
                 width: "100%",
                 height: 'auto',
                 maxWidth: "100%",
                 maxHeight: "60px",
+                left: '250px',
             }}
             max-age="31536000"
         />

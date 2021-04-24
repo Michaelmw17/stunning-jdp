@@ -10,6 +10,8 @@ export const Header = styled.header`
   width: 100%;
   height: 88px;
   z-index: 10;
+  background: #FFF;
+  
 
 `;
 
@@ -18,16 +20,16 @@ export const LogoContainer = styled(Link)`
   padding-top: 1rem;
    position: sticky;
   top: 0;
+  left: auto;
 `;
 
 export const Container = styled.div`
-  position: relative;
+  position: fixed;
   width: 100%;
-  max-width: 1280px;
   padding-right: 25px;
   padding-left: 25px;
   margin-right: auto;
-  margin-left: auto;
+    background: #FFF;
   
 `;
 
@@ -75,7 +77,7 @@ export const Burger = styled.div`
 
 export const NotHidden = styled.div`
   @media only screen and (max-width: 768px) {
-    
+     display: none;
     
   }
 `;

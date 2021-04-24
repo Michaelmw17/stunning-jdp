@@ -1,15 +1,3 @@
-// @flow
-/**
- * ReactCardFlipper
- * Author: Eric Stout, https://factor1studios.com
- *
- * Optional Props:
- * Width: string (default: auto)
- * Height: string (default: auto)
- * behavior: click, hover (default: click)
- * levitate: boolean (default: false, only works when behavior is set to `click`)
- **/
-
 import React, { Component } from "react";
 import injectSheet from "react-jss";
 import classNames from "classnames";
