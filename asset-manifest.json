@@ -17,11 +17,11 @@
     "static/js/6.747c9aea.chunk.js.map": "/stunning-jdp/static/js/6.747c9aea.chunk.js.map",
     "static/js/7.385500ea.chunk.js": "/stunning-jdp/static/js/7.385500ea.chunk.js",
     "static/js/7.385500ea.chunk.js.map": "/stunning-jdp/static/js/7.385500ea.chunk.js.map",
-    "main.css": "/stunning-jdp/static/css/main.56f4b697.chunk.css",
-    "main.js": "/stunning-jdp/static/js/main.50c4f229.chunk.js",
-    "main.js.map": "/stunning-jdp/static/js/main.50c4f229.chunk.js.map",
-    "runtime-main.js": "/stunning-jdp/static/js/runtime-main.3863d53c.js",
-    "runtime-main.js.map": "/stunning-jdp/static/js/runtime-main.3863d53c.js.map",
+    "main.css": "/stunning-jdp/static/css/main.c2a96923.chunk.css",
+    "main.js": "/stunning-jdp/static/js/main.98a10a3e.chunk.js",
+    "main.js.map": "/stunning-jdp/static/js/main.98a10a3e.chunk.js.map",
+    "runtime-main.js": "/stunning-jdp/static/js/runtime-main.8abe575f.js",
+    "runtime-main.js.map": "/stunning-jdp/static/js/runtime-main.8abe575f.js.map",
     "static/css/10.8a400ad0.chunk.css": "/stunning-jdp/static/css/10.8a400ad0.chunk.css",
     "static/js/10.b1248616.chunk.js": "/stunning-jdp/static/js/10.b1248616.chunk.js",
     "static/js/10.b1248616.chunk.js.map": "/stunning-jdp/static/js/10.b1248616.chunk.js.map",
@@ -31,8 +31,8 @@
     "static/js/12.c3615006.chunk.js.map": "/stunning-jdp/static/js/12.c3615006.chunk.js.map",
     "static/js/13.cfa53634.chunk.js": "/stunning-jdp/static/js/13.cfa53634.chunk.js",
     "static/js/13.cfa53634.chunk.js.map": "/stunning-jdp/static/js/13.cfa53634.chunk.js.map",
-    "static/js/14.a606372d.chunk.js": "/stunning-jdp/static/js/14.a606372d.chunk.js",
-    "static/js/14.a606372d.chunk.js.map": "/stunning-jdp/static/js/14.a606372d.chunk.js.map",
+    "static/js/14.8d4f90ac.chunk.js": "/stunning-jdp/static/js/14.8d4f90ac.chunk.js",
+    "static/js/14.8d4f90ac.chunk.js.map": "/stunning-jdp/static/js/14.8d4f90ac.chunk.js.map",
     "static/js/15.db2a6c8f.chunk.js": "/stunning-jdp/static/js/15.db2a6c8f.chunk.js",
     "static/js/15.db2a6c8f.chunk.js.map": "/stunning-jdp/static/js/15.db2a6c8f.chunk.js.map",
     "static/js/16.7337d134.chunk.js": "/stunning-jdp/static/js/16.7337d134.chunk.js",
@@ -44,15 +44,15 @@
     "index.html": "/stunning-jdp/index.html",
     "static/css/0.373bc5f8.chunk.css.map": "/stunning-jdp/static/css/0.373bc5f8.chunk.css.map",
     "static/css/10.8a400ad0.chunk.css.map": "/stunning-jdp/static/css/10.8a400ad0.chunk.css.map",
-    "static/css/main.56f4b697.chunk.css.map": "/stunning-jdp/static/css/main.56f4b697.chunk.css.map",
+    "static/css/main.c2a96923.chunk.css.map": "/stunning-jdp/static/css/main.c2a96923.chunk.css.map",
     "static/js/10.b1248616.chunk.js.LICENSE.txt": "/stunning-jdp/static/js/10.b1248616.chunk.js.LICENSE.txt",
     "static/media/slick-theme.css": "/stunning-jdp/static/media/slick.c94f7671.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.3863d53c.js",
+    "static/js/runtime-main.8abe575f.js",
     "static/css/10.8a400ad0.chunk.css",
     "static/js/10.b1248616.chunk.js",
-    "static/css/main.56f4b697.chunk.css",
-    "static/js/main.50c4f229.chunk.js"
+    "static/css/main.c2a96923.chunk.css",
+    "static/js/main.98a10a3e.chunk.js"
   ]
 }
