@@ -1,0 +1,54 @@
+input {
+     width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  outline: none;
+  font-size: 0.875rem;
+  padding: 1rem 1.25rem;
+  transition: border-color 0.3s ease-in;
+  border-radius: 8px;
+  color: #000;
+
+  }
+#firstName {
+     width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  outline: none;
+  font-size: 0.875rem;
+  padding: 1rem 1.25rem;
+  transition: border-color 0.3s ease-in;
+  border-radius: 8px;
+  color: #000;
+  margin-top:50px;
+  margin-bottom:20px;
+
+  }
+#number {
+     width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  outline: none;
+  font-size: 0.875rem;
+  padding: 1rem 1.25rem;
+  transition: border-color 0.3s ease-in;
+  border-radius: 8px;
+  color: #000;
+  margin-top:20px;
+  margin-bottom:20px;
+
+  }
+#subject {
+     width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  outline: none;
+  font-size: 0.875rem;
+  padding: 1rem 1.25rem;
+  transition: border-color 0.3s ease-in;
+  border-radius: 8px;
+  color: #000;
+  margin-top:50px;
+  margin-bottom:20px;
+
+  }

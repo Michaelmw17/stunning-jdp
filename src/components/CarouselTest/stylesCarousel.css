@@ -1,6 +1,6 @@
-.container {
+.containerCar {
   padding: 60px;
-   background: transparent;
+   background: rgb(209, 29, 50);
 }
 
 /* p,h2 {
@@ -8,5 +8,5 @@
 } */
 .review {
   font-size: 30px;
-  color: #EAB642
+  color: white
 }

@@ -14,17 +14,16 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     maxWidth: 360,
-    backgroundColor: "#EAB642",
+    backgroundColor: "RGB(209, 29, 50)",
     position: 'relative',
-    overflow: 'auto',
     maxHeight: 300,
-    color: '#FFF'
+    color: '#FFF',
   },
   listSection: {
-    backgroundColor: '#EAB642',
+    backgroundColor: 'RGB(209, 29, 50)',
   },
   ul: {
-    backgroundColor: '#EAB642',
+    backgroundColor: 'RGB(209, 29, 50)',
     padding: 0,
     paddingRight: 30,
   },
@@ -35,8 +34,7 @@ export default function PinnedSubheaderList() {
 
   return (
     <List className={classes.root} subheader={<li />}>
-    <p style={{ fontSize: 20,color: '#FFF', textTransform: 'uppercase'}}>Strata / Property Maintenance</p>
-          <ul className={classes.ul}>
+      <ul className={classes.ul}>
               <ul className='list-unstyled'>
               {items} 
               </ul>

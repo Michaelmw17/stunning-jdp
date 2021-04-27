@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import Container from '../../common/Container'
+// import Container from '../../common/Container'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './stylesCarousel.css'
@@ -8,7 +8,6 @@ import '../../globalStyles'
 export default class CarouselServices extends Component {
   render() {
     const settings = {
-      dots: true,
       infinite: true,
       slidesToShow: 2,
       lazyLoad: true,
@@ -46,7 +45,7 @@ export default class CarouselServices extends Component {
 	]
     };
     return (<>
-    <Container>
+    
       {/* <h1>Reviews</h1> */}
       <div className="containerCar">
         
@@ -67,7 +66,6 @@ export default class CarouselServices extends Component {
           
         </Slider>
       </div>
-      </Container>
       </>
     );
   }

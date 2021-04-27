@@ -1,5 +1,5 @@
 #subject {
-   margin-bottom: 30px;
+   margin-bottom: 10px;
 }
 .form-group {
    display: block;
@@ -20,7 +20,6 @@ input[type=text], select, textarea{
   font-size: 16px;
   border-radius: 320px;
   padding: 16px;
-  background-color: #EBECF0;
   text-shadow: 1px 1px 0 #FFF;
   padding-left: 50px;
 }
@@ -48,5 +47,14 @@ input[type=submit] {
   border-radius: 4px;
   cursor: pointer;
   float: right;
+}
+ul {
+  list-style-type: none;
+}
+
+ul li:before {
+  content: '-';
+  position: absolute;
+  margin-left: -20px;
 }
 

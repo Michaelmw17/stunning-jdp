@@ -5,7 +5,7 @@ h1 {
 .Services-section
 {
 	/* background: #FFF; */
-	text-align: center;
+	text-align: left;
 	
 }
 
@@ -52,20 +52,24 @@ h1 {
 	margin-left: 35px;
 	text-transform: uppercase;
 	text-align: center;
-	color: #FFF;
+	color: #fff;
 
 }
-
+.fas {
+	margin-left: 40px;
+}
 .p-des
 {
 	font-style: italic;
-	color: #3498db;
+	color: #000;
 	padding-left: 35px;
 }
 
 .p-sm
 {
-	margin-top: 40px;
+	margin-top: 10px;
+	margin-left: 0px;
+	
 }
 
 .p-sm a
@@ -109,5 +113,4 @@ h1 {
 }
 .containerS {
 	margin: auto;
-  	width: 150%;
 }

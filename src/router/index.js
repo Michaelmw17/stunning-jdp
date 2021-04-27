@@ -1,17 +1,11 @@
 import { lazy, Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
-
-// import Footer from "../components/Footer";
-// import Header from "../components/Header";
-
 import About from "../pages/About/About"
 import First from "../pages/First"
 import Contact from "../pages/Contact/contact"
 import Home from "../pages/Home"
-// import FullWidthGrid from "../components/LightBlub/lightBlub";
 import routes from "./config";
 import GlobalStyles from "../globalStyles";
-// import { Contact } from "../components/ContactForm/styles";
 
 const Router = () => {
   return (
@@ -43,7 +37,6 @@ const Router = () => {
       <Contact />
     </Route>
       </Switch>
-      {/* <Footer /> */}
     </Suspense>
   );
 };

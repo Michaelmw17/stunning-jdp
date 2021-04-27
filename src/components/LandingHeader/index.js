@@ -6,6 +6,7 @@ import { CSSTransition } from "react-transition-group";
 import { withTranslation } from "react-i18next";
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
+
 import HomeIcon from '@material-ui/icons/Home';
 import * as S from "./styles";
 import Tooltip from "react-simple-tooltip"
@@ -51,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
           
             <Tooltip
             arrow={8}
-  background="#EAB642"
+  background="RGB(209, 29, 50)"
   border="#0e1111"
   color="#FFF"
   content="Enter JDP Electrical"
@@ -71,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
     `}
           >
             <Link to="/about">
-          <HomeIcon style={{ color:"#EAB642", fontSize: 55   }} />
+          <HomeIcon style={{ color:"RGB(209, 29, 50)", fontSize: 55   }} />
               <S.Span >{t("Welcome")}</S.Span>
           </Link>
           </Tooltip>

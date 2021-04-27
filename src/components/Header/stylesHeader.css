@@ -1,5 +1,5 @@
 span:hover {
- color: #EAB642
+ color:blue
 }
 .intro{
     margin-top: 50px;
@@ -14,5 +14,5 @@ span:hover {
   background-color: #5469d4;
 }
 .button-label {
-  color: #000;
+  color: #FFF;
 }

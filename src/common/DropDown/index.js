@@ -48,7 +48,7 @@ export default function SimpleSelect() {
           <MenuItem value={"Commercial"}>Commercial</MenuItem>
           <MenuItem value={"Other"}>Other</MenuItem>
         </Select>
-        <FormHelperText>Select option from DropDown Menu</FormHelperText>
+        <FormHelperText></FormHelperText>
       </FormControl>
       
     </div>

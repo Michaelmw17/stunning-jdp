@@ -26,11 +26,6 @@ export const NavLink = styled.div`
   display: inline-block;
   text-align: center;
 `;
-// export const Span = styled.div`
-//   color: red[500],
-// 	fontSize: 20, fontSize: 20,
-// 	position: "static"
-// `;
 
 export const CustomNavLink = styled.div`
   width: 203px;

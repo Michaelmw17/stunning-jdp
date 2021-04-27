@@ -14,17 +14,16 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     maxWidth: 360,
-    backgroundColor: '#EAB642',
+    backgroundColor: 'RGB(209, 29, 50)',
     position: 'relative',
-    overflow: 'auto',
     maxHeight: 300,
     color: '#FFF'
   },
   listSection: {
-    backgroundColor: '#EAB642',
+    backgroundColor: 'RGB(209, 29, 50)',
   },
   ul: {
-    backgroundColor: '#EAB642',
+    backgroundColor: 'RGB(209, 29, 50)',
     padding: 0,
 
     paddingRight: 20,

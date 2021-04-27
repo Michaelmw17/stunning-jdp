@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const ContactContainer = styled.div`
-  padding: 5rem 0;
-  padding-left:50px;
+  padding: 7rem 0;
+  padding-left:80px;
+  padding-right:30px;
+
 `;
 
 export const Contact = styled.section`

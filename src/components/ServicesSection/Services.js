@@ -3,16 +3,16 @@ import ReactCardFlipper from "./ReactCardFlipper";
 import injectSheet from "react-jss";
 import MyListResidential from '../../common/MyListResidential/list'
 import MyListCommercial from '../../common/MyListCommercial/Clist'
-import DataList from '../../common/MyListData/list'
-import FireList from '../../common/MyListFire/list'
-import SecurityList from '../../common/MyListSecurity/list'
+// import DataList from '../../common/MyListData/list'
+// import FireList from '../../common/MyListFire/list'
+// import SecurityList from '../../common/MyListSecurity/list'
 import PinnedSubheaderList from '../../common/MyListStrata/list'
 import {  Grid, withStyles } from "@material-ui/core";
 import HomeIcon from '@material-ui/icons/Home';
 import BusinessIcon from '@material-ui/icons/Business';
-import WhatshotIcon from '@material-ui/icons/Whatshot';
-import SecurityIcon from '@material-ui/icons/Security';
-import RingVolumeIcon from '@material-ui/icons/RingVolume';
+// import WhatshotIcon from '@material-ui/icons/Whatshot';
+// import SecurityIcon from '@material-ui/icons/Security';
+// import RingVolumeIcon from '@material-ui/icons/RingVolume';
 import './ServicesStyles.css'
 const styles = {
   root:{
@@ -26,86 +26,91 @@ const TestApp = ({ classes }) => {
         <div className={classes.container}>
             <div id="main" className="containerS">
                 <div className="row">
-                  <div className="col-10 text-center col-centered">
+                  <div className="">
                     <div className="Services-section">
                   <div className="inner-width-services">
                   <Grid container spacing={8} justify="flex-start">
                     <Grid item xs={12} sm={6} md={6} lg={4}>
                     <ReactCardFlipper
                       width="300px"
-                      height="400px"
+                      height="490px"
                       behavior="hover"
                       className={classes.root}
                       innerCardClass={classes.card}
                     >
-                      <div className="text-center">
+                      <div className="text-left">
                       <div className="Services">
                       <div className="pie">
-                        <div className="p-name" style={{ fontSize: 20, paddingRight: 50}}>Residential</div>
-                        <div className="p-des"><HomeIcon  style={{ fontSize: 220, paddingTop: 10, paddingRight: 50 }} /></div>
+                        <div className="p-name" style={{ fontSize: 20, paddingRight: 20}}>Residential</div>
+                        
+                        <HomeIcon  style={{ fontSize: 220, paddingTop: 10, paddingLeft: 20 }} /></div>
                         
                       </div>
                       </div>
-                      </div>
-                      <div className="text-center">
-                          <div className="p-sm">
+                      <div className="text-left">
+                          <p style={{ marginLeft: 70,fontSize: 20,color: '#FFF', textTransform: 'uppercase', listStyleType: 'none'}}>Residential</p>
                           <MyListResidential/>
-                        </div>
+                        
+                      </div>
+                    </ReactCardFlipper>
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={6} lg={4}>
+                      <ReactCardFlipper
+                      width="300px"
+                      height="480px"
+                      behavior="hover"
+                      className={classes.root}
+                      innerCardClass={classes.card}
+                    >
+                      <div className="text-left">
+                      <div className="Services">
+                      <div className="pie">
+                        <div className="p-name" style={{ fontSize: 20, paddingRight: 20}}>Strata / Property Maintenance</div>
+                       
+                        <i className="fas fa-tools" style={{ fontSize: 120, paddingTop: 0, paddingLeft: 20 }} ></i></div>
+                      
+                      </div>
+                      </div>
+                      <div className="text-left">
+                          
+                          <p style={{ marginLeft: 30,fontSize: 20,color: '#FFF', textTransform: 'uppercase'}}>Strata / Property Maintenance</p>
+        
+                          <PinnedSubheaderList/>
+                        
                       </div>
                     </ReactCardFlipper>
                     </Grid>
                     <Grid item xs={12} sm={6} md={6} lg={4}>
                     <ReactCardFlipper
                       width="300px"
-                      height="400px"
+                      height="480px"
                       behavior="hover"
                       className={classes.root}
                       innerCardClass={classes.card}
                     >
-                      <div className="text-center">
+                      <div className="text-left">
                         <div className="Services">
                           <div className="pie">
-                            <div className="p-name" style={{ fontSize: 20, paddingRight: 30}}>Commercial</div>
-                            <div className="p-des"><BusinessIcon  style={{ fontSize: 210, paddingTop: 10 }} />
-                            </div>
+                            <div className="p-name" style={{ fontSize: 20, paddingLeft: 5 }}>Commercial</div>
+                            
+                            <BusinessIcon  style={{ fontSize: 220, paddingTop: 50, color: "#FFF", paddingLeft: 30 }} />
+                            
                           </div>
                         </div>
                       </div>
-                      <div className="text-center">
-                          <div className="p-sm">
+                      <div className="text-left">
+                          
+
+                      <p style={{ marginLeft: 60,fontSize: 20,color: '#FFF', textTransform: 'uppercase', listStyleType: 'none'}}>Commercial</p>
                           <MyListCommercial/>
-                        </div>
-                      </div>
-                    </ReactCardFlipper>
-                    </Grid>
-                    <Grid item xs={12} sm={6} md={6} lg={4}>
-                      <ReactCardFlipper
-                      width="300px"
-                      height="400px"
-                      behavior="hover"
-                      className={classes.root}
-                      innerCardClass={classes.card}
-                    >
-                      <div className="text-center">
-                      <div className="Services">
-                      <div className="pie">
-                        <div className="p-name" style={{ fontSize: 20}}>Strata / Property Maintenance</div>
-                        <div className="p-des"><i className="fas fa-tools" style={{ fontSize: 120, paddingTop: 0 }} ></i></div>
-                      </div>
-                      </div>
-                      </div>
-                      <div className="text-center">
-                          <div className="p-sm">
-                          <PinnedSubheaderList/>
                         
-                        </div>
                       </div>
                     </ReactCardFlipper>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={6} lg={4}>
+                    {/* <Grid item xs={12} sm={6} md={6} lg={4}>
                       <ReactCardFlipper
                       width="300px"
-                      height="400px"
+                      height="450px"
                       behavior="hover"
                       className={classes.root}
                       innerCardClass={classes.card}
@@ -128,7 +133,7 @@ const TestApp = ({ classes }) => {
                     <Grid item xs={12} sm={6} md={6} lg={4}>
                       <ReactCardFlipper
                       width="300px"
-                      height="400px"
+                      height="450px"
                       behavior="hover"
                       className={classes.root}
                       innerCardClass={classes.card}
@@ -151,7 +156,7 @@ const TestApp = ({ classes }) => {
                     <Grid item xs={12} sm={6} md={6} lg={4}>
                       <ReactCardFlipper
                       width="300px"
-                      height="400px"
+                      height="450px"
                       behavior="hover"
                       className={classes.root}
                       innerCardClass={classes.card}
@@ -169,8 +174,8 @@ const TestApp = ({ classes }) => {
                           <FireList/>
                         </div>
                       </div>
-                    </ReactCardFlipper>
-                    </Grid>
+                    </ReactCardFlipper> */}
+                    {/* </Grid> */}
                   </Grid>
                 </div>
               </div>
@@ -191,15 +196,15 @@ const styling = {
   },
   card: {
     border: "1px solid #ccc",
-    borderRadius: "8px",
+    borderRadius: "29px",
     padding: "10px",
     marginBottom: "50px",
       
-  background:' #EAB642',
+  background:' RGB(209, 29, 50)',
   '-webkit-box-shadow': "0 7px 8px rgba(0, 0, 0, 0.12)",
   '-moz-box-shadow': "0 7px 8px rgba(0, 0, 0, 0.12)",
   'box-shadow':" 0 7px 8px rgba(0, 0, 0, 0.12)",
-    color: "black",
+    color: "white",
   }
 };
 

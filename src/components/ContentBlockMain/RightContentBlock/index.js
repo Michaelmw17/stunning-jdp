@@ -4,6 +4,7 @@ import { withTranslation } from "react-i18next";
 import Slide from "react-reveal/Slide";
 import ButtonAnimated from '../../../common/ButtonAnimation/AnimationButton'
 import SvgIcon from "../../../components/ImageComp/imgComp";
+import Container from '@material-ui/core/Container';
 
 import Button from "../../../common/Button";
 
@@ -25,21 +26,12 @@ const RightBlock = ({ title, content, contentTwo, button, icon, t, id }) => {
             <S.ContentWrapper>
               <h3>{t(title)}</h3>
               <S.Content>{t(content)}</S.Content>
-              {/* <S.Content>{t(contentTwo)}</S.Content> */}
-              <S.Content>Brothers Dominic and Joseph Panetta have built a reputable electrical contracting business specialising in all electrical installations and repairs for Residential and Commercial sectors. </S.Content>
-              <S.Content>We offer our expert advice and cost effective solutions, and provide options for lasting, efficient and practical lighting designs.</S.Content>
-
-                {/* <Grid container={true} spacing={3}> */}
-                 <div>
-          <h6 style={{ color: 'red', fontSize:29, textAlign: 'center' }}>“Our approach is simple – we treat your home like our own.”</h6>
-          
-          </div>
+              
                 <Row>
-             
- <div className="row">
- 
-  <div className="col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-0">
-    <S.ButtonWrapper>
+            <Container fixed>
+            <Row>
+            <Col lg={6} md={6} sm={6} xs={24}>
+            <S.ButtonWrapper>
                 {button &&
                   typeof button === "object" &&
                   button.map((item, id) => {
@@ -69,8 +61,15 @@ const RightBlock = ({ title, content, contentTwo, button, icon, t, id }) => {
                     );
                   })}
               </S.ButtonWrapper>
+              </Col >
+            </Row>
+            </Container>
+ {/* <div className="row"> */}
+ 
+  <div className="col-sm-6 col-md-4 col-md-offset-2 col-lg-6 col-lg-offset-3">
+    
   </div>
-</div>
+{/* </div> */}
               </Row>
               {/* </Grid> */}
             </S.ContentWrapper>

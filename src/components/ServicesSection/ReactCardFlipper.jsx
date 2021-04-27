@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import injectSheet from "react-jss";
 import classNames from "classnames";
 
-type Props = { 
+type Props = { 
   width: string,
   height: string,
    behavior: string,

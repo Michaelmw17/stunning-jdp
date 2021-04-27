@@ -25,7 +25,7 @@ const Styles = createGlobalStyle`
 }
         
     a:hover {
-        color: #EAB642;
+        color: blue;
     }
 
     h1,
@@ -36,14 +36,24 @@ const Styles = createGlobalStyle`
     h6
     {
         font-family: 'Poppins', sans-serif;
-        color: #EAB642;
+        color: ;
+        padding: 5rem  1rem ;
         font-size: 2.975rem;
         line-height: 3.0625rem;
       
         @media only screen and (max-width: 414px) {
           font-size: 1.625rem;
         }
-   
+   h6 {
+       font-family: 'Poppins', sans-serif;
+        color: red;
+        font-size: 2.975rem;
+        line-height: 3.0625rem;
+      
+        @media only screen and (max-width: 414px) {
+          font-size: 1.625rem;
+           color: red;
+        }
     p {
 		font-weight: 200;
         font-size: 1.525rem;
@@ -56,10 +66,10 @@ const Styles = createGlobalStyle`
     a {
         text-decoration: none;
         outline: none;
-        color: #EAB642;
+        color: rgb(209, 29, 50);
 
         :hover {
-            color: #EAB642;
+            color: blue;
         }
     }
     
@@ -75,14 +85,15 @@ const Styles = createGlobalStyle`
         display: flex;
         flex-direction: column;
         padding: 1.25rem;
-        text-align: left;
         padding-top: 2.5rem;
         padding-right: 2rem;
+        text-align: center;
     }
 
     .anticon,
     .ant-notification-notice-icon-success {
-        color: #EAB642;
+        color: rgb(209, 29, 50);
+        
     }
     Span:hover {
         color: #000

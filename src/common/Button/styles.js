@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-  background: ${(props) => props.color || '#EAB642'};
-  color: ${(props) => (props.color ? '#EAB642' : '#fff')};
+  background: ${(props) => props.color || 'rgb(209, 29, 50)'};
+  color: ${(props) => (props.color ? 'rgb(209, 29, 50)' : '#fff')};
   font-size: 1rem;
   font-weight: 700;
   width: 100%;
@@ -24,6 +24,7 @@ export const Button = styled.button`
 
   @media only screen and (max-width: 480px) {
     width: ${(props) => (props.width ? '160px' : '100%')};
+    margin-left: 0rem;
   }
   
 `;

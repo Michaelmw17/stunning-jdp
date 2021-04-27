@@ -17,9 +17,10 @@ export const Input = styled.input`
   transition: border-color 0.3s ease-in;
   border-radius: 8px;
   color: #000;
+  
 
   &:focus,
   &:hover {
-    border-color: #EAB642;
+    border-color: blue;
   }
 `;

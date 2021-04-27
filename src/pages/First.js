@@ -58,13 +58,14 @@ function First(props) {
                 styles: exampleMapStyles,
             }}
         mapContainerStyle={{
-              height: `50vh`,
+              height: `80vh`,
               width: '70%',
-              marginLeft: '80px',
-              marginRight: '10px',
-              marginTop: '0px',
-              marginBottom: '40px',
+              marginLeft: '20px',
+              marginRight: '20px',
+              marginTop: '20px',
               maxWidth: '1480px',
+              minWidth: '280px',
+              borderRadius: '14px'
         }}
         zoom={15}
           >

@@ -19,9 +19,9 @@ const MyComp = () => {
                 marginRight: "auto",
                 width: "100%",
                 height: 'auto',
-                maxWidth: "100%",
-                maxHeight: "60px",
-                left: '250px',
+                maxWidth: "50%",
+                maxHeight: "30px",
+                left: '350px',
             }}
             max-age="31536000"
         />

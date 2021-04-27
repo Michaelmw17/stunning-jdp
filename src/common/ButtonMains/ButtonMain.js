@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
             "background": "#D3D3D3",
             "borderRadius": "20%",
             "boxShadow": "0 0 50px #71d9ff,\n    inset 0 0 50px #71d9ff,\n    inset 0 1px 1px #000,\n    0 0 0 1px #000,\n    0 0 0 1px #000,\n    0 0  1px #000",
-            "marginLeft": "20px",
+            "marginLeft": "15px",
             "marginTop": "20px",
           }}>
             </span>

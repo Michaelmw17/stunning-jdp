@@ -1,16 +1,10 @@
 import { lazy, Fragment,Suspense  } from "react";
 import { Row, Col } from "antd";
 import Spinner from 'react-bootstrap/Spinner';
-// import Link from '@material-ui/core/Link';
-// import i18n from "i18next";
 import { withTranslation } from "react-i18next";
 import Fade from "react-reveal/Fade";
 import {  Link } from 'react-router-dom';
-// import { GrInstagram } from 'react-icons/fa';
-// import SocialMediaIcons from 'react-social-media-icons';
 import * as S from "./styles";
-// var { SocialIcon } = require('react-social-icons');
-// const SvgIcon = lazy(() => import("../../common/SvgIcon"));
 const MyComp = lazy(() => import("../../components/MyComp/myComp"));
 const Container = lazy(() => import("../../common/Container"));
 
@@ -47,33 +41,34 @@ const scrollTo = (id) => {
                   <S.Chat>{t(`Let's Chat`)}</S.Chat>
                 </Mailto>
               </Col>
- 
-              <Col lg={8} md={8} sm={12} xs={24}>
+              <Col lg={6} md={6} sm={12} xs={24}>
                 <S.Title>{t("Joe Panetta")}</S.Title>
-                <S.Large to="/" left="true">
-                  {t("Ph: 0412 450 300")}
-                </S.Large>
+                {/* <S.Large left="true"> */}
+                <a href="tel:0412-450-300">
+                            {t("Ph: 0412 450 300")}
+                </a>
                 <Mailto email="joe@jdpelectrical.com.au" subject="Enquire To JPD" body="Hello Joe!">
                     <S.Chat>{t(`Joe@jdpelectrical.com.au`)}</S.Chat>
                   </Mailto>
-               
               </Col>
               <Col lg={6} md={6} sm={12} xs={24} >
                 <S.Empty />
                 <S.Title >{t("Dominic Panetta")}</S.Title>
-                <S.Large left="true" to="/">
-                  {t("Ph: 0412 479 557")}
-                </S.Large>
+                <a href="tel:0412-479-557">
+                            {t("Ph: 0412 479 557")}
+                </a>
                 <Mailto email="dom@jdpelectrical.com.au" subject="Enquire To JPD" body="Hello Dom!">
                     <S.Chat>{t(`Dom@jdpelectrical.com.au`)}</S.Chat>
                   </Mailto>
               </Col>
-              <Col lg={6} md={6} sm={12} xs={24}>
+              <Col lg={8} md={8} sm={12} xs={24}>
                 <S.Empty />
                 <S.Title>{t("General & Accounts")}</S.Title>
-                <S.Large left="true" to="/">
-                  {t("Ph: (02) 9419 7947 ")}
-                </S.Large>
+                {/* <S.Large left="true" to="/"> */}
+                <a href="tel:02-9419-7947">
+                            {t("Ph: (02) 9419 7947 ")}
+                </a>
+                {/* </S.Large> */}
                 <Mailto email=" info@jdpelectrical.com.au" subject="Enquire To JPD" body="Hello JPD!">
                  <S.Chat>{t(`Info@jdpelectrical.com.au`)}</S.Chat>
                   </Mailto>
@@ -104,7 +99,6 @@ const scrollTo = (id) => {
                 <S.Large left="true" to="/">
                   {t("Home")}
                 </S.Large>
-                
                 <S.Large left="true"  to="/about" onClick={() => scrollTo("Service")}>
                   {t("Services")}
                 </S.Large>
@@ -139,20 +133,8 @@ const scrollTo = (id) => {
                             <Spinner animation="border" />
                             }>
                     <MyComp />
-                  
-                  {/* <Link to="/" > */}
-
-                                
                     </Suspense>
-                {/* </Link> */}
-                  {/* <SvgIcon
-                    src="logo.svg"
-                    aria-label="homepage"
-                    width="101px"
-                    height="64px"
-                  /> */}
                 </S.LogoContainer>
-              {/* </S.NavLink> */}
               </Link>
               <S.FooterContainer>
                 {/* <SocialMediaIcons
@@ -161,7 +143,7 @@ const scrollTo = (id) => {
                     iconColor={'#495056'}
                   /> */}
                 {/* <SocialLink
-                  href="https://github.com/Adrinlol/create-react-app-adrinlol"
+                  href=""
                   src="github.svg"
                 />
                 <SocialLink
@@ -169,15 +151,15 @@ const scrollTo = (id) => {
                   src="twitter.svg"
                 />
                 <SocialLink
-                  href="https://www.linkedin.com/in/lasha-kakabadze/"
+                  href=""
                   src="/linkedin.svg"
                 />
                 <SocialLink
-                  href="https://github.com/Adrinlol/"
+                  href=""
                   src="instagram.svg"
                 />
                 <SocialLink
-                  href="https://medium.com/@lashakakabadze/"
+                  href=""
                   src="medium.svg"
                 /> */}
               </S.FooterContainer>

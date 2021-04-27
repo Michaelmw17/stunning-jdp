@@ -19,6 +19,6 @@ export const TextArea = styled.textarea`
 
   &:focus,
   &:hover {
-    border-color: #EAB642;
+    border-color: RGB(209, 29, 50);
   }
 `;
