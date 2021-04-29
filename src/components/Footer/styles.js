@@ -7,7 +7,7 @@ export const Footer = styled.footer`
 `;
 
 export const Title = styled.h4`
-  font-size: 16px;
+  font-size: 18px;
   text-transform: uppercase;
   color: #000;
 
@@ -83,6 +83,7 @@ export const Large = styled(Link)`
   line-height: 24px;
   display: block;
   margin-bottom: 0.625rem;
+  margin-top: -0.525rem;
 
   &:hover {
     color: rgb(255, 130, 92);

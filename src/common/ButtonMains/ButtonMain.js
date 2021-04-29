@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
     <div className={classes.root}>
       
       <div id="example1">
+      <div id="example11">
      
         <Button
           title="Click to Enter"
@@ -48,23 +49,24 @@ const useStyles = makeStyles((theme) => ({
             "borderRadius": "20%",
             
             "boxShadow":
-              "0 0 50px #D3D3D3,\n    inset 0 0 50px rgba(255,255,255),    inset 0 1px 1px #71d9ff,\n    0 0 0 1px #D3D3D3,\n    0 0 0 3px #707070,\n    0 0 0 5px #D3D3D3",
+              "0 0 50px #94ffff,\n    inset 0 0 50px rgba(255,255,255),    inset 0 1px 1px #71d9ff,\n    0 0 0 1px #D3D3D3,\n    0 0 0 3px #707070,\n    0 0 0 5px #D3D3D3",
           }}>
           
           <span style={{"position": "absolute",
           
             "top": "0", "left": "0",
             "display": "block",
-            "width": "40%",
+            "width": "45%",
             "height": "10%",
-            "background": "#D3D3D3",
+            "background": "#66ffff",
             "borderRadius": "20%",
             "boxShadow": "0 0 50px #71d9ff,\n    inset 0 0 50px #71d9ff,\n    inset 0 1px 1px #000,\n    0 0 0 1px #000,\n    0 0 0 1px #000,\n    0 0  1px #000",
-            "marginLeft": "15px",
+            "marginLeft": "13px",
             "marginTop": "20px",
           }}>
             </span>
         </Button>
+      </div>
       </div>
     </div>
   );

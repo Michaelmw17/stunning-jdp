@@ -4,7 +4,7 @@ import { withTranslation } from "react-i18next";
 import Slide from "react-reveal/Slide";
 import ButtonAnimated from '../../../common/ButtonAnimation/AnimationButton'
 import SvgIcon from "../../../components/ImageComp/imgComp";
-import Container from '@material-ui/core/Container';
+// import Container from '@material-ui/core/Container';
 
 import Button from "../../../common/Button";
 
@@ -28,48 +28,44 @@ const RightBlock = ({ title, content, contentTwo, button, icon, t, id }) => {
               <S.Content>{t(content)}</S.Content>
               
                 <Row>
-            <Container fixed>
-            <Row>
-            <Col lg={6} md={6} sm={6} xs={24}>
-            <S.ButtonWrapper>
-                {button &&
-                  typeof button === "object" &&
-                  button.map((item, id) => {
-                    return (
-                    <ButtonAnimated 
-                        key={id}
-                      >
-                        <S.Span>{t(item.title1)}</S.Span>
-                      </ButtonAnimated>
-                      
-                    );
-                  })}
-              </S.ButtonWrapper>
-              <S.ButtonWrapper>
-                {button &&
-                  typeof button === "object" &&
-                  button.map((item, id) => {
-                    return (
-                      <Button
-                        key={id}
-                        color={item.color}
-                        width="true"
-                        onClick={() => scrollTo("Team")}
-                      > 
-                        {t(item.title)}
-                      </Button>
-                    );
-                  })}
-              </S.ButtonWrapper>
-              </Col >
-            </Row>
-            </Container>
- {/* <div className="row"> */}
- 
-  <div className="col-sm-6 col-md-4 col-md-offset-2 col-lg-6 col-lg-offset-3">
-    
-  </div>
-{/* </div> */}
+                <Row>
+                    <Col xs={12} sm={24} md={24} lg={12} xl={12}>
+                      <S.ButtonWrapper>
+                                {button &&
+                                  typeof button === "object" &&
+                                  button.map((item, id) => {
+                                    return (
+                                    <ButtonAnimated 
+                                        key={id}
+                                      >
+                                        <S.Span>{t(item.title1)}</S.Span>
+                                      </ButtonAnimated>
+                                      
+                                    );
+                                  })}
+                              </S.ButtonWrapper>
+                    </Col>
+                    <Col xs={24} sm={24} md={24} lg={12} xl={12}>
+                      <S.ButtonWrapper>
+                                {button &&
+                                  typeof button === "object" &&
+                                  button.map((item, id) => {
+                                    return (
+                                      <Button
+                                        key={id}
+                                        color={item.color}
+                                        width="true"
+                                        onClick={() => scrollTo("Team")}
+                                      > 
+                                        {t(item.title)}
+                                      </Button>
+                                    );
+                                  })}
+                              </S.ButtonWrapper>
+                            </Col>
+                            
+                          </Row>
+                                  
               </Row>
               {/* </Grid> */}
             </S.ContentWrapper>

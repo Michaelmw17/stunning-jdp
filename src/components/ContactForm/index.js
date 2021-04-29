@@ -1,24 +1,34 @@
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
 import { Row, Col } from "antd";
 import Zoom from "react-reveal/Zoom";
 import { withTranslation } from "react-i18next";
-import GoogleMap from '../../pages/First'
-import './stylesForm.css'
+import emailjs from 'emailjs-com';
+import Loader from "react-loader-spinner";
 import useForm from "./useForm";
 import validate from "./validationRules";
 
+import InputLabel from '@material-ui/core/InputLabel';
+
+import './stylesForm.css'
 import * as S from "./styles";
-import emailjs from 'emailjs-com';
+
+
 const Block = lazy(() => import("../Block"));
-// const Input = lazy(() => import("../../common/Input"));
 const Button = lazy(() => import("../../common/Button"));
 const TextArea = lazy(() => import("../../common/TextArea"));
 const SimpleSelect = lazy(() => import("../../common/DropDown"));
 
+const GoogleMap = lazy(() => import('../../pages/First'), {
+  fallback: <div><Loader
+    type="Rings"
+    color="#00BFFF"
+    timeout={9000}
+    height={80} width={80} /></div>
+})
 
 const Contact = ({ title, content, id, t , e, handleSubmit}) => {
    function sendEmail(e) {
-    e.preventDefault();
+    e.preventDefault({passive: true});
 
         emailjs.sendForm(
                 "service_a9ktqlp",
@@ -45,9 +55,6 @@ const Contact = ({ title, content, id, t , e, handleSubmit}) => {
       <S.Span />
     );
   };
-  // function myFunction() {
-  //         alert("Your file is being uploaded!")
-  //     }
 
   return (
     <S.ContactContainer id={id} >
@@ -58,12 +65,12 @@ const Contact = ({ title, content, id, t , e, handleSubmit}) => {
           <Col lg={12} md={12} sm={24}>
           <Block padding={true} title={title} content={content} />
               <Col>
-              <div>
+              <div className="formText">
                   <a href="tel:02-9419-7947">
                     Ph: (02) 9419 7947 
                     </a>
                 </div> 
-              <div>
+              <div className="formText">
                 <a href={
                   `https://www.google.com/maps/search/nit+17+4-6+Chaplin+Drive+Lane+Cove+West+NSW+2066./@-33.8098656,151.1461655,17z/data=!3m1!4b1`}> Unit 17, 4-6 Chaplin Drive Lane Cove West NSW 2066
                   </a>
@@ -71,7 +78,10 @@ const Contact = ({ title, content, id, t , e, handleSubmit}) => {
                 </Col>
             <S.FormGroup autoComplete="off" onSubmit={sendEmail ||  handleSubmit}  onsubmit="return false">
               <Col span={24}>
-                 <input minLength="1"  required="required" 
+                  <InputLabel shrink id="nameLabel">
+                    Full Name  *
+                  </InputLabel>
+                <input minLength="1"  required="required" 
                   type="text"
                   name="name"
                   id="firstName"
@@ -80,34 +90,43 @@ const Contact = ({ title, content, id, t , e, handleSubmit}) => {
                   value={values.name || ""}
                   onChange={handleChange}
                 />
-               
+              
                 <ValidationType type="name" />
               </Col>
               
               <Col span={24}>
-                 <input id="input" type="email"
+              <InputLabel shrink id="EmailLabel">
+                    Email *
+                  </InputLabel>
+                <input id="input" type="email"
                   name="email" required="required"
-                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                     placeholder="JohnSmith@email.com *" />
                 <ValidationType type="email" />
               </Col>
               <Col span={24}>
+              <InputLabel shrink id="phoneLabel">
+                    Phone Number *
+                  </InputLabel>
                 <input
                   placeholder="Phone Number*"
                   value={values.number || ""}
                   name="number"
-                   required="required"
+                  required="required"
                   id="number"
                   onChange={handleChange}
                 />
                 <ValidationType type="Number" />
               </Col>
               <Col span={24}>
+              <InputLabel shrink id="suburbLabel">
+                    Your Suburb *
+                  </InputLabel>
                 <input
                   placeholder="Suburb Name*"
                   value={values.suburb || ""}
                   name="suburb"
-                   required="required"
+                  required="required"
                   id="suburb"
                   onChange={handleChange}
                 />
@@ -118,18 +137,20 @@ const Contact = ({ title, content, id, t , e, handleSubmit}) => {
                   placeholder="menu"
                   value={values.message || ""}
                   name="menu"
-                   required="required"
+                  required="required"
                   id="menu"
                   onChange={handleChange}
                 />
                 <ValidationType type="message" />
               </Col>
               <Col span={24}>
+               <InputLabel shrink id="subjectLabel">
+                    Your Subject *
+                  </InputLabel>
                 <input
                 required="required" 
                   type="text"
                   name="subject"
-
                   id="subject"
                   placeholder="Subject *"
                   title="Subject *"
@@ -139,8 +160,11 @@ const Contact = ({ title, content, id, t , e, handleSubmit}) => {
                 <ValidationType type="subject" />
               </Col>
               <Col span={24}>
+              <InputLabel shrink id="MessageLabel">
+                    Your Message *
+                  </InputLabel>
                 <TextArea
-                  placeholder="Your Message"
+                  placeholder="Message"
                   value={values.message || ""}
                   name="message"
                   id="Message"
@@ -157,10 +181,10 @@ const Contact = ({ title, content, id, t , e, handleSubmit}) => {
             </S.FormGroup>
           </Col>
           <Col lg={12} md={11} sm={24}>
-            
-            
-      <GoogleMap />
-        
+                    <Suspense fallback={<div>
+                    <Loader type="Rings" color="#00BFFF" height={80} width={80} /></div>}>
+                  <GoogleMap defer/>
+                </Suspense>
           </Col>
         </Row>
       </S.Contact>

@@ -38,6 +38,7 @@ const Home = (props, i) => {
       <Container>
       <GlobalStyles/>
         <>
+           <NavLink to='/About'>
           <div className="App">
             <Tooltip
             arrow={8}
@@ -61,11 +62,11 @@ const Home = (props, i) => {
       word-break: break-all;
     `}
   >
-              <NavLink to='/About'>
+           
                   <Toggle theme={theme} toggleTheme={themeToggler} key={i} />
-          </NavLink>
             </Tooltip>
           </div>
+          </NavLink>
     </>
         <NavLink to='/About'>
               <h1 style={{textAlign: 'center', marginTop:30, color: 'white'}}>

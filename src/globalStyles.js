@@ -37,7 +37,7 @@ const Styles = createGlobalStyle`
     {
         font-family: 'Poppins', sans-serif;
         color: ;
-        padding: 5rem  1rem ;
+        padding: 5.5rem  1rem ;
         font-size: 2.975rem;
         line-height: 3.0625rem;
       

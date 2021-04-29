@@ -7,6 +7,7 @@ import MiddleBlockContentThree from "../../content/MiddleBlockContentThree.json"
 import ContactContent from "../../content/ContactContent.json";
 import IntroContent from "../../content/IntroContent.json";
 import Header from "../../components/Header";
+import MeetTeam from "../../components/MeetTheTeamHover";
 // import GoogleMap from '../First'
 // import Form from '../../components/VaildtionForm';
 
@@ -77,69 +78,9 @@ function First() {
         /> */}
         <div id="Teams"></div>
       </Container>
-      <h1> Meet the Team</h1>
-      <div className="team-section">
-        <div className="inner-width">
-          {/* <h2>Meet our team Designed by <a href="https://www.instagram.com/atulkprajapati2000/">Atul Prajapati</a></h2> */}
-          <div className="pers">
-            <div className="pe">
-              <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="person" />
-              <div className="p-name">Joe Panetta</div>
-              <div className="p-des">Designer</div>
-              <div className="p-sm">
-                <a href="/#"><i className="fab fa-facebook-f" /></a>
-                <a href="/#"><i className="fab fa-twitter" /></a>
-                <a href="/#"><i className="fab fa-instagram" /></a>
-                <a href="/#"><i className="fab fa-tumblr" /></a>
-              </div>
-            </div>
-            <div className="pe">
-              <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="person" />
-              <div className="p-name">Anna Panetta</div>
-              <div className="p-des">Designer</div>
-              <div className="p-sm">
-                <a href="/#"><i className="fab fa-facebook-f" /></a>
-                <a href="/#"><i className="fab fa-twitter" /></a>
-                <a href="/#"><i className="fab fa-instagram" /></a>
-                <a href="/#"><i className="fab fa-tumblr" /></a>
-              </div>
-            </div>
-            <div className="pe">
-              <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="person" />
-              <div className="p-name">Anna Panetta</div>
-              <div className="p-des">Designer</div>
-              <div className="p-sm">
-                <a href="/#"><i className="fab fa-facebook-f" /></a>
-                <a href="/#"><i className="fab fa-twitter" /></a>
-                <a href="/#"><i className="fab fa-instagram" /></a>
-                <a href="/#"><i className="fab fa-tumblr" /></a>
-              </div>
-            </div>
-            <div className="pe-one">
-              <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="person" />
-              <div className="p-name">Anna Panetta</div>
-              <div className="p-des">Designer</div>
-              <div className="p-sm">
-                <a href="/#"><i className="fab fa-facebook-f" /></a>
-                <a href="/#"><i className="fab fa-twitter" /></a>
-                <a href="/#"><i className="fab fa-instagram" /></a>
-                <a href="/#"><i className="fab fa-tumblr" /></a>
-              </div>
-            </div>
-            <div className="pe-two">
-              <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="person" />
-              <div className="p-name" id="Review">Dominic Panetta</div>
-              <div className="p-des">Director</div>
-              <div className="p-sm">
-                <a href="/#"><i className="fab fa-facebook-f" /></a>
-                <a href="/#"><i className="fab fa-twitter" /></a>
-                <a href="/#"><i className="fab fa-instagram" /></a>
-                <a href="/#"><i className="fab fa-tumblr" /></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+      <MeetTeam/>
+     
       <div id="Review">
         <Carousel/>
         </div>
@@ -149,7 +90,16 @@ function First() {
         </div> */}
         {/* <div className="Contact">
         <ContactJs/>
-        </div> */}
+        </div> 
+        
+        <div className="pe-one">
+              <div className="p-name">Anna Panetta</div>
+              <div className="p-des">Designer</div>
+              <div className="p-sm">
+               <button></button>
+               </div>
+            </div>
+        */}
       <ContactFrom
         title={ContactContent.title}
         content={ContactContent.text}

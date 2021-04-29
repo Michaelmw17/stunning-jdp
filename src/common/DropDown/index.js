@@ -10,7 +10,9 @@ import Select from '@material-ui/core/Select';
 const useStyles = makeStyles((theme) => ({
   formControl: {
     margin: theme.spacing(1),
-    minWidth: 290,
+    minWidth: 230,
+    marginTop:40,
+    marginBottom:-20,
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
@@ -29,7 +31,7 @@ export default function SimpleSelect() {
     <div>
       <FormControl className={classes.formControl}>
         <InputLabel shrink id="demo-simple-select-placeholder-label-label">
-          What can we help you with?: 
+          What can we help you with?:  *
         </InputLabel>
         <Select
           labelId="demo-simple-select-placeholder-label-label"

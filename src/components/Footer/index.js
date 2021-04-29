@@ -29,7 +29,7 @@ const scrollTo = (id) => {
           <Container id="footer">
             <Row type="flex" justify="space-between">
               <Col lg={10} md={10} sm={12} xs={24}>
-                <S.Language>{t("Contact")}</S.Language>
+                <S.Title>{t("Contact")}</S.Title>
                 <S.Large to="/">{t("Tell us everything")}</S.Large>
                 <S.Para>
                   {t(
@@ -52,7 +52,7 @@ const scrollTo = (id) => {
                   </Mailto>
               </Col>
               <Col lg={6} md={6} sm={12} xs={24} >
-                <S.Empty />
+                {/* <S.Empty /> */}
                 <S.Title >{t("Dominic Panetta")}</S.Title>
                 <a href="tel:0412-479-557">
                             {t("Ph: 0412 479 557")}
@@ -61,8 +61,10 @@ const scrollTo = (id) => {
                     <S.Chat>{t(`Dom@jdpelectrical.com.au`)}</S.Chat>
                   </Mailto>
               </Col>
-              <Col lg={8} md={8} sm={12} xs={24}>
-                <S.Empty />
+
+
+
+              <Col lg={10} md={10} sm={12} xs={24}>
                 <S.Title>{t("General & Accounts")}</S.Title>
                 {/* <S.Large left="true" to="/"> */}
                 <a href="tel:02-9419-7947">
@@ -81,16 +83,13 @@ const scrollTo = (id) => {
                    <S.Chat>{t(`Accounts@jdpelectrical.com.au`)}</S.Chat>
                   </Mailto>
               </Col>
-            </Row>
-            <Row type="flex" justify="space-between">
-              <Col lg={10} md={10} sm={12} xs={24}>
-                <S.Empty />
+              <Col lg={8} md={6} sm={12} xs={24}>
                 <S.Language>{t("ADDRESS")}</S.Language>
                 <S.Para>Unit 17 </S.Para>
                 <S.Para>4-6 Chaplin Drive</S.Para>
                 <S.Para> Lane Cove West NSW 2066</S.Para>
               </Col>
-              <Col lg={8} md={8} sm={12} xs={24}>
+              <Col lg={5} md={8} sm={12} xs={24}>
                 <S.Title>{t("Company")}</S.Title>
                 {/*Errors below on HOME page*/}
                 <S.Large left="true"  to="/about" onClick={() => scrollTo("mission")}>
@@ -109,14 +108,7 @@ const scrollTo = (id) => {
                   {t("Contact")}
                 </S.Large>
               </Col>
-              <Col lg={6} md={6} sm={12} xs={24}>
-                <i className="fab fa-facebook-f fa-2x" />
-                <br/>
-                <i className="fab fa-instagram fa-2x" />
-                <br/>
-               <i className="fab fa-twitter fa-2x" />
-              </Col>
-            </Row>
+              </Row>
           </Container>
         </S.Footer>
         <S.Extra>

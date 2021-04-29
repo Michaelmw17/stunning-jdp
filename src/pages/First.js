@@ -60,11 +60,11 @@ function First(props) {
         mapContainerStyle={{
               height: `80vh`,
               width: '70%',
-              marginLeft: '20px',
-              marginRight: '20px',
+              marginLeft: '10px',
+              marginRight: '40px',
               marginTop: '20px',
               maxWidth: '1480px',
-              minWidth: '280px',
+              minWidth: '210px',
               borderRadius: '14px'
         }}
         zoom={15}

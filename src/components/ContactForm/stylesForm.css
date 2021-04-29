@@ -52,3 +52,26 @@ input {
   margin-bottom:20px;
 
   }
+  .formText {
+     margin-left: 1.2rem
+  }
+  #nameLabel {
+     margin-top: 50px;
+     margin-bottom: -30px;
+  }
+  #EmailLabel {
+     margin-bottom: 10px;
+  }
+  #suburbLabel {
+     margin-bottom: 20px;
+  }
+  #phoneLabel {
+     margin-top: 5px;
+  }
+  #subjectLabel {
+     margin-top: 25px;
+     margin-bottom: -30px;
+  }
+  #MessageLabel {
+     margin-bottom: 20px;
+  }

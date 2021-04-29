@@ -41,7 +41,7 @@ const TestApp = ({ classes }) => {
                       <div className="text-left">
                       <div className="Services">
                       <div className="pie">
-                        <div className="p-name" style={{ fontSize: 20, paddingRight: 20}}>Residential</div>
+                        <div className="p-naming" style={{ fontSize: 20, paddingRight: 20}}>Residential</div>
                         
                         <HomeIcon  style={{ fontSize: 220, paddingTop: 10, paddingLeft: 20 }} /></div>
                         
@@ -65,7 +65,7 @@ const TestApp = ({ classes }) => {
                       <div className="text-left">
                       <div className="Services">
                       <div className="pie">
-                        <div className="p-name" style={{ fontSize: 20, paddingRight: 20}}>Strata / Property Maintenance</div>
+                        <div className="p-naming" style={{ fontSize: 20, paddingRight: 20}}>Strata / Property Maintenance</div>
                        
                         <i className="fas fa-tools" style={{ fontSize: 120, paddingTop: 0, paddingLeft: 20 }} ></i></div>
                       
@@ -91,7 +91,7 @@ const TestApp = ({ classes }) => {
                       <div className="text-left">
                         <div className="Services">
                           <div className="pie">
-                            <div className="p-name" style={{ fontSize: 20, paddingLeft: 5 }}>Commercial</div>
+                            <div className="p-naming" style={{ fontSize: 20, paddingLeft: 5 }}>Commercial</div>
                             
                             <BusinessIcon  style={{ fontSize: 220, paddingTop: 50, color: "#FFF", paddingLeft: 30 }} />
                             

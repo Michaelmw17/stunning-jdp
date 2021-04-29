@@ -14,6 +14,7 @@ export const ButtonAnimated = styled.button`
   margin-top: 0.625rem;
   
   
+  
 @media only screen and (max-width: 1024px) {
     width: ${(props) => (props.width ? '160px' : '80%')};
   

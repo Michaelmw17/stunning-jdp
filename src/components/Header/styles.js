@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { MenuOutlined } from '@ant-design/icons';
 
 export const Header = styled.header`
-  padding: 1rem 0.5rem;
-   position: fixed;
+  padding: 1rem 0.0rem;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -69,7 +69,7 @@ export const ContactWrapper = styled.div`
 `;
 
 export const Burger = styled.div`
-  @media only screen and (max-width: 1044px) {
+  @media only screen and (max-width: 1289px) {
     display: block !important;
     
   }
@@ -78,7 +78,7 @@ export const Burger = styled.div`
 `;
 
 export const NotHidden = styled.div`
-  @media only screen and (max-width: 1044px) {
+  @media only screen and (max-width: 1289px) {
      display: none;
      
     
