@@ -19,13 +19,13 @@
     "static/js/7.c3a386b8.chunk.js": "/stunning-jdp/static/js/7.c3a386b8.chunk.js",
     "static/js/7.c3a386b8.chunk.js.map": "/stunning-jdp/static/js/7.c3a386b8.chunk.js.map",
     "main.css": "/stunning-jdp/static/css/main.7860b62e.chunk.css",
-    "main.js": "/stunning-jdp/static/js/main.f41f3d65.chunk.js",
-    "main.js.map": "/stunning-jdp/static/js/main.f41f3d65.chunk.js.map",
+    "main.js": "/stunning-jdp/static/js/main.ad3e9418.chunk.js",
+    "main.js.map": "/stunning-jdp/static/js/main.ad3e9418.chunk.js.map",
     "runtime-main.js": "/stunning-jdp/static/js/runtime-main.bb75fdfe.js",
     "runtime-main.js.map": "/stunning-jdp/static/js/runtime-main.bb75fdfe.js.map",
     "static/css/10.8a400ad0.chunk.css": "/stunning-jdp/static/css/10.8a400ad0.chunk.css",
-    "static/js/10.dd5c70d5.chunk.js": "/stunning-jdp/static/js/10.dd5c70d5.chunk.js",
-    "static/js/10.dd5c70d5.chunk.js.map": "/stunning-jdp/static/js/10.dd5c70d5.chunk.js.map",
+    "static/js/10.80859fa5.chunk.js": "/stunning-jdp/static/js/10.80859fa5.chunk.js",
+    "static/js/10.80859fa5.chunk.js.map": "/stunning-jdp/static/js/10.80859fa5.chunk.js.map",
     "static/js/11.ddf33733.chunk.js": "/stunning-jdp/static/js/11.ddf33733.chunk.js",
     "static/js/11.ddf33733.chunk.js.map": "/stunning-jdp/static/js/11.ddf33733.chunk.js.map",
     "static/js/12.a7c236c0.chunk.js": "/stunning-jdp/static/js/12.a7c236c0.chunk.js",
@@ -47,14 +47,14 @@
     "static/css/3.373bc5f8.chunk.css.map": "/stunning-jdp/static/css/3.373bc5f8.chunk.css.map",
     "static/css/5.c3e2f056.chunk.css.map": "/stunning-jdp/static/css/5.c3e2f056.chunk.css.map",
     "static/css/main.7860b62e.chunk.css.map": "/stunning-jdp/static/css/main.7860b62e.chunk.css.map",
-    "static/js/10.dd5c70d5.chunk.js.LICENSE.txt": "/stunning-jdp/static/js/10.dd5c70d5.chunk.js.LICENSE.txt",
+    "static/js/10.80859fa5.chunk.js.LICENSE.txt": "/stunning-jdp/static/js/10.80859fa5.chunk.js.LICENSE.txt",
     "static/media/slick-theme.css": "/stunning-jdp/static/media/slick.c94f7671.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.bb75fdfe.js",
     "static/css/10.8a400ad0.chunk.css",
-    "static/js/10.dd5c70d5.chunk.js",
+    "static/js/10.80859fa5.chunk.js",
     "static/css/main.7860b62e.chunk.css",
-    "static/js/main.f41f3d65.chunk.js"
+    "static/js/main.ad3e9418.chunk.js"
   ]
 }
