@@ -7,7 +7,7 @@ export const MiddleBlock = styled.section`
   justify-content: center;
 
   @media screen and (max-width: 768px) {
-    padding: 3.5rem 0 3rem;
+    padding: 3.5rem 0 1rem;
   }
 `;
 

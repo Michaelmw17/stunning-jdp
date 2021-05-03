@@ -17,9 +17,8 @@ const MyComp = () => {
                display: "absolute",
                 background: '#FFF',
                 marginRight: "auto",
-                
+                height: "100%",
                 width: "100%",
-                height: 'auto',
                 maxWidth: "50%",
                 maxHeight: "30px",
                 left: '350px',

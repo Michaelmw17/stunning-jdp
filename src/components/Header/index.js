@@ -7,11 +7,12 @@ import { Row, Col, Drawer } from "antd";
 import { CSSTransition } from "react-transition-group";
 import { withTranslation } from "react-i18next";
 import { makeStyles } from '@material-ui/core/styles';
-// import BuildIcon from '@material-ui/icons/Build';
-// import InfoIcon from '@material-ui/icons/Info';
-// import HomeIcon from '@material-ui/icons/Home';
-// import RateReviewIcon from '@material-ui/icons/RateReview';
-// import ContactMailIcon from '@material-ui/icons/ContactMail';
+import BuildIcon from '@material-ui/icons/Build';
+import InfoIcon from '@material-ui/icons/Info';
+import HomeIcon from '@material-ui/icons/Home';
+import RateReviewIcon from '@material-ui/icons/RateReview';
+import ContactMailIcon from '@material-ui/icons/ContactMail';
+
 // import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
 //         import PhoneForwardedIcon from '@material-ui/icons/PhoneForwarded';
         import { Link } from 'react-router-dom';
@@ -54,16 +55,16 @@ const useStyles = makeStyles((theme) => ({
         <div className={classes.root} style={{ textAlign: "center" }}>
          <S.CustomNavLinkSmall>
             <Link to="/">
-          {/* <HomeIcon style={{ color:"RGB(209, 29, 50)", fontSize: 40  }} /> */}
+          <HomeIcon style={{ color:"RGB(209, 29, 50)", fontSize: 30  }} />
               <S.Span><span>{t("Home")}</span></S.Span>
               </Link>
           </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall onClick={() => scrollTo("People")}>
-          {/* <InfoIcon style={{color:"RGB(209, 29, 50)", fontSize: 40  }} /> */}
+          <InfoIcon style={{color:"RGB(209, 29, 50)", fontSize: 30  }} />
           <S.Span ><span>{t("About")}</span></S.Span>
         </S.CustomNavLinkSmall>
           <S.CustomNavLinkSmall onClick={() => scrollTo("Service")}>
-          {/* <BuildIcon style={{ color:"RGB(209, 29, 50)", fontSize: 40   }} /> */}
+          <BuildIcon style={{ color:"RGB(209, 29, 50)", fontSize: 30   }} />
             <S.Span className="Span"><span>{t("Services")}</span></S.Span>
         </S.CustomNavLinkSmall>
           {/* <S.CustomNavLinkSmall onClick={() => scrollTo("Teams")}>
@@ -71,17 +72,17 @@ const useStyles = makeStyles((theme) => ({
           <S.Span><span>{t("Our Team")}</span></S.Span>
         </S.CustomNavLinkSmall> */}
           <S.CustomNavLinkSmall onClick={() => scrollTo("Review")}>
-            {/* <RateReviewIcon style={{ color:"RGB(209, 29, 50)", fontSize: 40 }} /> */}
+            <RateReviewIcon style={{ color:"RGB(209, 29, 50)", fontSize: 30 }} />
           <S.Span><span>{t("Reviews")}</span></S.Span>
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall onClick={() => scrollTo("Team")}>
-          {/* <ContactMailIcon style={{ color:"RGB(209, 29, 50)", fontSize: 40  }} /> */}
+          <ContactMailIcon style={{ color:"RGB(209, 29, 50)", fontSize: 30  }} />
           <S.Span><span>{t("Contact")}</span></S.Span>
           </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall >
           <div>
           <a href="tel:02-9419-7947">
-      <Button classes={{ root: 'button', label: 'button-label'}} style={{ backgroundColor: "rgb(209, 29, 50)", borderRadius: '10px', height:'40px', width:'100%'}}>
+      <Button classes={{ root: 'button', label: 'button-label'}} style={{ backgroundColor: "rgb(209, 29, 50)", borderRadius: '10px', height:'40px', width:'100%', marginBottom:40}}>
       CALL US NOW
       {/* <PhoneForwardedIcon/> */}
       </Button>

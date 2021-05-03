@@ -1,12 +1,16 @@
 import { Row, Col } from "antd";
+import {  Suspense } from "react";
 // import Grid from '@material-ui/core/Grid';
 import { withTranslation } from "react-i18next";
 import Slide from "react-reveal/Slide";
 import ButtonAnimated from '../../../common/ButtonAnimation/AnimationButton'
-import SvgIcon from "../../../components/ImageComp/imgComp";
+// import SvgIcon from "../../../components/ImageComp/imgComp";
+import Image from "../ImageComponent/index";
 // import Container from '@material-ui/core/Container';
-
+import './styling.css'
 import Button from "../../../common/Button";
+import ContactMailIcon from '@material-ui/icons/ContactMail';
+import BuildlIcon from '@material-ui/icons/Build';
 
 import * as S from "./styles";
 
@@ -38,7 +42,11 @@ const RightBlock = ({ title, content, contentTwo, button, icon, t, id }) => {
                                     <ButtonAnimated 
                                         key={id}
                                       >
-                                        <S.Span>{t(item.title1)}</S.Span>
+                                        <S.Span>
+                                        {t(item.title1)}
+                                        <BuildlIcon style={{ color:"#000", fontSize: 15,paddingTop: 0 }} />
+                                        </S.Span>
+                                        
                                       </ButtonAnimated>
                                       
                                     );
@@ -58,6 +66,8 @@ const RightBlock = ({ title, content, contentTwo, button, icon, t, id }) => {
                                         onClick={() => scrollTo("Team")}
                                       > 
                                         {t(item.title)}
+                                        
+                                      <ContactMailIcon style={{ color:"#FFF", fontSize: 25,paddingTop: 10 }} />
                                       </Button>
                                     );
                                   })}
@@ -71,15 +81,17 @@ const RightBlock = ({ title, content, contentTwo, button, icon, t, id }) => {
             </S.ContentWrapper>
           </Slide>
         </Col>
-        <Col lg={11} md={11} sm={12} xs={24}>
+        <Col lg={8} md={11} sm={12} xs={24}>
           <Slide right>
-            
-            <SvgIcon
+          <Suspense fallback={<div>Loading..</div>}>
+            <Image id='ImageComp'/>
+            </Suspense>
+            {/* <SvgIcon
               src={icon}
               className="about-block-image"
               width="100%"
               height="100%"
-            />
+            /> */}
           </Slide>
         </Col>
       </Row>

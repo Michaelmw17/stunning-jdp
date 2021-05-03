@@ -14,7 +14,7 @@ export const Content = styled.p`
   font-size: 20px
 `;
 export const Span = styled.p`
-  margin: -0.2rem 3rem 0rem -1rem;
+  margin: 0.4rem -5rem 0rem -6rem;
   font-size: 16px
 `;
 

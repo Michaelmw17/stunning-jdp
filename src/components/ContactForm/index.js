@@ -6,25 +6,27 @@ import emailjs from 'emailjs-com';
 import Loader from "react-loader-spinner";
 import useForm from "./useForm";
 import validate from "./validationRules";
+import loadable from '@loadable/component'
 
 import InputLabel from '@material-ui/core/InputLabel';
 
 import './stylesForm.css'
 import * as S from "./styles";
 
+const OtherComponent = loadable(() => import('../../pages/First'))
 
 const Block = lazy(() => import("../Block"));
 const Button = lazy(() => import("../../common/Button"));
 const TextArea = lazy(() => import("../../common/TextArea"));
 const SimpleSelect = lazy(() => import("../../common/DropDown"));
 
-const GoogleMap = lazy(() => import('../../pages/First'), {
-  fallback: <div><Loader
-    type="Rings"
-    color="#00BFFF"
-    timeout={9000}
-    height={80} width={80} /></div>
-})
+// const GoogleMap = lazy(() => import('../../pages/First'), {
+//   fallback: <div><Loader
+//     type="Rings"
+//     color="#00BFFF"
+//     timeout={9000}
+//     height={80} width={80} /></div>
+// })
 
 const Contact = ({ title, content, id, t , e, handleSubmit}) => {
    function sendEmail(e) {
@@ -183,7 +185,8 @@ const Contact = ({ title, content, id, t , e, handleSubmit}) => {
           <Col lg={12} md={11} sm={24}>
                     <Suspense fallback={<div>
                     <Loader type="Rings" color="#00BFFF" height={80} width={80} /></div>}>
-                  <GoogleMap defer/>
+                  {/* <GoogleMap defer/> */}
+                  <OtherComponent/>
                 </Suspense>
           </Col>
         </Row>

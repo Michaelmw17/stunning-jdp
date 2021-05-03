@@ -37,16 +37,18 @@ const scrollTo = (id) => {
                     Feel free to reach out.`
                   )}
                 </S.Para>
-                <Mailto email="info@jdpelectrical.com.au " subject="Enquire To JPD" body="Hello world!" >
+                <Mailto email="info@jdpelectrical.com.au " subject="Enquire To JPD" body="Hello JPD!" >
                   <S.Chat>{t(`Let's Chat`)}</S.Chat>
                 </Mailto>
               </Col>
               <Col lg={6} md={6} sm={12} xs={24}>
                 <S.Title>{t("Joe Panetta")}</S.Title>
                 {/* <S.Large left="true"> */}
+                <S.Para>
                 <a href="tel:0412-450-300">
                             {t("Ph: 0412 450 300")}
                 </a>
+                </S.Para>
                 <Mailto email="joe@jdpelectrical.com.au" subject="Enquire To JPD" body="Hello Joe!">
                     <S.Chat>{t(`Joe@jdpelectrical.com.au`)}</S.Chat>
                   </Mailto>
@@ -54,9 +56,11 @@ const scrollTo = (id) => {
               <Col lg={6} md={6} sm={12} xs={24} >
                 {/* <S.Empty /> */}
                 <S.Title >{t("Dominic Panetta")}</S.Title>
+                <S.Para>
                 <a href="tel:0412-479-557">
                             {t("Ph: 0412 479 557")}
                 </a>
+                </S.Para>
                 <Mailto email="dom@jdpelectrical.com.au" subject="Enquire To JPD" body="Hello Dom!">
                     <S.Chat>{t(`Dom@jdpelectrical.com.au`)}</S.Chat>
                   </Mailto>
@@ -67,9 +71,11 @@ const scrollTo = (id) => {
               <Col lg={10} md={10} sm={12} xs={24}>
                 <S.Title>{t("General & Accounts")}</S.Title>
                 {/* <S.Large left="true" to="/"> */}
+                <S.Para>
                 <a href="tel:02-9419-7947">
                             {t("Ph: (02) 9419 7947 ")}
                 </a>
+                </S.Para>
                 {/* </S.Large> */}
                 <Mailto email=" info@jdpelectrical.com.au" subject="Enquire To JPD" body="Hello JPD!">
                  <S.Chat>{t(`Info@jdpelectrical.com.au`)}</S.Chat>
@@ -84,7 +90,7 @@ const scrollTo = (id) => {
                   </Mailto>
               </Col>
               <Col lg={8} md={6} sm={12} xs={24}>
-                <S.Language>{t("ADDRESS")}</S.Language>
+                <S.Title>{t("ADDRESS")}</S.Title>
                 <S.Para>Unit 17 </S.Para>
                 <S.Para>4-6 Chaplin Drive</S.Para>
                 <S.Para> Lane Cove West NSW 2066</S.Para>

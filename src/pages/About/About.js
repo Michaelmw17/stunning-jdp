@@ -6,18 +6,23 @@ import MiddleBlockContentTwo from "../../content/MiddleBlockContentTwo.json";
 import MiddleBlockContentThree from "../../content/MiddleBlockContentThree.json";
 import ContactContent from "../../content/ContactContent.json";
 import IntroContent from "../../content/IntroContent.json";
+
 import Header from "../../components/Header";
-import MeetTeam from "../../components/MeetTheTeamHover";
+// import MeetTeam from "../../components/MeetTheTeamHover";
 // import GoogleMap from '../First'
 // import Form from '../../components/VaildtionForm';
 
-import Carousel from "../../components/CarouselTest/Carousel"
+// import Carousel from "../../components/CarouselTest/Carousel"
 // import CarouselServices from "../../components/CarouselTopServices/Carousel"
 import './about.css'
-import MeetTheTeam from "../../components/ServicesSection/Services"
+// import MeetTheTeam from "../../components/ServicesSection/Services"
 import Footer from "../../components/Footer";
 // import ContactJs from "../../components/MyContact/myComp";
+import loadable from '@loadable/component'
+const MeetTheTeam = loadable(() => import('../../components/ServicesSection/Services.js'))
 
+const Carousel = lazy(() => import("../../components/CarouselTest/Carousel"));
+const MeetTeam = lazy(() => import("../../components/MeetTheTeamHover"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const ContentBlockMain = lazy(() => import("../../components/ContentBlockMain"));
 const ContactFrom = lazy(() => import("../../components/ContactForm"));

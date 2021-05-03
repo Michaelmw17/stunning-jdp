@@ -1,12 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
 
 const Styles = createGlobalStyle`
+@font-face { font-family: Ubuntu; font-display: swap; }
 
     body,
     html,
     a {
         font-family: 'Ubuntu', sans-serif;
-        
+        font-display: swap;
     }
 
 
@@ -44,6 +45,9 @@ const Styles = createGlobalStyle`
         @media only screen and (max-width: 414px) {
           font-size: 1.625rem;
         }
+        h1,h2,h3,h4,h5,h6::first-letter {
+  text-transform: uppercase;
+}
    h6 {
        font-family: 'Poppins', sans-serif;
         color: red;

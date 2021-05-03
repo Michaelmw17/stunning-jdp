@@ -13,21 +13,17 @@ export const ButtonAnimated = styled.button`
   cursor: pointer;
   margin-top: 0.625rem;
   
-  
-  
-@media only screen and (max-width: 1024px) {
-    width: ${(props) => (props.width ? '160px' : '80%')};
-  
+  @media only screen and (max-width: 1024px) {
+    width: ${(props) => (props.width ? '160px' : '100%')};
   }
 
   @media only screen and (max-width: 768px) {
-    width: ${(props) => (props.width ? '160px' : '70%')};
-  
+    width: ${(props) => (props.width ? '160px' : '100%')};
   }
 
   @media only screen and (max-width: 480px) {
-    width: ${(props) => (props.width ? '100px' : '39%')};
-
+    width: ${(props) => (props.width ? '160px' : '100%')};
+    margin-left: 0rem;
   }
   
 `;

@@ -7,6 +7,8 @@ import Home from "../pages/Home"
 import routes from "./config";
 import GlobalStyles from "../globalStyles";
 
+
+
 const Router = () => {
   return (
     <Suspense fallback={null}>

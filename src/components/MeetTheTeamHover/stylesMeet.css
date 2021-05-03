@@ -6,10 +6,16 @@
   align-items: center;
   flex-wrap: wrap;
   margin: 20px 0;
+  
 }
 .noStyle {
     color: #FFF;
+     text-transform: lowercase;
 }
+     .noStyle::first-letter {
+  text-transform: uppercase;
+}
+
 .container .card {
   position: relative;
   width: 300px;
@@ -21,6 +27,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgb(209, 29, 50)  !important;
 }
 .container .card .content {
   position: absolute;
@@ -38,6 +45,7 @@
   border-radius: 15px;
   transition: bottom 0.2s;
   transition-delay: 0.15s;
+
 }
 .container .card:hover .content {
   bottom: 0;
@@ -88,4 +96,8 @@
 .container .card .content .sci li a {
   color: black;
   font-size: 24px;
+}
+.img-responsive {
+  max-width: 100%;
+  max-height: 100%;
 }

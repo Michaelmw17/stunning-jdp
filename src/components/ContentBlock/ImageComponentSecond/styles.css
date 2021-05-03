@@ -1,0 +1,7 @@
+.image-gallery-left-nav,
+.image-gallery-right-nav {
+  padding: 50px 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@import "~react-image-gallery/styles/css/image-gallery.css";

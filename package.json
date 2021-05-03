@@ -4,6 +4,7 @@
  "version": "0.1.0",
  "private": true,
  "dependencies": {
+  "@loadable/component": "^5.14.1",
   "@material-ui/core": "^4.11.3",
   "@material-ui/icons": "^4.11.2",
   "@react-google-maps/api": "^2.1.1",
@@ -13,6 +14,7 @@
   "antd": "^4.10.3",
   "axios": "^0.21.1",
   "bootstrap": "^4.6.0",
+  "clsx": "^1.1.1",
   "emailjs-com": "^2.6.4",
   "feather-icons": "^4.28.0",
   "i18next": "^19.8.4",
@@ -26,6 +28,7 @@
   "react-card-flipper": "^1.0.1",
   "react-dom": "^17.0.2",
   "react-i18next": "^11.8.5",
+  "react-image-gallery": "^1.0.9",
   "react-loader-spinner": "^4.0.0",
   "react-material-ui-carousel": "^2.2.4",
   "react-parallax-component": "^1.0.6",

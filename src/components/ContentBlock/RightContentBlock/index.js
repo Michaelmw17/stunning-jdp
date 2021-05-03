@@ -1,14 +1,28 @@
 import { Row, Col } from "antd";
+import React, { Suspense } from "react";
+import { lazy } from '@loadable/component'
+import Loader from "react-loader-spinner";
 // import Grid from '@material-ui/core/Grid';
 import { withTranslation } from "react-i18next";
 import Slide from "react-reveal/Slide";
 import ButtonAnimated from '../../../common/ButtonAnimation/AnimationButton'
-import SvgIcon from "../../../components/ImageComp/imgComp";
-
+// import SvgIcon from "../../../components/ImageComp/imgComp";
+// import Image from "../ImageComponent"
+// import ImageTwo from "../ImageComponentSecond"
 import Button from "../../../common/Button";
-
+// import MyGalleryFirst from "../ImageComponentSecond";
+// import Image2 from "../ImageComponent/index";
 import * as S from "./styles";
-
+// const MyGalleryFirst = lazy(() => import("../ImageComponentSecond"));
+// const AboutDescription = lazy(() => import('../../AboutContext/aboutDescription'), {
+//     fallback: <div><Loader type="Rings" color="#00BFFF" height={80} width={80} /></div>
+// })
+// const MyGalleryFirst = lazy(() => import('../ImageComponentSecond'), {
+//     fallback: <div><Loader type="Rings" color="#00BFFF" height={80} width={80} /></div>
+// })
+const Image2 = lazy(() => import('../ImageComponent/index.js'), {
+    fallback: <div><Loader type="Rings" color="#00BFFF" height={80} width={80} /></div>
+})
 const RightBlock = ({ title, content, contentTwo, button, icon, t, id }) => {
   const scrollTo = (id) => {
     const element = document.getElementById(id);
@@ -76,15 +90,20 @@ const RightBlock = ({ title, content, contentTwo, button, icon, t, id }) => {
             </S.ContentWrapper>
           </Slide>
         </Col>
-        <Col lg={11} md={11} sm={12} xs={24}>
+        <Col lg={8} md={11} sm={12} xs={24}>
           <Slide right>
-            
-            <SvgIcon
+             {/* <ImageTwo id='ImageCompTwo'/> */}
+             {/* <Image id='ImageComp'/> */}
+            {/* <SvgIcon
               src={icon}
               className="about-block-image"
               width="100%"
               height="100%"
-            />
+            /> */}
+            <Suspense fallback={<div><Loader type="Rings" color="#00BFFF" height={80} width={80} /></div>}>
+                              <Image2/>
+                        </Suspense>
+                      
           </Slide>
         </Col>
       </Row>
