@@ -12,10 +12,10 @@
     "static/js/4.3be85664.chunk.js": "/stunning-jdp/static/js/4.3be85664.chunk.js",
     "static/js/4.3be85664.chunk.js.map": "/stunning-jdp/static/js/4.3be85664.chunk.js.map",
     "main.css": "/stunning-jdp/static/css/main.83581356.chunk.css",
-    "main.js": "/stunning-jdp/static/js/main.42e8c3d4.chunk.js",
-    "main.js.map": "/stunning-jdp/static/js/main.42e8c3d4.chunk.js.map",
-    "runtime-main.js": "/stunning-jdp/static/js/runtime-main.097be562.js",
-    "runtime-main.js.map": "/stunning-jdp/static/js/runtime-main.097be562.js.map",
+    "main.js": "/stunning-jdp/static/js/main.01e2793f.chunk.js",
+    "main.js.map": "/stunning-jdp/static/js/main.01e2793f.chunk.js.map",
+    "runtime-main.js": "/stunning-jdp/static/js/runtime-main.4924d1be.js",
+    "runtime-main.js.map": "/stunning-jdp/static/js/runtime-main.4924d1be.js.map",
     "static/css/7.26ca8a35.chunk.css": "/stunning-jdp/static/css/7.26ca8a35.chunk.css",
     "static/js/7.72305bc1.chunk.js": "/stunning-jdp/static/js/7.72305bc1.chunk.js",
     "static/js/7.72305bc1.chunk.js.map": "/stunning-jdp/static/js/7.72305bc1.chunk.js.map",
@@ -57,8 +57,8 @@
     "static/js/21.0cdd59e7.chunk.js.map": "/stunning-jdp/static/js/21.0cdd59e7.chunk.js.map",
     "static/js/22.a6815812.chunk.js": "/stunning-jdp/static/js/22.a6815812.chunk.js",
     "static/js/22.a6815812.chunk.js.map": "/stunning-jdp/static/js/22.a6815812.chunk.js.map",
-    "static/js/23.a045ee2e.chunk.js": "/stunning-jdp/static/js/23.a045ee2e.chunk.js",
-    "static/js/23.a045ee2e.chunk.js.map": "/stunning-jdp/static/js/23.a045ee2e.chunk.js.map",
+    "static/js/23.c653b4d2.chunk.js": "/stunning-jdp/static/js/23.c653b4d2.chunk.js",
+    "static/js/23.c653b4d2.chunk.js.map": "/stunning-jdp/static/js/23.c653b4d2.chunk.js.map",
     "static/js/24.a32e8c4f.chunk.js": "/stunning-jdp/static/js/24.a32e8c4f.chunk.js",
     "static/js/24.a32e8c4f.chunk.js.map": "/stunning-jdp/static/js/24.a32e8c4f.chunk.js.map",
     "static/js/25.a1c1e7a1.chunk.js": "/stunning-jdp/static/js/25.a1c1e7a1.chunk.js",
@@ -87,10 +87,10 @@
     "static/media/slick-theme.css": "/stunning-jdp/static/media/slick.c94f7671.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.097be562.js",
+    "static/js/runtime-main.4924d1be.js",
     "static/css/7.26ca8a35.chunk.css",
     "static/js/7.72305bc1.chunk.js",
     "static/css/main.83581356.chunk.css",
-    "static/js/main.42e8c3d4.chunk.js"
+    "static/js/main.01e2793f.chunk.js"
   ]
 }
