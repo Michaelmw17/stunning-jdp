@@ -23,8 +23,8 @@
     "static/js/8.7e4d82f2.chunk.js.map": "/stunning-jdp/static/js/8.7e4d82f2.chunk.js.map",
     "main.js": "/stunning-jdp/static/js/main.dc239f1e.chunk.js",
     "main.js.map": "/stunning-jdp/static/js/main.dc239f1e.chunk.js.map",
-    "runtime-main.js": "/stunning-jdp/static/js/runtime-main.6b450d43.js",
-    "runtime-main.js.map": "/stunning-jdp/static/js/runtime-main.6b450d43.js.map",
+    "runtime-main.js": "/stunning-jdp/static/js/runtime-main.264319cb.js",
+    "runtime-main.js.map": "/stunning-jdp/static/js/runtime-main.264319cb.js.map",
     "static/js/11.213d32dc.chunk.js": "/stunning-jdp/static/js/11.213d32dc.chunk.js",
     "static/js/11.213d32dc.chunk.js.map": "/stunning-jdp/static/js/11.213d32dc.chunk.js.map",
     "static/css/12.26ca8a35.chunk.css": "/stunning-jdp/static/css/12.26ca8a35.chunk.css",
@@ -57,8 +57,8 @@
     "static/js/22.9ea70dbe.chunk.js": "/stunning-jdp/static/js/22.9ea70dbe.chunk.js",
     "static/js/22.9ea70dbe.chunk.js.map": "/stunning-jdp/static/js/22.9ea70dbe.chunk.js.map",
     "static/css/23.ac628a77.chunk.css": "/stunning-jdp/static/css/23.ac628a77.chunk.css",
-    "static/js/23.44e57e35.chunk.js": "/stunning-jdp/static/js/23.44e57e35.chunk.js",
-    "static/js/23.44e57e35.chunk.js.map": "/stunning-jdp/static/js/23.44e57e35.chunk.js.map",
+    "static/js/23.24c1009c.chunk.js": "/stunning-jdp/static/js/23.24c1009c.chunk.js",
+    "static/js/23.24c1009c.chunk.js.map": "/stunning-jdp/static/js/23.24c1009c.chunk.js.map",
     "static/css/24.afd7172b.chunk.css": "/stunning-jdp/static/css/24.afd7172b.chunk.css",
     "static/js/24.349bc7ef.chunk.js": "/stunning-jdp/static/js/24.349bc7ef.chunk.js",
     "static/js/24.349bc7ef.chunk.js.map": "/stunning-jdp/static/js/24.349bc7ef.chunk.js.map",
@@ -106,7 +106,7 @@
     "static/media/slick-theme.css": "/stunning-jdp/static/media/slick.c94f7671.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.6b450d43.js",
+    "static/js/runtime-main.264319cb.js",
     "static/css/12.26ca8a35.chunk.css",
     "static/js/12.6162815f.chunk.js",
     "static/js/main.dc239f1e.chunk.js"
