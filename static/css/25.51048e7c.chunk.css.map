@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/components/CarouselTest/stylesCarousel.css"],"names":[],"mappings":"AAAA,cACE,YAAa,CACZ,kBACH,CAKA,QACE,cAAe,CACf,UACF","file":"25.51048e7c.chunk.css","sourcesContent":[".containerCar {\n  padding: 60px;\n   background: rgb(209, 29, 50);\n}\n\n/* p,h2 {\n  margin: auto;\n} */\n.review {\n  font-size: 30px;\n  color: white\n}\n"]}
