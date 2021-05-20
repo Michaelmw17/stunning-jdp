@@ -25,8 +25,8 @@
     "static/js/9.4971dd7c.chunk.js.map": "/stunning-jdp/static/js/9.4971dd7c.chunk.js.map",
     "main.js": "/stunning-jdp/static/js/main.69e38a32.chunk.js",
     "main.js.map": "/stunning-jdp/static/js/main.69e38a32.chunk.js.map",
-    "runtime-main.js": "/stunning-jdp/static/js/runtime-main.357aa501.js",
-    "runtime-main.js.map": "/stunning-jdp/static/js/runtime-main.357aa501.js.map",
+    "runtime-main.js": "/stunning-jdp/static/js/runtime-main.2c104d83.js",
+    "runtime-main.js.map": "/stunning-jdp/static/js/runtime-main.2c104d83.js.map",
     "static/js/12.f24d0639.chunk.js": "/stunning-jdp/static/js/12.f24d0639.chunk.js",
     "static/js/12.f24d0639.chunk.js.map": "/stunning-jdp/static/js/12.f24d0639.chunk.js.map",
     "static/js/13.80f87ec9.chunk.js": "/stunning-jdp/static/js/13.80f87ec9.chunk.js",
@@ -52,8 +52,8 @@
     "static/js/20.07eba52a.chunk.js": "/stunning-jdp/static/js/20.07eba52a.chunk.js",
     "static/js/20.07eba52a.chunk.js.map": "/stunning-jdp/static/js/20.07eba52a.chunk.js.map",
     "static/css/21.233a1aea.chunk.css": "/stunning-jdp/static/css/21.233a1aea.chunk.css",
-    "static/js/21.0aa97860.chunk.js": "/stunning-jdp/static/js/21.0aa97860.chunk.js",
-    "static/js/21.0aa97860.chunk.js.map": "/stunning-jdp/static/js/21.0aa97860.chunk.js.map",
+    "static/js/21.9183c7e1.chunk.js": "/stunning-jdp/static/js/21.9183c7e1.chunk.js",
+    "static/js/21.9183c7e1.chunk.js.map": "/stunning-jdp/static/js/21.9183c7e1.chunk.js.map",
     "static/js/22.ea924e83.chunk.js": "/stunning-jdp/static/js/22.ea924e83.chunk.js",
     "static/js/22.ea924e83.chunk.js.map": "/stunning-jdp/static/js/22.ea924e83.chunk.js.map",
     "static/js/23.149eeac0.chunk.js": "/stunning-jdp/static/js/23.149eeac0.chunk.js",
@@ -135,7 +135,7 @@
     "static/media/slick-theme.css": "/stunning-jdp/static/media/slick.c94f7671.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.357aa501.js",
+    "static/js/runtime-main.2c104d83.js",
     "static/css/14.26ca8a35.chunk.css",
     "static/js/14.41aaa6a5.chunk.js",
     "static/js/main.69e38a32.chunk.js"
