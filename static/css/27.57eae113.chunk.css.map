@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/common/DropDown/Styles.css"],"names":[],"mappings":"AAAA,eACI,eAAgB,CAChB,gBACJ","file":"27.57eae113.chunk.css","sourcesContent":["#simple-select {\n    margin-top: 40px;\n    margin-left: 10px;\n}\n"]}
