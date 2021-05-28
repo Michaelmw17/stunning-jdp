@@ -47,7 +47,7 @@
   "deploy": "gh-pages -d build",
   "start": "react-scripts start",
   "test": "react-scripts test",
-  "build": "webpack",
+  "build": "npm run build",
   "eject": "react-scripts eject"
  },
  "eslintConfig": {
