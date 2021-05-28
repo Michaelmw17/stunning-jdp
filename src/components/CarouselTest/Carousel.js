@@ -8,16 +8,14 @@ import '../../globalStyles'
 export default class CarouselServices extends Component {
   render() {
     const settings = {
+      className: "center",
+      centerMode: true,
+      centerPadding: " 0px",
+      slidesToShow: 1,
+      speed: 500,
+      paddingLeft: '40px',
       infinite: true,
-      slidesToShow: 2,
-      lazyLoad: true,
-      slidesToScroll: 1,
-      autoplay: true,
-      speed: 2000,
-      autoplaySpeed: 2000,
-      cssEase: "linear",
-      
-      paddingLeft: '30px',
+      adaptiveHeight: true,
       responsive: [
 		{
 			breakpoint: 1200,
@@ -47,21 +45,24 @@ export default class CarouselServices extends Component {
     return (<>
     
       {/* <h1>Reviews</h1> */}
+      
       <div className="containerCar">
-        
+      <h1 id="review-h1">Our Reviews</h1>
         <Slider {...settings}>
-          <div >
-            <div className="review"> "It's just amazing. Absolutely wonderful!"
-               </div><p><em> - Claudelle .</em></p>
+         
+          <div>
+             <div className="review"> "Joe and Dominic have been our electricians for over 12 years, delivering high quality service including major electrical renovations and outdoor lighting. Joe and Dominic are a pleasure to have working in our home and we highly recommend their services."
+               </div><p id="Name"><em>  - Mary (Mosman).</em></p>
+               
+          </div>
+           <div>
+            <div className="review"> "Fast, professional and reliable. Highly recommend" 
+              </div> <p  id="Name"><em> - Callum  .</em></p>
+          </div>
+           <div >
+            <div className="review">"Polite, professional, honest and timely. Very competitive rates. A breath of fresh air and would highly recommend them." 
+              </div><p  id="Name"><em> - Bryant (Lane Cove North)</em></p>
             
-          </div>
-          <div>
-            <div className="review"> "It's just amazing. Absolutely wonderful!"
-              </div> <p><em> - Claudelle .</em></p>
-          </div>
-          <div>
-             <div className="review"> "It's just amazing. Absolutely wonderful!"
-               </div><p><em> - Claudelle .</em></p>
           </div>
           
         </Slider>

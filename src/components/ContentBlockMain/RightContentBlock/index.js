@@ -1,18 +1,26 @@
-import { Row, Col } from "antd";
-import {  Suspense } from "react";
+// import { Row } from "antd";
+// import { Col } from "antd";
+import React, {  lazy, Suspense } from "react";
 // import Grid from '@material-ui/core/Grid';
 import { withTranslation } from "react-i18next";
 import Slide from "react-reveal/Slide";
 import ButtonAnimated from '../../../common/ButtonAnimation/AnimationButton'
 // import SvgIcon from "../../../components/ImageComp/imgComp";
-import Image from "../ImageComponent/index";
+// import Image from "../ImageComponent/index";
 // import Container from '@material-ui/core/Container';
 import './styling.css'
 import Button from "../../../common/Button";
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 import BuildlIcon from '@material-ui/icons/Build';
+import Loader from "react-loader-spinner";
 
 import * as S from "./styles";
+const Row = React.lazy(() => import(/* webpackChunkName: "sula-antd" */ 'antd/lib/grid/row'));
+const Col = React.lazy(() => import(/* webpackChunkName: "sula-antd" */ 'antd/lib/grid/col'));
+
+const Image = lazy(() => import('../ImageComponent/index.js'), {
+    fallback: <div><Loader type="Rings" color="#00BFFF" height={80} width={80} /></div>
+})
 
 const RightBlock = ({ title, content, contentTwo, button, icon, t, id }) => {
   const scrollTo = (id) => {
@@ -30,6 +38,7 @@ const RightBlock = ({ title, content, contentTwo, button, icon, t, id }) => {
             <S.ContentWrapper>
               <h3>{t(title)}</h3>
               <S.Content>{t(content)}</S.Content>
+              <S.Content> JDP Electrical Services offer a complete range of electrical installations and services throughout Sydney, North Shore Region and surrounding areas.</S.Content>
               
                 <Row>
                 <Row>
@@ -44,7 +53,7 @@ const RightBlock = ({ title, content, contentTwo, button, icon, t, id }) => {
                                       >
                                         <S.Span>
                                         {t(item.title1)}
-                                        <BuildlIcon style={{ color:"#000", fontSize: 15,paddingTop: 0 }} />
+                                        <BuildlIcon className='icon' style={{ fontSize: 20,paddingTop: 4, }} />
                                         </S.Span>
                                         
                                       </ButtonAnimated>
@@ -67,7 +76,7 @@ const RightBlock = ({ title, content, contentTwo, button, icon, t, id }) => {
                                       > 
                                         {t(item.title)}
                                         
-                                      <ContactMailIcon style={{ color:"#FFF", fontSize: 25,paddingTop: 10 }} />
+                                      <ContactMailIcon style={{ color:"#FFF", fontSize: 25,paddingTop: 6, paddingLeft: 6  }} />
                                       </Button>
                                     );
                                   })}
@@ -81,9 +90,15 @@ const RightBlock = ({ title, content, contentTwo, button, icon, t, id }) => {
             </S.ContentWrapper>
           </Slide>
         </Col>
-        <Col lg={8} md={11} sm={12} xs={24}>
+        <Col lg={12} md={12} sm={12} xs={24}>
           <Slide right>
-          <Suspense fallback={<div>Loading..</div>}>
+          <Suspense fallback={<div>
+          <Loader type="Rings" color="#00BFFF"
+                    height={100}
+                    width={100}
+                    timeout={3000}/>
+          </div>
+}>
             <Image id='ImageComp'/>
             </Suspense>
             {/* <SvgIcon

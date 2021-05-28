@@ -1,5 +1,5 @@
 span:hover {
- color:blue
+ color:rgb(209, 29, 50)
 }
 .intro{
     margin-top: 50px;
@@ -11,8 +11,8 @@ span:hover {
   padding: 7px 14px;
 }
 .button:hover {
-  background-color: #5469d4;
+  background-color: white
 }
 .button-label {
-  color: #FFF;
+  color: black;
 }

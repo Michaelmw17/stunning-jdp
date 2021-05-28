@@ -1,7 +1,6 @@
-import { useState, Fragment, lazy, Suspense } from "react";
-
-import Spinner from 'react-bootstrap/Spinner';
-import { Row, Col, Drawer } from "antd";
+import React, { useState, Fragment, lazy, Suspense } from "react";
+import Loader from "react-loader-spinner";
+import {  Drawer } from "antd";
 import { CSSTransition } from "react-transition-group";
 import { withTranslation } from "react-i18next";
 import { makeStyles } from '@material-ui/core/styles';
@@ -11,7 +10,9 @@ import HomeIcon from '@material-ui/icons/Home';
 import * as S from "./styles";
 import Tooltip from "react-simple-tooltip"
 import {css} from "styled-components"
- 
+ const Row = React.lazy(() => import(/* webpackChunkName: "sula-antd" */ 'antd/lib/grid/row'));
+const Col = React.lazy(() => import(/* webpackChunkName: "sula-antd" */ 'antd/lib/grid/col'));
+
 const MyComp = lazy(() => import("../MyComp/myComp"));
 
 const Header = ({ t }) => {
@@ -94,8 +95,10 @@ const useStyles = makeStyles((theme) => ({
       <S.Header>
         <Row type="flex" justify="space-between" gutter={20}>
           <S.LogoContainer to="/" aria-label="homepage">
-                  <Suspense fallback={
-                            <Spinner animation="border" />
+                  <Suspense fallback={<Loader type="Rings" color="#00BFFF"
+                    height={100}
+                    width={100}
+                    timeout={3000}/>
                             }>
                 
                                 <MyComp rel="preload" /> 

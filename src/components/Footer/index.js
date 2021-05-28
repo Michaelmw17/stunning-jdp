@@ -1,11 +1,18 @@
-import { lazy, Fragment,Suspense  } from "react";
-import { Row, Col } from "antd";
-import Spinner from 'react-bootstrap/Spinner';
+import React, { lazy, Fragment,Suspense  } from "react";
+// import { Row, Col } from "antd";
+import Loader from "react-loader-spinner";
+
 import { withTranslation } from "react-i18next";
 import Fade from "react-reveal/Fade";
 import {  Link } from 'react-router-dom';
 import * as S from "./styles";
+// import  { lazy } from "react";
+const Row = React.lazy(() => import(/* webpackChunkName: "sula-antd" */ 'antd/lib/grid/row'));
+const Col = React.lazy(() => import(/* webpackChunkName: "sula-antd" */ 'antd/lib/grid/col'));
+
 const MyComp = lazy(() => import("../../components/MyComp/myComp"));
+const MyCompRed = lazy(() => import("../../components/MyCompRed/myComp.js"));
+const MyCompBlue = lazy(() => import("../../components/MyCompBlue/myComp.js"));
 const Container = lazy(() => import("../../common/Container"));
 
 const Mailto = ({ email, subject = '', body = '', children }) => {
@@ -28,7 +35,7 @@ const scrollTo = (id) => {
         <S.Footer>
           <Container id="footer">
             <Row type="flex" justify="space-between">
-              <Col lg={10} md={10} sm={12} xs={24}>
+              <Col lg={9} md={10} sm={12} xs={24}>
                 <S.Title>{t("Contact")}</S.Title>
                 <S.Large to="/">{t("Tell us everything")}</S.Large>
                 <S.Para>
@@ -37,33 +44,42 @@ const scrollTo = (id) => {
                     Feel free to reach out.`
                   )}
                 </S.Para>
-                <Mailto email="info@jdpelectrical.com.au " subject="Enquire To JPD" body="Hello JPD!" >
+                <Mailto email="info@jdpelectrical.com.au " subject="Enquire To JDP" body="Hello JDP!" >
                   <S.Chat>{t(`Let's Chat`)}</S.Chat>
                 </Mailto>
               </Col>
               <Col lg={6} md={6} sm={12} xs={24}>
-                <S.Title>{t("Joe Panetta")}</S.Title>
-                {/* <S.Large left="true"> */}
-                <S.Para>
-                <a href="tel:0412-450-300">
-                            {t("Ph: 0412 450 300")}
-                </a>
-                </S.Para>
-                <Mailto email="joe@jdpelectrical.com.au" subject="Enquire To JPD" body="Hello Joe!">
+               <S.Title>{t("ADDRESS")}</S.Title>
+                <S.Para>Unit 17 </S.Para>
+                <S.Para>4-6 Chaplin Drive</S.Para>
+                <S.Para> Lane Cove West NSW 2066</S.Para>
+                {/* <Mailto email="joe@jdpelectrical.com.au" subject="Enquire To JDP" body="Hello Joe!">
                     <S.Chat>{t(`Joe@jdpelectrical.com.au`)}</S.Chat>
-                  </Mailto>
+                  </Mailto> */}
               </Col>
               <Col lg={6} md={6} sm={12} xs={24} >
+              <S.Title>{t("JDP Electrical Services")}</S.Title>
+                {/*Errors below on HOME page*/}
+                <S.Large left="true" to="/">
+                  {t("Home")}
+                </S.Large>
+                <S.Large left="true"  to="/about" onClick={() => scrollTo("mission")}>
+                  {t("About")}
+                </S.Large>
+                <S.Large left="true"  to="/about" onClick={() => scrollTo("Service")}>
+                  {t("Services")}
+                </S.Large>
+                <S.Large left="true"  to="/about" onClick={() => scrollTo("Review")}>
+                  {t("Reviews")}
+                </S.Large>
+                <S.Large left="true"  to="/about" onClick={() => scrollTo("Team")}>
+                  {t("Contact")}
+                </S.Large>
                 {/* <S.Empty /> */}
-                <S.Title >{t("Dominic Panetta")}</S.Title>
-                <S.Para>
-                <a href="tel:0412-479-557">
-                            {t("Ph: 0412 479 557")}
-                </a>
-                </S.Para>
-                <Mailto email="dom@jdpelectrical.com.au" subject="Enquire To JPD" body="Hello Dom!">
+                
+                {/* <Mailto email="dom@jdpelectrical.com.au" subject="Enquire To JDP" body="Hello Dom!">
                     <S.Chat>{t(`Dom@jdpelectrical.com.au`)}</S.Chat>
-                  </Mailto>
+                  </Mailto> */}
               </Col>
 
 
@@ -77,7 +93,7 @@ const scrollTo = (id) => {
                 </a>
                 </S.Para>
                 {/* </S.Large> */}
-                <Mailto email=" info@jdpelectrical.com.au" subject="Enquire To JPD" body="Hello JPD!">
+                <Mailto email=" info@jdpelectrical.com.au" subject="Enquire To JDP" body="Hello JDP!">
                  <S.Chat>{t(`Info@jdpelectrical.com.au`)}</S.Chat>
                   </Mailto>
                 <S.Large left="true" to="/">
@@ -85,34 +101,28 @@ const scrollTo = (id) => {
                 </S.Large>
                 <S.Large left="true" to="/">
                 </S.Large>
-                <Mailto email=" accounts@jdpelectrical.com.au" subject="Enquire To JPD" body="Hello JPD!">
+                <Mailto email=" accounts@jdpelectrical.com.au" subject="Enquire To JDP" body="Hello JDP!">
                    <S.Chat>{t(`Accounts@jdpelectrical.com.au`)}</S.Chat>
                   </Mailto>
               </Col>
               <Col lg={8} md={6} sm={12} xs={24}>
-                <S.Title>{t("ADDRESS")}</S.Title>
-                <S.Para>Unit 17 </S.Para>
-                <S.Para>4-6 Chaplin Drive</S.Para>
-                <S.Para> Lane Cove West NSW 2066</S.Para>
+               
+                <S.Title>{t("Joe Panetta")}</S.Title>
+                {/* <S.Large left="true"> */}
+                <S.Para>
+                <a href="tel:0412-450-300">
+                            {t("Ph: 0412 450 300")}
+                </a>
+                </S.Para>
               </Col>
               <Col lg={5} md={8} sm={12} xs={24}>
-                <S.Title>{t("Company")}</S.Title>
-                {/*Errors below on HOME page*/}
-                <S.Large left="true"  to="/about" onClick={() => scrollTo("mission")}>
-                  {t("About")}
-                </S.Large>
-                <S.Large left="true" to="/">
-                  {t("Home")}
-                </S.Large>
-                <S.Large left="true"  to="/about" onClick={() => scrollTo("Service")}>
-                  {t("Services")}
-                </S.Large>
-                <S.Large left="true"  to="/about" onClick={() => scrollTo("Review")}>
-                  {t("Reviews")}
-                </S.Large>
-                <S.Large left="true"  to="/about" onClick={() => scrollTo("Team")}>
-                  {t("Contact")}
-                </S.Large>
+                
+                <S.Title >{t("Dominic Panetta")}</S.Title>
+                <S.Para>
+                <a href="tel:0412-479-557">
+                            {t("Ph: 0412 479 557")}
+                </a>
+                </S.Para>
               </Col>
               </Row>
           </Container>
@@ -121,19 +131,35 @@ const scrollTo = (id) => {
           <Container border="true">
             <Row
               type="flex"
-              justify="space-between"
               align="middle"
               style={{ paddingTop: "3rem" }}
-            >
+            ><Suspense fallback={<Loader type="Rings" color="#00BFFF"
+                    height={100}
+                    width={100}
+                    timeout={3000}/>
+                            }>
+             <Col lg={8} md={6} sm={12} xs={24}>
               <Link to="/" >
                 <S.LogoContainer>
-                  <Suspense fallback={
-                            <Spinner animation="border" />
-                            }>
-                    <MyComp />
-                    </Suspense>
+                    <MyComp /> 
                 </S.LogoContainer>
               </Link>
+              </Col>
+              <Col lg={8} md={6} sm={12} xs={24}>
+              <Link to="/" >
+                <S.LogoContainer>
+                    <MyCompRed />
+                </S.LogoContainer>
+              </Link>
+              </Col>
+              <Col lg={8} md={6} sm={12} xs={24}>
+              <Link to="/" >
+                <S.LogoContainer>
+                    <MyCompBlue />
+                </S.LogoContainer>
+              </Link>
+              </Col> 
+              </Suspense>
               <S.FooterContainer>
                 {/* <SocialMediaIcons
                     icons={socialMediaIcons}

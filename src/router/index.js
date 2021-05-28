@@ -1,19 +1,17 @@
 import { lazy, Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
-import About from "../pages/About/About"
-import First from "../pages/First"
-import Contact from "../pages/Contact/contact"
-import Home from "../pages/Home"
 import routes from "./config";
 import GlobalStyles from "../globalStyles";
-
+// import Loader from "react-loader-spinner";
+// import loadable from '@loadable/component'
+const Home = lazy(() => import('../pages/Home'))
+const About = lazy(() => import('../pages/About/About'))
 
 
 const Router = () => {
   return (
     <Suspense fallback={null}>
       <GlobalStyles />
-      
       <Switch>
         {routes.map((routeItem) => {
           return (
@@ -31,12 +29,6 @@ const Router = () => {
         </Route>
         <Route path="/About">
       <About />
-    </Route>
-        <Route path="/First">
-      <First />
-    </Route>
-        <Route path="/contact">
-      <Contact />
     </Route>
       </Switch>
     </Suspense>

@@ -1,11 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
 const Styles = createGlobalStyle`
-@font-face { font-family: Ubuntu; font-display: swap; }
-
     body,
     html,
     a {
+        font-family: 'Open Sans';
         font-family: 'Ubuntu', sans-serif;
         font-display: swap;
     }
@@ -26,7 +25,7 @@ const Styles = createGlobalStyle`
 }
         
     a:hover {
-        color: blue;
+        color: rgb(209, 29, 50);
     }
 
     h1,
@@ -37,13 +36,12 @@ const Styles = createGlobalStyle`
     h6
     {
         font-family: 'Poppins', sans-serif;
-        color: ;
-        padding: 5.5rem  1rem ;
-        font-size: 2.975rem;
+        padding: 3.7rem  0.5rem 0.5rem 0.3rem ;
+        font-size: 3.255rem;
         line-height: 3.0625rem;
       
         @media only screen and (max-width: 414px) {
-          font-size: 1.625rem;
+          font-size: 1.925rem;
         }
         h1,h2,h3,h4,h5,h6::first-letter {
   text-transform: uppercase;
@@ -55,12 +53,12 @@ const Styles = createGlobalStyle`
         line-height: 3.0625rem;
       
         @media only screen and (max-width: 414px) {
-          font-size: 1.625rem;
+          font-size: 1.925rem;
            color: red;
         }
     p {
 		font-weight: 200;
-        font-size: 1.525rem;
+        font-size: 1.625rem;
     }
    
     h1 {
@@ -73,7 +71,7 @@ const Styles = createGlobalStyle`
         color: rgb(209, 29, 50);
 
         :hover {
-            color: blue;
+            color: rgb(209, 29, 50)
         }
     }
     
@@ -102,6 +100,7 @@ const Styles = createGlobalStyle`
     Span:hover {
         color: #000
     }
+    
 
 `;
 
@@ -110,7 +109,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
-    font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
+    
     transition: all 0.50s linear;
   }
   `

@@ -1,9 +1,10 @@
-import { useState, Fragment, lazy, Suspense } from "react";
+import React, { useState, Fragment, lazy, Suspense } from "react";
 import './stylesHeader.css'
 import '../../globalStyles'
 import Button from '@material-ui/core/Button';
-import Spinner from 'react-bootstrap/Spinner';
-import { Row, Col, Drawer } from "antd";
+import Loader from "react-loader-spinner";
+// import React from "react"
+import {  Drawer } from "antd";
 import { CSSTransition } from "react-transition-group";
 import { withTranslation } from "react-i18next";
 import { makeStyles } from '@material-ui/core/styles';
@@ -12,11 +13,14 @@ import InfoIcon from '@material-ui/icons/Info';
 import HomeIcon from '@material-ui/icons/Home';
 import RateReviewIcon from '@material-ui/icons/RateReview';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
-
+import PhoneForwardedIcon from '@material-ui/icons/PhoneForwarded';
 // import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
 //         import PhoneForwardedIcon from '@material-ui/icons/PhoneForwarded';
         import { Link } from 'react-router-dom';
 import * as S from "./styles";
+const Row = React.lazy(() => import(/* webpackChunkName: "sula-antd" */ 'antd/lib/grid/row'));
+const Col = React.lazy(() => import(/* webpackChunkName: "sula-antd" */ 'antd/lib/grid/col'));
+
 const MyComp = lazy(() => import("../../components/MyComp/myComp"));
 
 const Header = ({ t }) => {
@@ -59,13 +63,13 @@ const useStyles = makeStyles((theme) => ({
               <S.Span><span>{t("Home")}</span></S.Span>
               </Link>
           </S.CustomNavLinkSmall>
-        <S.CustomNavLinkSmall onClick={() => scrollTo("People")}>
-          <InfoIcon style={{color:"RGB(209, 29, 50)", fontSize: 30  }} />
-          <S.Span ><span>{t("About")}</span></S.Span>
-        </S.CustomNavLinkSmall>
           <S.CustomNavLinkSmall onClick={() => scrollTo("Service")}>
           <BuildIcon style={{ color:"RGB(209, 29, 50)", fontSize: 30   }} />
             <S.Span className="Span"><span>{t("Services")}</span></S.Span>
+        </S.CustomNavLinkSmall>
+        <S.CustomNavLinkSmall onClick={() => scrollTo("People")}>
+          <InfoIcon style={{color:"RGB(209, 29, 50)", fontSize: 30  }} />
+          <S.Span ><span>{t("About")}</span></S.Span>
         </S.CustomNavLinkSmall>
           {/* <S.CustomNavLinkSmall onClick={() => scrollTo("Teams")}>
             <SupervisorAccountIcon style={{ color:"RGB(209, 29, 50)", fontSize: 40 }} />
@@ -82,22 +86,36 @@ const useStyles = makeStyles((theme) => ({
         <S.CustomNavLinkSmall >
           <div>
           <a href="tel:02-9419-7947">
-      <Button classes={{ root: 'button', label: 'button-label'}} style={{ backgroundColor: "rgb(209, 29, 50)", borderRadius: '10px', height:'40px', width:'100%', marginBottom:40}}>
-      CALL US NOW
-      {/* <PhoneForwardedIcon/> */}
+      <Button classes={{ root: 'button', label: 'button-label'}} style={{  
+        marginBottom:40, 
+        background:  'FFF',
+        color: 'rgb(209, 29, 50)',
+        fontSize: '1rem',
+        fontWeight: 600,
+        width: "100%",
+        border:'2px solid  rgb(209, 29, 50)',
+        borderRadius: "8px",
+        height: "50px",
+        right: "0",
+        outline: "none",
+        cursor: "pointer",
+        maxWidth: "180px",
+  }}>
+    <p style={{padding: "3px", paddingTop: "20px"}}> CALL US NOW  </p>
+      <PhoneForwardedIcon/>
       </Button>
       </a>
     </div>
     </S.CustomNavLinkSmall>
         
 
-        <S.CustomNavLinkSmall
+        {/* <S.CustomNavLinkSmall
           style={{ width: "180px" }}
           onClick={() => scrollTo("Team")}
-        >
+        > */}
           <S.Span>
           </S.Span>
-          </S.CustomNavLinkSmall>
+          {/* </S.CustomNavLinkSmall> */}
           </div>
       </Fragment>
     );
@@ -108,8 +126,11 @@ const useStyles = makeStyles((theme) => ({
       <S.Container>
         <Row type="flex" justify="space-between" gutter={20}>
           <S.LogoContainer to="/" aria-label="homepage">
-             <Suspense fallback={
-                            <Spinner animation="border" />
+             <Suspense fallback={<Loader type="Rings" color="#00BFFF"
+                    height={100}
+                    width={100}
+                    timeout={3000}/>
+                          
                             }>
                                 <MyComp rel="preload" /> 
                     </Suspense>

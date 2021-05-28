@@ -8,13 +8,15 @@ import large from "./assets/light3.webp";
 
 function App() {
   return (
-    <div className="Image">
+    <div className="ImageDiv">
       <BlurImageLoader
+       className="img"
         image={large}
         placeholder={small}
         width={2992}
         height={2134}
         ratio={71.323529411}
+        rel="preload"
       />
     </div>
   );

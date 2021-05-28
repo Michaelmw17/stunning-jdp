@@ -1,20 +1,23 @@
-import { lazy, Suspense } from "react";
-import { Row, Col } from "antd";
+import React, { lazy, Suspense } from "react";
+// import { Row, Col } from "antd";
+
 import Zoom from "react-reveal/Zoom";
 import { withTranslation } from "react-i18next";
 import emailjs from 'emailjs-com';
 import Loader from "react-loader-spinner";
 import useForm from "./useForm";
 import validate from "./validationRules";
-import loadable from '@loadable/component'
+// import loadable from '@loadable/component'
 
-import InputLabel from '@material-ui/core/InputLabel';
+// import InputLabel from '@material-ui/core/InputLabel';
 
 import './stylesForm.css'
 import * as S from "./styles";
 
-const OtherComponent = loadable(() => import('../../pages/First'))
-
+// const OtherComponent = loadable(() => import('../../pages/First'))
+const Row = React.lazy(() => import(/* webpackChunkName: "sula-antd" */ 'antd/lib/grid/row'));
+const Col = React.lazy(() => import(/* webpackChunkName: "sula-antd" */ 'antd/lib/grid/col'));
+const OtherComponent = lazy(() => import("../First.js"));
 const Block = lazy(() => import("../Block"));
 const Button = lazy(() => import("../../common/Button"));
 const TextArea = lazy(() => import("../../common/TextArea"));
@@ -30,7 +33,7 @@ const SimpleSelect = lazy(() => import("../../common/DropDown"));
 
 const Contact = ({ title, content, id, t , e, handleSubmit}) => {
    function sendEmail(e) {
-    e.preventDefault({passive: true});
+    // e.preventDefault({passive: true});
 
         emailjs.sendForm(
                 "service_a9ktqlp",
@@ -67,22 +70,9 @@ const Contact = ({ title, content, id, t , e, handleSubmit}) => {
           <Col lg={12} md={12} sm={24}>
           <Block padding={true} title={title} content={content} />
               <Col>
-              <div className="formText">
-                  <a href="tel:02-9419-7947">
-                    Ph: (02) 9419 7947 
-                    </a>
-                </div> 
-              <div className="formText">
-                <a href={
-                  `https://www.google.com/maps/search/nit+17+4-6+Chaplin+Drive+Lane+Cove+West+NSW+2066./@-33.8098656,151.1461655,17z/data=!3m1!4b1`}> Unit 17, 4-6 Chaplin Drive Lane Cove West NSW 2066
-                  </a>
-              </div>
                 </Col>
             <S.FormGroup autoComplete="off" onSubmit={sendEmail ||  handleSubmit}  onsubmit="return false">
               <Col span={24}>
-                  <InputLabel shrink id="nameLabel">
-                    Full Name  *
-                  </InputLabel>
                 <input minLength="1"  required="required" 
                   type="text"
                   name="name"
@@ -97,9 +87,6 @@ const Contact = ({ title, content, id, t , e, handleSubmit}) => {
               </Col>
               
               <Col span={24}>
-              <InputLabel shrink id="EmailLabel">
-                    Email *
-                  </InputLabel>
                 <input id="input" type="email"
                   name="email" required="required"
                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
@@ -107,11 +94,8 @@ const Contact = ({ title, content, id, t , e, handleSubmit}) => {
                 <ValidationType type="email" />
               </Col>
               <Col span={24}>
-              <InputLabel shrink id="phoneLabel">
-                    Phone Number *
-                  </InputLabel>
                 <input
-                  placeholder="Phone Number*"
+                  placeholder="Phone Number *"
                   value={values.number || ""}
                   name="number"
                   required="required"
@@ -121,11 +105,8 @@ const Contact = ({ title, content, id, t , e, handleSubmit}) => {
                 <ValidationType type="Number" />
               </Col>
               <Col span={24}>
-              <InputLabel shrink id="suburbLabel">
-                    Your Suburb *
-                  </InputLabel>
                 <input
-                  placeholder="Suburb Name*"
+                  placeholder="Suburb Name *"
                   value={values.suburb || ""}
                   name="suburb"
                   required="required"
@@ -134,7 +115,8 @@ const Contact = ({ title, content, id, t , e, handleSubmit}) => {
                 />
                 <ValidationType type="Suburb" />
               </Col>
-              <Col span={24}>
+              <Row type="flex" justify="space-between">
+              <Col span={24} lg={12} md={24} sm={24}>
                 <SimpleSelect
                   placeholder="menu"
                   value={values.message || ""}
@@ -145,10 +127,7 @@ const Contact = ({ title, content, id, t , e, handleSubmit}) => {
                 />
                 <ValidationType type="message" />
               </Col>
-              <Col span={24}>
-               <InputLabel shrink id="subjectLabel">
-                    Your Subject *
-                  </InputLabel>
+              <Col span={24} lg={12} md={24} sm={24}>
                 <input
                 required="required" 
                   type="text"
@@ -161,10 +140,8 @@ const Contact = ({ title, content, id, t , e, handleSubmit}) => {
                 />
                 <ValidationType type="subject" />
               </Col>
-              <Col span={24}>
-              <InputLabel shrink id="MessageLabel">
-                    Your Message *
-                  </InputLabel>
+              </Row>
+              <Col span={24} >
                 <TextArea
                   placeholder="Message"
                   value={values.message || ""}
@@ -175,19 +152,38 @@ const Contact = ({ title, content, id, t , e, handleSubmit}) => {
                 />
                 <ValidationType type="message" />
               </Col>
+              
               <S.ButtonContainer>
-                <Button name="submit" type="submit" >
+                <Button name="submit" type="submit"  id="Submit">
                   {t("Submit")}
                 </Button>
               </S.ButtonContainer>
             </S.FormGroup>
           </Col>
           <Col lg={12} md={11} sm={24}>
+          <div id="TextAddress">
+          <div className="formText" style={{color: 'color: rgb(28, 6, 200)'}}>
+                  <a href="tel:02-9419-7947">
+                    Ph: (02) 9419 7947 
+                    </a>
+                </div> 
+              <div className="formText">
+                <a href="https://goo.gl/maps/hrBNba4G8a1EbgFg6">
+                 Unit 17, 4-6 Chaplin Drive Lane Cove West NSW 2066
+                  </a>
+                  
+              </div>
+              </div>
                     <Suspense fallback={<div>
-                    <Loader type="Rings" color="#00BFFF" height={80} width={80} /></div>}>
-                  {/* <GoogleMap defer/> */}
+                    <Loader  type="Puff"
+                    color="#00BFFF"
+                    height={100}
+                    width={100}
+                    timeout={3000} /></div>}>
+                
                   <OtherComponent/>
                 </Suspense>
+                
           </Col>
         </Row>
       </S.Contact>

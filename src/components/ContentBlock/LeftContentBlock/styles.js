@@ -1,5 +1,8 @@
 import styled from 'styled-components';
-import { Col } from 'antd';
+// import { Col } from 'antd';
+import React from "react";
+// const Row = React.lazy(() => import(/* webpackChunkName: "sula-antd" */ 'antd/lib/grid/row'));
+const Col = React.lazy(() => import(/* webpackChunkName: "sula-antd" */ 'antd/lib/grid/col'));
 
 export const LeftContentBlock = styled.section`
   position: relative;

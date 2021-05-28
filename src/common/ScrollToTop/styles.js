@@ -17,6 +17,6 @@ export const Up = styled.div`
   cursor: pointer;
 
   @media screen and (max-width: 1024px) {
-    display: none;
+      right: 20px;
   }
 `;

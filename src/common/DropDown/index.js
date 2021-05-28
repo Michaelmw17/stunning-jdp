@@ -1,26 +1,26 @@
-
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-
+import './Styles.css'
 const useStyles = makeStyles((theme) => ({
   formControl: {
-    margin: theme.spacing(1),
-    minWidth: 230,
-    marginTop:40,
-    marginBottom:-20,
+     margin: theme.spacing(1),
+    minWidth: 210,
+    maxWidth: 320,
+    marginTop:-0,
+    marginBottom:0,
+    marginLeft:-1,
+
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
   },
 }));
-
 export default function SimpleSelect() {
-  const classes = useStyles();
+   const classes = useStyles();
   const [age, setAge] = React.useState('');
 
   const handleChange = (event) => {
@@ -29,30 +29,41 @@ export default function SimpleSelect() {
 
   return (
     <div>
-      <FormControl className={classes.formControl}>
-        <InputLabel shrink id="demo-simple-select-placeholder-label-label">
-          What can we help you with?:  *
-        </InputLabel>
+     <FormControl className={classes.formControl} id="menu">
+        <InputLabel id="demo-simple-select-label">What can we help you with? *</InputLabel>
         <Select
-          labelId="demo-simple-select-placeholder-label-label"
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={age}
+          onChange={handleChange}
+          className={classes.selectEmpty}
+        >
+          <MenuItem value={"Residential"}>Residential</MenuItem>
+          <MenuItem value={"Strata / Property Maintenance"}>Strata / Property Maintenance</MenuItem>
+          <MenuItem value={"Commercial"}>Commercial</MenuItem>
+          <MenuItem value={"Other"}>Other</MenuItem>
+        </Select>
+      </FormControl>
+      {/* <FormControl className={classes.formControl}>
+        
+        <Select
+          labelId="simple-select"
           id="menu"
           name="menu"
-          value={age}
+          placeholder="What can we help you with?:  *"
+          value={"What can we help you with?:  *"}
           onChange={handleChange}
           displayEmpty
           className={classes.selectEmpty}
         >
-          <MenuItem value={"None"}>
-            <em>None</em>
-          </MenuItem>
+        
           <MenuItem value={"Residential"}>Residential</MenuItem>
           <MenuItem value={"Strata / Property Maintenance "}>Strata / Property Maintenance </MenuItem>
           <MenuItem value={"Commercial"}>Commercial</MenuItem>
           <MenuItem value={"Other"}>Other</MenuItem>
         </Select>
-        <FormHelperText></FormHelperText>
       </FormControl>
-      
+       */}
     </div>
   );
 }

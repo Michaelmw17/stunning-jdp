@@ -23,10 +23,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: 'RGB(209, 29, 50)',
   },
   ul: {
-    backgroundColor: 'RGB(209, 29, 50)',
+    backgroundColor: 'black',
     padding: 0,
-
     paddingRight: 20,
+    borderRadius: '15px',
   },
 }));
 

@@ -10,6 +10,7 @@ export const Title = styled.h4`
   font-size: 18px;
   text-transform: uppercase;
   color: #000;
+  padding: 2.5rem 0 0rem 0rem;
 
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;
@@ -24,7 +25,7 @@ export const NavLink = styled(Link)`
   &:hover,
   &:active,
   &:focus {
-    color: #15418e;
+    color: rgb(209, 29, 50)
   }
 `;
 
@@ -44,9 +45,9 @@ export const Target = styled.a`
 export const Extra = styled.section`
   // background: #F7F9FB;
   position: relative;
-  width: 100%;
-  padding-right: 25px;
-  padding-left: 25px;
+  width: 90%;
+  padding-right: 5px;
+  padding-left: 5px;
   margin-right: auto;
   margin-left: auto;
   padding-bottom: 2rem;
@@ -55,6 +56,7 @@ export const Extra = styled.section`
 export const LogoContainer = styled.div`
   display: flex;
   position: relative;
+  
 `;
 
 export const Select = styled.div`
@@ -76,7 +78,7 @@ export const Large = styled(Link)`
   font-size: 16px;
   color: rgba(2, 7, 62, 0.8);
   text-align: ${(props) => (props.left ? 'left' : '')};
-  padding: ${(props) => (props.left ? '0 10%' : '')};
+  padding: ${(props) => (props.left ? '0 15%' : '')};
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-transform: capitalize;
@@ -86,7 +88,7 @@ export const Large = styled(Link)`
   margin-top: -0.525rem;
 
   &:hover {
-    color: rgb(255, 130, 92);
+    color: rgb(209, 29, 50)
   }
 `;
 export const Mailto = styled(Link)`
@@ -116,7 +118,7 @@ export const Chat = styled.p`
 
   &:hover {
     border-bottom: 1px solid rgb(255, 130, 92);
-    color: rgb(255, 130, 92);
+    color: rgb(209, 29, 50);
   }
 `;
 

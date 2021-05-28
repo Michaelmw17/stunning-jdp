@@ -6,7 +6,7 @@ import List from '@material-ui/core/List';
 // import ListSubheader from '@material-ui/core/ListSubheader';
 import './RStyle.css'
 
-const words = ['Maintenance and repairs', ' Renovations and new builds', 'Cbus home automation',' Home security lighting', 'Garden lighting','  General power outlets','Lighting control systems', 'Main switchboard','Upgrades, safety switches and circuit breakers', 'Lights and power points ', 'Smoke detectors',  'Appliance installations and repairs ', 'Fan installations', 'Data / Phone / Tv communications', 'Security',' Complete rewiring', ];
+const words = ['Repairs & Maintenance', 'Renovations & New Builds', 'Clipsal Cbus Automation', 'Switchboard Upgrades', 'Safety Switch protection','  Smoke Detectors','General Power Outlets', 'LED Lighting upgrade','Security & Garden Lighting', 'Ceiling Sweep Fans', 'Appliance installations & Repairs', 'TV – DATA – Communications',];
 
 const items = words.map((word, e) => {
     return <li key={e}>{word}</li>;
@@ -24,10 +24,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: 'rgb(209, 29, 50)',
   },
   ul: {
-    backgroundColor: 'rgb(209, 29, 50)',
+     backgroundColor: 'rgb(209, 29, 50)',
     padding: 0,
-
-    paddingRight: 50,
+    paddingRight: 20,
+    borderRadius: '15px',
   },
 }));
 

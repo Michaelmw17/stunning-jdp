@@ -210,7 +210,24 @@ margin-top:10px;
 
 
 #Service {
-	padding-right: 20px;
-	padding-left: 20px;
-	padding-top: 20px;
+	padding-top: 90px;
+	padding-bottom: -50px;
 }
+
+#Review {
+	padding-top: 130px;
+}
+#mission {
+	padding-top: -80px;
+}
+@media only screen and (max-width: 480px) {
+   #Service {
+	padding-top: 120px;
+	padding-bottom: -50px;
+}
+#mission {
+	padding-top: 100px;
+}
+
+
+  }

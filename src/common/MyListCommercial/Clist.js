@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     maxHeight: 300,
     color: '#FFF'
+    
   },
   listSection: {
     backgroundColor: 'RGB(209, 29, 50)',

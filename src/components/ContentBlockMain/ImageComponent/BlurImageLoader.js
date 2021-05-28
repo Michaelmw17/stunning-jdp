@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const WrapperLoadableImage = styled.div`
   overflow: hidden;
-  background-color: #f4f4f4;
+ background-color: transparent !important;
 `;
 
 const LoadableImage = styled.div`

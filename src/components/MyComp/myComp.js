@@ -17,11 +17,11 @@ const MyComp = () => {
                display: "absolute",
                 background: '#FFF',
                 marginRight: "auto",
+                marginTop: "15px",
                 height: "100%",
                 width: "100%",
-                maxWidth: "50%",
-                maxHeight: "30px",
-                left: '350px',
+                maxWidth: "70%",
+                maxHeight: "55px",
             }}
             max-age="31536000"
         />

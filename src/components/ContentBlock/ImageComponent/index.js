@@ -3,22 +3,41 @@ import React from "react";
 import "./styles.css";
 import { BlurImageLoader } from "./BlurImageLoader";
 
-// import small from "./assets/light4_.webp";
-import large from "./assets/light4.webp";
+import small from "./assets/IMG_10503.webp";
+import large from "./assets/IMG_10502.webp";
 
-function App() {
+class ImageWithStatusText extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { imageStatus: "loading" };
+  }
+ handleImageLoaded() {
+    this.setState({ imageStatus: "loaded" });
+  }
+
+  handleImageErrored() {
+    this.setState({ imageStatus: "failed to load" });
+  }
+  render() {
   return (
-    <div className="Image">
+    <div className="ImageDiv">
       <BlurImageLoader
+        className="img"
         image={large}
-        width={2992}
-        height={2134}
-        ratio={66.323529411}
+        placeholder={small}
+        width={2042} //2042px
+        height={1360} //1360px
+        ratio={66.57868311}
+        
+        onLoad={this.handleImageLoaded.bind(this)}
+        onError={this.handleImageErrored.bind(this)}
+        rel="preload"
       />
     </div>
   );
 }
-export default App;
+}
+export default ImageWithStatusText;
 
 // import React, { Suspense } from "react";
 //https://images.unsplash.com/photo-1518991791750-044b923256f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&h=630&q=80

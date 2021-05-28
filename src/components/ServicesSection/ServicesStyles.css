@@ -62,7 +62,6 @@ h1 {
 {
 	font-style: italic;
 	color: #000;
-	padding-left: 35px;
 }
 
 .p-sm
@@ -92,25 +91,37 @@ h1 {
 	line-height: 30px;
 }
 
+
+@media screen and (min-width: 1024px) {
+    /* Styles go here */
+    
+}
 @media screen and (max-width: 960px) {
 	.pie{
 		width: 100%;
 	}
+
 }
 @media screen and (max-width: 768px) {
 	.pie{
 		width: 100%;
 	}
+
 }
 @media screen and (max-width: 600px) {
 	.pie{
 		width: 100%;
 	}
+	
 }
 .Link {
 	margin-bottom: 600px;
 	display: absolute;
 }
-.containerS {
+
+	   /* #main {
 	margin: auto;
-}
+	margin-left: auto;
+	margin-right: auto;
+} */
+
